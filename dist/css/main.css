@@ -500,7 +500,11 @@ input[type="email"] {
   background: #2c2c2c;
 }
 
-.footer-section a {
+.footer-nav-link a {
   display: block;
+  color: #f8e2e2;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.7rem 0;
 }
 /*# sourceMappingURL=main.css.map */

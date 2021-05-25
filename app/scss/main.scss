@@ -320,7 +320,14 @@ input[type="email"] {
 
 .footer-section {
   background: $primary-color;
+}
+
+.footer-nav-link {
   a {
     display: block;
+    color: $primary-font-color;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.7rem 0;
   }
 }

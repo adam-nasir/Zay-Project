@@ -499,4 +499,8 @@ input[type="email"] {
 .footer-section {
   background: #2c2c2c;
 }
+
+.footer-section a {
+  display: block;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,139 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  color: $primary-font-color;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+//Flexbox
+
+.flex {
+  display: flex;
+
+  &-direction-column {
+    flex-direction: column;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-fe {
+    justify-content: flex-end;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-order-1 {
+    order: 1;
+  }
+
+  &-order-2 {
+    order: 2;
+  }
+
+  &-1 {
+    flex: 1.49;
+  }
+
+  &-2 {
+    flex: 2;
+  }
+
+  &-3 {
+    flex: 3;
+  }
+
+  &-4 {
+    flex: 3.1;
+  }
+
+  &-5 {
+    flex: 5;
+  }
+
+  &-align-self-end {
+    align-self: flex-end;
+  }
+}
+
+.padding-y {
+  &-1 {
+    padding: 1rem 0;
+  }
+
+  &-2 {
+    padding: 2rem 0;
+  }
+
+  &-3 {
+    padding: 3rem 0;
+  }
+
+  &-4 {
+    padding: 4rem 0;
+  }
+
+  &-5 {
+    padding: 5rem 0;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1380px;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  color: inherit;
+  background: $secondary-color;
+  border: 4px solid $line-color;
+  padding: 13px 9px;
+  display: inline-block;
+  letter-spacing: 6px;
+  font-weight: bold;
+  margin-top: 1.65rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.global-logo {
+  font-weight: 600;
+  font-size: 3rem;
+  a {
+    color: $navy-blue;
+  }
+}

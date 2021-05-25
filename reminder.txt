@@ -1,0 +1,47 @@
+To DO List
+overhaul of design
+https://unsplash.com/@mnzoutfits
+https://clarkson-demo.squarespace.com/?nochrome=true
+https://unsplash.com/@pedram_normohamadi
+hover and focus on the buttons
+
+
+https://www2.hm.com/en_ca/index.html
+
+add a discover 
+
+mobile
+
+Padding of the nav-link is too big and when you resize the page it overlap.
+change the padding. 
+
+shrink down 
+
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+for the favico and oog
+
+Issue with email subscribe section:
+- remove in inline-size when the window reaches 678px
+
+.model-bg mobile styling
+
+  background: url("../../images/fashion-sale-section/hust-wilson-nJHvhXS4C0U-unsplash-edit-2.jpg")
+    no-repeat center center / cover;
+  width: 90%;
+  max-width: 100%;
+  height: 60vh;
+
+
+  do animation fade-in  for the image image 
+
+
+  about page inspiration
+  https://preview.colorlib.com/#cozastore
+  https://clarkson-demo.squarespace.com/?nochrome=true
+  https://www.frankandoak.com/our-story
+
+
+  catagories for mobile
+  .men-catagories,
+.women-catagories {
+  height: 50vh;

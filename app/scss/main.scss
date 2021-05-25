@@ -322,6 +322,11 @@ input[type="email"] {
   background: $primary-color;
 }
 
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .footer-nav-link {
   a {
     display: block;
@@ -329,5 +334,28 @@ input[type="email"] {
     font-size: 0.9rem;
     font-weight: 600;
     padding: 0.7rem 0;
+    align-self: center;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.corporate-info-list,
+.discover-list,
+.help-list,
+.sign-up-membership {
+  margin-top: 1.3rem;
+}
+
+.footer-social-media {
+  margin-top: 1.7rem;
+
+  a {
+    color: $primary-font-color;
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
   }
 }

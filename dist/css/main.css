@@ -56,6 +56,12 @@ a {
           justify-content: flex-end;
 }
 
+.flex-jc-se {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .flex-jc-c {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -500,11 +506,43 @@ input[type="email"] {
   background: #2c2c2c;
 }
 
+.footer-nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
 .footer-nav-link a {
   display: block;
   color: #f8e2e2;
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0.7rem 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.title {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.corporate-info-list,
+.discover-list,
+.help-list,
+.sign-up-membership {
+  margin-top: 1.3rem;
+}
+
+.footer-social-media {
+  margin-top: 1.7rem;
+}
+
+.footer-social-media a {
+  color: #f8e2e2;
+  font-size: 1.6rem;
+  padding: 0 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */

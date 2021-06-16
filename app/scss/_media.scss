@@ -1,0 +1,517 @@
+//Global Classes
+.container {
+  @include media($viewport-9) {
+    width: 100%;
+  }
+}
+
+.btn {
+  @include media($viewport-9) {
+    font-size: 1rem;
+  }
+
+  @include media($viewport-4) {
+    font-size: 0.75rem;
+  }
+}
+//Info Nav Styling
+.info-nav {
+  @include media($viewport-7) {
+    display: none;
+  }
+}
+
+//Main Nav Styling
+
+.main-nav {
+  .container {
+    @include media($viewport-9) {
+      grid-template-columns: 2fr 2fr;
+    }
+  }
+
+  .nav-link {
+    @include media($viewport-9) {
+      position: fixed;
+      background-color: $secondary-color;
+      height: 100%;
+      width: 14em;
+      top: 0;
+      left: 0;
+      z-index: 99999;
+      display: flex;
+      margin: 0rem;
+      flex-direction: column;
+
+      transform: translateX(-276px);
+    }
+
+    a {
+      @include media($viewport-12) {
+        padding: 0rem 1.7rem;
+      }
+
+      @include media($viewport-9) {
+        padding: 1.5rem 1.5rem 1.5rem 0.8rem;
+        font-size: 1.9rem;
+        font-weight: 600;
+      }
+    }
+    .exit-button {
+      @include media($viewport-9) {
+        display: block;
+      }
+    }
+  }
+
+  .hamburger {
+    @include media($viewport-9) {
+      display: block;
+    }
+  }
+
+  .logo {
+    @include media($viewport-9) {
+      font-size: 2.3rem;
+    }
+
+    @include media($viewport-4) {
+      font-size: 1.9rem;
+    }
+  }
+
+  .icon-bar {
+    @include media($viewport-4) {
+      padding-top: 0.5rem;
+    }
+    i {
+      @include media($viewport-4) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+/* Showcase Section Styling */
+.showcase {
+  @include media($viewport-9) {
+    padding: 3rem 0;
+  }
+
+  @include media($viewport-4) {
+    text-align: center;
+  }
+  .container {
+    @include media($viewport-9) {
+      display: block;
+    }
+  }
+}
+
+.showcase-text {
+  @include media($viewport-9) {
+    margin-bottom: 2.5rem;
+  }
+
+  h4 {
+    //Tweakpoint
+    @include media($hero-text) {
+      font-size: 0.75rem;
+      letter-spacing: 0.4rem;
+    }
+
+    @include media($viewport-3) {
+      letter-spacing: 0.3rem;
+    }
+  }
+
+  h1 {
+    //Tweakpoint
+    @include media($hero-text) {
+      font-size: 1.8rem;
+    }
+
+    @include media($viewport-4) {
+      font-size: 1.4rem;
+      padding: 0 0.4rem;
+    }
+
+    @include media($viewport-3) {
+      font-size: 1.25rem;
+      padding: 0 0.4rem;
+    }
+  }
+}
+
+/* Catagories Section Styling */
+.catagories {
+  .container {
+    @include media($viewport-9) {
+      flex-direction: column;
+    }
+
+    // @include media($viewport-12) {
+    //   flex-direction: row;
+    // }
+  }
+}
+
+.catagories {
+  @include media($viewport-9) {
+    padding: 1rem;
+  }
+}
+
+.men-catagories,
+.women-catagories {
+  @include media($viewport-9) {
+    margin: 1rem;
+    height: 500px;
+    width: 100%;
+    background-position: 32% 39%;
+  }
+
+  @include media($viewport-4) {
+    height: 310px;
+    width: 100%;
+  }
+
+  p {
+    @include media($viewport-4) {
+      font-size: 1.8rem;
+      width: 104px;
+    }
+  }
+}
+/* Email Scription Section */
+.member-email-section {
+  @include media($viewport-9) {
+    padding: 3rem;
+  }
+
+  @include media($viewport-4) {
+    padding: 1.5rem;
+  }
+}
+
+.form-h2 {
+  @include media($viewport-9) {
+    inline-size: 607px;
+    font-size: 2rem;
+  }
+
+  @include media($viewport-7) {
+    inline-size: 427px;
+    font-size: 1.5rem;
+  }
+
+  @include media($viewport-4) {
+    inline-size: unset;
+    font-size: 1.2rem;
+  }
+}
+
+.form-p {
+  @include media($viewport-7) {
+    font-size: 1rem;
+  }
+}
+
+.form-email {
+  @include media($viewport-7) {
+    padding: 0.2rem;
+    width: 80%;
+    margin-top: 1rem;
+  }
+
+  @include media($viewport-4) {
+    width: 100%;
+  }
+}
+
+.form-button {
+  @include media($viewport-7) {
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  @include media($viewport-4) {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+input[type="email"] {
+  @include media($viewport-7) {
+    font-size: 1.2rem;
+  }
+}
+
+/* Fall Sales Section */
+
+//fix this
+
+.sale-info {
+  @include media($viewport-7) {
+    top: 78%;
+  }
+  // @include media($viewport-9) {
+  //   top: 64%;
+  // }
+
+  @include media($viewport-4) {
+    top: 74%;
+  }
+
+  .btn {
+    //Tweakpoint
+    @include media($fall-sale-text) {
+      margin-top: 0.3rem;
+    }
+
+    @include media($viewport-7) {
+      display: none;
+    }
+  }
+}
+
+.sale-title {
+  //Tweakpoint
+  @include media($fall-sale-text) {
+    font-size: 3.5rem;
+  }
+
+  @include media($viewport-9) {
+    font-size: 3rem;
+  }
+
+  @include media($viewport-7) {
+    font-size: 2.6rem;
+  }
+
+  @include media($viewport-4) {
+    font-size: 1.2rem;
+  }
+
+  @include media($viewport-3) {
+    font-size: 1rem;
+  }
+}
+
+.sale-phrase {
+  @include media($fall-sale-text) {
+    font-size: 1.3rem;
+  }
+
+  //   @include media($viewport-9) {
+  //     font-size: 1.5rem;
+  //     padding-bottom: 0rem;
+  //   }
+
+  //   @include media($viewport-7) {
+  //     font-size: 1.2rem;
+  //     padding-bottom: 0rem;
+  //   }
+
+  @include media($viewport-4) {
+    font-size: 0.95rem;
+  }
+
+  @include media($viewport-3) {
+    font-size: 0.8rem;
+  }
+}
+
+/* Fall Fashion Show Section */
+.fall-designer-section {
+  @include media($viewport-7) {
+    padding: 3rem;
+  }
+}
+
+.fd-text-content {
+  @include media($viewport-7) {
+    padding-top: 4%;
+  }
+
+  @include media($viewport-4) {
+    padding-top: 1%;
+  }
+
+  @include media($viewport-3) {
+    padding-top: 0;
+  }
+}
+
+.fd-title {
+  @include media($viewport-9) {
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  @include media($viewport-7) {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  @include media($viewport-4) {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.fd-phrase {
+  @include media($viewport-9) {
+    font-size: 1.3rem;
+  }
+
+  @include media($viewport-7) {
+    font-size: 1.1rem;
+  }
+
+  @include media($viewport-4) {
+    font-size: 1rem;
+  }
+
+  @include media($viewport-3) {
+    font-size: 0.75rem;
+  }
+}
+
+.fd-link {
+  @include media($viewport-7) {
+    font-size: 0.95rem;
+  }
+
+  @include media($viewport-4) {
+    font-size: 0.9rem;
+  }
+
+  @include media($viewport-4) {
+    font-size: 0.8rem;
+  }
+}
+/* Footer Styling */
+.footer-section {
+  @include media($viewport-7) {
+    padding: 1.5rem 0;
+    gap: 1.5rem;
+  }
+}
+
+.footer-nav {
+  @include media($viewport-7) {
+    display: block;
+  }
+}
+
+.footer-nav-list,
+.corporate-info-list,
+.discover-list,
+.help-list,
+.sign-up-membership {
+  @include media($viewport-7) {
+    border-bottom: $secondary-color 2px solid;
+  }
+}
+
+.corporate-info-list,
+.discover-list,
+.help-list,
+.sign-up-membership {
+  @include media($viewport-7) {
+    padding: 1.5rem 0;
+    margin: 0;
+  }
+
+  a:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.footer-nav-list {
+  @include media($viewport-4) {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+    padding-bottom: 0.4rem;
+  }
+
+  @include media($viewport-7) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-nav-link {
+    @include media($viewport-7) {
+      padding: 1.5rem;
+    }
+
+    a {
+      @include media($viewport-4) {
+        display: inline-block;
+        padding: 0.5rem;
+        padding-top: 0rem;
+      }
+      @include media($viewport-7) {
+        display: inline-block;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.title-content {
+  @include media($viewport-7) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  i {
+    @include media($viewport-7) {
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
+
+.title {
+  @include media($viewport-7) {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.footer-block {
+  @include media($viewport-7) {
+    max-height: 68px;
+    transition: max-height 0.2s ease-in-out;
+  }
+}
+
+.corporate-info-list,
+.discover-list,
+.help-list {
+  @include media($viewport-7) {
+    overflow: hidden;
+  }
+}
+
+.sign-up-membership {
+  @include media($viewport-7) {
+    text-align: center;
+    border-bottom: none;
+  }
+}
+// .footer-social-media {
+//   margin-top: 1.7rem;
+
+//   a {
+//     color: $primary-font-color;
+//     font-size: 1.6rem;
+//     padding: 0 0.5rem;
+//   }
+// }
+
+/* Catagories Section Styling */

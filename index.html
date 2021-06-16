@@ -20,6 +20,7 @@
     <title>Zay | Quality Attire, Low Prices, Fast Shipping</title>
   </head>
   <body>
+    <div class="overlay no-display"></div>
     <header>
       <nav class="info-nav">
         <div class="container flex flex-jc-sb flex-ai-c">
@@ -52,10 +53,20 @@
 
       <nav class="main-nav">
         <div class="container">
-          <h1 class="logo">
+          <header class="main-header flex">
+            <div class="hamburger">
+                <div class="line"></div>
+                   <div class="line"></div>
+                   <div class="line"></div>
+            </div>
+            <h1 class="logo">
             <a href="#">Zay</a>
           </h1>
+          </header>
+          
           <div class="nav-link">
+
+            <i class="fas fa-times exit-button"></i>
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Shop</a>
@@ -121,17 +132,14 @@ YOUR FIRST ORDER</h2>
 
     <!-- Fall Sales Section -->
     <section class="fall-sales-section padding-y-4">
+      <a href ="#" class="img-c"></a>
       <div class="container">
-      <div class="sale flex flex-ai-c flex-jc-c">
-        
-          <img class ="sale-bg" src="images/fashion-sale-section/fall-section-bg.png" alt="">
-        
+      <div class="sale">
+      
+          <img src="images/fashion-sale-section/fall-section-bg.png" alt="">
+       
        <div class="sale-info">
-          <div class="price-content">
-            <h4 class="price-title">Jacket</h4>
-            <p class ="price">23.99$</p>
-          </div>
-          <div class="sale-content flex-align-self-end">
+          <div class="sale-content-text">
             <h3 class="sale-title">Stylish jackets from $23.99</h4>
             <p class ="sale-phrase">Let make your fall stylish</p>
             <a href ="#" class="btn">shop now</a>
@@ -142,7 +150,7 @@ YOUR FIRST ORDER</h2>
     </section>
     <!-- Fall Designers Section -->
     <!--fd stands for fall designers-->
-    <section class="fall-designer-section padding-y-4">
+    <section class="fall-designer-section padding-y-3">
       <div class="container">
         <div class="fd-text-content">
           <h3 class="fd-title">Discover Fall Fashion</h3>
@@ -168,8 +176,12 @@ YOUR FIRST ORDER</h2>
                 <a href="#">Contact</a>
               </div>
             </div>
-            <div class="corporate-info-list">
-              <h4 class="title">Coporate Info</h4>
+            <div class="corporate-info-list footer-block">
+              
+              <div class ="title-content">
+                <h4 class="title">Coporate Info</h4>
+              <i class="fas fa-plus-circle accord-btn"></i>
+              </div>
               <div class="footer-nav-link">
                 <a href="#">Career at Zay</a>
                 <a href="#">Press</a>
@@ -177,8 +189,11 @@ YOUR FIRST ORDER</h2>
                 <a href="#">Contact</a>
               </div>
             </div>
-            <div class="discover-list">
-              <h4 class="title">discover</h4>
+            <div class="discover-list footer-block">
+              <div class ="title-content">
+                <h4 class="title">discover</h4>
+              <i class="fas fa-plus-circle  accord-btn"></i>
+              </div>
                 <div class="footer-nav-link">
                 <a href="#">Gift Cards</a>
                 <a href="#">Student Discount Program</a>
@@ -187,8 +202,11 @@ YOUR FIRST ORDER</h2>
                 <a href="#">Archives</a>
               </div>
               </div>
-              <div class="help-list">
-                <h4 class="title">help</h4>
+              <div class="help-list footer-block">
+                <div class ="title-content">
+                  <h4 class="title">help</h4>
+                <i class="fas fa-plus-circle accord-btn"></i>
+                </div>
                 <div class="footer-nav-link">
                 <a href="#">Customer Service</a>
                 <a href="#">My Accounts</a>
@@ -223,5 +241,6 @@ YOUR FIRST ORDER</h2>
           </nav>
       </div>
     </footer>
+    <script src ="app/js/app.js"></script>
   </body>
 </html>

@@ -56,6 +56,9 @@ a {
   &-ai-c {
     align-items: center;
   }
+  &-ai-fe {
+    align-items: flex-end;
+  }
 
   &-order-1 {
     order: 1;
@@ -124,13 +127,19 @@ a {
   color: inherit;
   background: $secondary-color;
   border: 4px solid $line-color;
-  padding: 13px 9px;
+  padding: 0.56em 0.43em;
   display: inline-block;
   letter-spacing: 6px;
   font-weight: bold;
   margin-top: 1.65rem;
   font-family: inherit;
   font-size: 1rem;
+  transition: 0.5s ease background;
+
+  &:hover,
+  &:focus {
+    background: lighten($secondary-color, 10%);
+  }
 }
 
 .global-logo {
@@ -139,4 +148,54 @@ a {
   a {
     color: $navy-blue;
   }
+}
+
+//Overlay
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $secondary-color;
+  overflow: hidden;
+}
+
+// Media Queries Section
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+.line {
+  width: 30px;
+  height: 2.8px;
+  background-color: $primary-font-color;
+  margin: 0.4rem 0.4rem 0.4rem 0;
+}
+
+//JS Classes
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.appear {
+  transform: translateX(0px) !important;
+  transition: 0.6s ease transform;
+}
+
+.no-display {
+  display: none;
+}
+
+.display {
+  max-height: 500px !important;
+  transition: max-height 0.2s ease-in-out;
 }

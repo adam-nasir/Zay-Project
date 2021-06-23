@@ -327,6 +327,16 @@ input[type="email"] {
   @include media($viewport-7) {
     padding: 3rem;
   }
+
+  .container {
+    @include media($viewport-7) {
+      padding: 4rem;
+    }
+
+    @include media($viewport-3) {
+      padding: 2rem;
+    }
+  }
 }
 
 .fd-text-content {
@@ -452,7 +462,7 @@ input[type="email"] {
     a {
       @include media($viewport-4) {
         display: inline-block;
-        padding: 0.5rem;
+        padding: 0rem;
         padding-top: 0rem;
       }
       @include media($viewport-7) {

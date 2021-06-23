@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: "Public Sans", sans-serif;
-  color: #f7dada;
+  color: #f8dbdb;
 }
 
 img {
@@ -201,7 +201,7 @@ a {
 .line {
   width: 30px;
   height: 2.8px;
-  background-color: #f7dada;
+  background-color: #f8dbdb;
   margin: 0.4rem 0.4rem 0.4rem 0;
 }
 
@@ -232,7 +232,7 @@ a {
 }
 
 .info-nav a {
-  color: #f7dada;
+  color: #f8dbdb;
   font-size: 0.75rem;
   display: inline-block;
 }
@@ -301,7 +301,7 @@ a {
 }
 
 .main-nav .nav-link a {
-  color: #f7dada;
+  color: #f8dbdb;
   padding: 0rem 2.9rem;
   -webkit-transition: color 0.5s ease, font-weight 0.2s ease;
   transition: color 0.5s ease, font-weight 0.2s ease;
@@ -339,7 +339,7 @@ a {
 .main-nav .icon-bar .hamburger {
   font-size: 1.4rem;
   margin-left: 1rem;
-  color: #f7dada;
+  color: #f8dbdb;
 }
 
 .main-nav .icon-bar .cart {
@@ -352,7 +352,7 @@ a {
   font-size: 0.8rem;
   top: -70%;
   left: 54%;
-  background: #f7dada;
+  background: #f8dbdb;
   border-radius: 50px;
   padding: 0.2rem;
   font-weight: 600;
@@ -362,7 +362,7 @@ a {
 /* Showcase Styling */
 .showcase {
   background: #2c2c2c;
-  color: #f7dada;
+  color: #f8dbdb;
 }
 
 .showcase-text {
@@ -545,7 +545,7 @@ input[type="email"] {
 }
 
 .fall-designer-section .container {
-  border: #f7dada 16px solid;
+  border: #f8dbdb 16px solid;
   padding: 5rem;
 }
 
@@ -568,7 +568,7 @@ input[type="email"] {
   text-decoration: underline;
   padding: 0.75rem;
   font-weight: 300;
-  color: #f7dada;
+  color: #f8dbdb;
   letter-spacing: 0.1rem;
   font-size: 1rem;
   -webkit-transition: 0.3s ease-in color;
@@ -576,7 +576,7 @@ input[type="email"] {
 }
 
 .fd-link:hover {
-  color: #eeb0b0;
+  color: #f0b0b0;
 }
 
 /* Footer Styling */
@@ -593,7 +593,7 @@ input[type="email"] {
 
 .footer-nav-link a {
   display: block;
-  color: #f7dada;
+  color: #f8dbdb;
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0.7rem 0;
@@ -623,7 +623,7 @@ input[type="email"] {
 }
 
 .footer-social-media a i {
-  color: #f7dada;
+  color: #f8dbdb;
   font-size: 1rem;
   padding-right: 0.8rem;
 }
@@ -987,6 +987,18 @@ input[type="email"] {
 }
 
 @media screen and (max-width: 768px) {
+  .fall-designer-section .container {
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .fall-designer-section .container {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .fd-text-content {
     padding-top: 4%;
   }
@@ -1150,7 +1162,7 @@ input[type="email"] {
 @media screen and (max-width: 480px) {
   .footer-nav-list .footer-nav-link a {
     display: inline-block;
-    padding: 0.5rem;
+    padding: 0rem;
     padding-top: 0rem;
   }
 }

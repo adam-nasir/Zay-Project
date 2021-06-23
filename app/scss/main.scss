@@ -251,6 +251,10 @@ input[type="email"] {
 .sale {
   position: relative;
   overflow: hidden;
+  max-width: 100vw;
+  // height: 100vh;
+  margin: 0 auto;
+  display: flex;
 
   &::after {
     content: "";
@@ -268,6 +272,8 @@ input[type="email"] {
 }
 
 .sale img {
+  width: 100%;
+  height: 100%;
 }
 
 .sale-info {
@@ -293,32 +299,29 @@ input[type="email"] {
 /* Fall Fashion Show Section */
 
 .fall-designer-section {
-  background: url("../../images/fall-season-section/fallseason.png") no-repeat
-    center center/ cover;
+  background: $terary-color;
   height: 100%;
-  padding: 7.5rem 0;
+  padding: 2rem;
 
   .container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    border: $primary-font-color 16px solid;
+    padding: 5rem;
   }
 }
 
 .fd-text-content {
-  grid-column: 6 / span 13;
   text-align: center;
-  // padding-top: 5%;
-  align-self: center;
 }
 
 .fd-title {
   font-size: 3.4rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.56rem;
 }
 
 .fd-phrase {
-  font-size: 1.7rem;
-  padding-bottom: 1.3rem;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  font-weight: 200;
 }
 
 .fd-link {
@@ -327,7 +330,7 @@ input[type="email"] {
   font-weight: 300;
   color: $primary-font-color;
   letter-spacing: 0.1rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   transition: 0.3s ease-in color;
 
   &:hover {

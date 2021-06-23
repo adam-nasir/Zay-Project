@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: "Public Sans", sans-serif;
-  color: #f8e2e2;
+  color: #f7dada;
 }
 
 img {
@@ -201,7 +201,7 @@ a {
 .line {
   width: 30px;
   height: 2.8px;
-  background-color: #f8e2e2;
+  background-color: #f7dada;
   margin: 0.4rem 0.4rem 0.4rem 0;
 }
 
@@ -232,7 +232,7 @@ a {
 }
 
 .info-nav a {
-  color: #f8e2e2;
+  color: #f7dada;
   font-size: 0.75rem;
   display: inline-block;
 }
@@ -301,7 +301,7 @@ a {
 }
 
 .main-nav .nav-link a {
-  color: #f8e2e2;
+  color: #f7dada;
   padding: 0rem 2.9rem;
   -webkit-transition: color 0.5s ease, font-weight 0.2s ease;
   transition: color 0.5s ease, font-weight 0.2s ease;
@@ -339,7 +339,7 @@ a {
 .main-nav .icon-bar .hamburger {
   font-size: 1.4rem;
   margin-left: 1rem;
-  color: #f8e2e2;
+  color: #f7dada;
 }
 
 .main-nav .icon-bar .cart {
@@ -352,7 +352,7 @@ a {
   font-size: 0.8rem;
   top: -70%;
   left: 54%;
-  background: #f8e2e2;
+  background: #f7dada;
   border-radius: 50px;
   padding: 0.2rem;
   font-weight: 600;
@@ -362,7 +362,7 @@ a {
 /* Showcase Styling */
 .showcase {
   background: #2c2c2c;
-  color: #f8e2e2;
+  color: #f7dada;
 }
 
 .showcase-text {
@@ -494,6 +494,11 @@ input[type="email"] {
 .sale {
   position: relative;
   overflow: hidden;
+  max-width: 100vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .sale::after {
@@ -503,6 +508,11 @@ input[type="email"] {
   background: linear-gradient(0deg, rgba(65, 65, 65, 0.549533) 0%, rgba(255, 255, 255, 0) 66%);
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sale img {
   width: 100%;
   height: 100%;
 }
@@ -529,51 +539,44 @@ input[type="email"] {
 
 /* Fall Fashion Show Section */
 .fall-designer-section {
-  background: url("../../images/fall-season-section/fallseason.png") no-repeat center center/cover;
+  background: #313131;
   height: 100%;
-  padding: 7.5rem 0;
+  padding: 2rem;
 }
 
 .fall-designer-section .container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
+  border: #f7dada 16px solid;
+  padding: 5rem;
 }
 
 .fd-text-content {
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 13;
-  grid-column: 6 / span 13;
   text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .fd-title {
   font-size: 3.4rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.56rem;
 }
 
 .fd-phrase {
-  font-size: 1.7rem;
-  padding-bottom: 1.3rem;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  font-weight: 200;
 }
 
 .fd-link {
   text-decoration: underline;
   padding: 0.75rem;
   font-weight: 300;
-  color: #f8e2e2;
+  color: #f7dada;
   letter-spacing: 0.1rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   -webkit-transition: 0.3s ease-in color;
   transition: 0.3s ease-in color;
 }
 
 .fd-link:hover {
-  color: #eeb9b9;
+  color: #eeb0b0;
 }
 
 /* Footer Styling */
@@ -590,7 +593,7 @@ input[type="email"] {
 
 .footer-nav-link a {
   display: block;
-  color: #f8e2e2;
+  color: #f7dada;
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0.7rem 0;
@@ -620,7 +623,7 @@ input[type="email"] {
 }
 
 .footer-social-media a i {
-  color: #f8e2e2;
+  color: #f7dada;
   font-size: 1rem;
   padding-right: 0.8rem;
 }

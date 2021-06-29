@@ -192,7 +192,7 @@
 }
 
 .women-catagories {
-  background: url("../../images/catagories-section/women.jpg") no-repeat center
+  background: url("../../images/catagories-section/woman.jpg") no-repeat center
     center/ cover;
   margin-left: 1.3rem;
 }
@@ -200,8 +200,8 @@
 /* Email Scription Section */
 
 .member-email-section {
-  background: url("../../images/email-section/emai-backgroud-3.jpg") no-repeat
-    center center/ cover;
+  background: url("../../images/email-section/email-bg-1.jpg") no-repeat center
+    center/ cover;
 
   text-align: center;
 }
@@ -305,7 +305,7 @@ input[type="email"] {
 
   .container {
     border: $primary-font-color 16px solid;
-    padding: 5rem;
+    padding: 6rem;
   }
 }
 
@@ -314,7 +314,7 @@ input[type="email"] {
 }
 
 .fd-title {
-  font-size: 3.4rem;
+  font-size: 4.5rem;
   margin-bottom: 0.56rem;
 }
 
@@ -327,7 +327,6 @@ input[type="email"] {
 .fd-link {
   text-decoration: underline;
   padding: 0.75rem;
-  font-weight: 300;
   color: $primary-font-color;
   letter-spacing: 0.1rem;
   font-size: 1rem;

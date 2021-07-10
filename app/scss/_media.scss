@@ -161,6 +161,20 @@
     padding: 1rem;
   }
 }
+.men-catagories{
+ @include media($viewport-7){
+  background: url("../../images/catagories-section/man-small.jpg") no-repeat center
+  center/ cover;
+ }
+}
+
+.women-catagories{
+  @include media($viewport-7){
+    background: url("../../images/catagories-section/woman-small.jpg") no-repeat center
+    center/ cover;
+   }
+
+}
 
 .men-catagories,
 .women-catagories {

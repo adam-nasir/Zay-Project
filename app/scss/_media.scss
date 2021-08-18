@@ -113,6 +113,10 @@
     margin-bottom: 2.5rem;
   }
 
+  @include media($viewport-4) {
+    margin-right: 0rem;
+  }
+
   h4 {
     //Tweakpoint
     @include media($hero-text) {
@@ -133,12 +137,11 @@
 
     @include media($viewport-4) {
       font-size: 1.4rem;
-      padding: 0 0.4rem;
+      padding: 0 1.4rem;
     }
 
     @include media($viewport-3) {
       font-size: 1.25rem;
-      padding: 0 0.4rem;
     }
   }
 }
@@ -161,19 +164,18 @@
     padding: 1rem;
   }
 }
-.men-catagories{
- @include media($viewport-7){
-  background: url("../../images/catagories-section/man-small.jpg") no-repeat center
-  center/ cover;
- }
+.men-catagories {
+  @include media($viewport-7) {
+    background: url("../../images/catagories-section/man-small.jpg") no-repeat
+      center center/ cover;
+  }
 }
 
-.women-catagories{
-  @include media($viewport-7){
-    background: url("../../images/catagories-section/woman-small.jpg") no-repeat center
-    center/ cover;
-   }
-
+.women-catagories {
+  @include media($viewport-7) {
+    background: url("../../images/catagories-section/woman-small.jpg") no-repeat
+      center center/ cover;
+  }
 }
 
 .men-catagories,

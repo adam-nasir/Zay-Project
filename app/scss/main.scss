@@ -87,6 +87,7 @@
       font-size: 2rem;
       padding: 0.8rem;
       cursor: pointer;
+      text-align: right;
       display: none;
     }
   }
@@ -186,12 +187,14 @@
 }
 
 .men-catagories {
-  background: url("../../images/catagories-section/man-large.jpg") no-repeat center center/ cover;
+  background: url("../../images/catagories-section/man-large.jpg") no-repeat
+    center center/ cover;
   margin-right: 1.3rem;
 }
 
 .women-catagories {
-  background: url("../../images/catagories-section/woman-large.jpg") no-repeat center center/ cover;
+  background: url("../../images/catagories-section/woman-large.jpg") no-repeat
+    center center/ cover;
   margin-left: 1.3rem;
 }
 

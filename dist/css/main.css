@@ -273,6 +273,7 @@ a {
   font-size: 2rem;
   padding: 0.8rem;
   cursor: pointer;
+  text-align: right;
   display: none;
 }
 
@@ -676,6 +677,12 @@ input[type="email"] {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .showcase-text {
+    margin-right: 0rem;
+  }
+}
+
 @media screen and (max-width: 1241px) {
   .showcase-text h4 {
     font-size: 0.75rem;
@@ -698,14 +705,13 @@ input[type="email"] {
 @media screen and (max-width: 480px) {
   .showcase-text h1 {
     font-size: 1.4rem;
-    padding: 0 0.4rem;
+    padding: 0 1.4rem;
   }
 }
 
 @media screen and (max-width: 320px) {
   .showcase-text h1 {
     font-size: 1.25rem;
-    padding: 0 0.4rem;
   }
 }
 

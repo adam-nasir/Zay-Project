@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: "Public Sans", sans-serif;
-  color: #f8dbdb;
+  color: #ffe2e2;
 }
 
 img {
@@ -166,7 +166,7 @@ a {
 .line {
   width: 30px;
   height: 2.8px;
-  background-color: #f8dbdb;
+  background-color: #ffe2e2;
   margin: 0.4rem 0.4rem 0.4rem 0;
 }
 
@@ -194,7 +194,7 @@ a {
 }
 
 .info-nav a {
-  color: #f8dbdb;
+  color: #ffe2e2;
   font-size: 0.75rem;
   display: inline-block;
 }
@@ -255,7 +255,7 @@ a {
 }
 
 .main-nav .nav-link a {
-  color: #f8dbdb;
+  color: #ffe2e2;
   padding: 0rem 2.9rem;
   transition: color 0.5s ease, font-weight 0.2s ease;
 }
@@ -289,7 +289,7 @@ a {
 .main-nav .icon-bar .hamburger {
   font-size: 1.4rem;
   margin-left: 1rem;
-  color: #f8dbdb;
+  color: #ffe2e2;
 }
 
 .main-nav .icon-bar .cart {
@@ -302,7 +302,7 @@ a {
   font-size: 0.8rem;
   top: -70%;
   left: 54%;
-  background: #f8dbdb;
+  background: #ffe2e2;
   border-radius: 50px;
   padding: 0.2rem;
   font-weight: 600;
@@ -312,7 +312,7 @@ a {
 /* Showcase Styling */
 .showcase {
   background: #2c2c2c;
-  color: #f8dbdb;
+  color: #ffe2e2;
 }
 
 .showcase-text {
@@ -478,7 +478,7 @@ input[type="email"] {
 }
 
 .fall-designer-section .container {
-  border: #f8dbdb 16px solid;
+  border: #ffe2e2 16px solid;
   padding: 6rem;
 }
 
@@ -500,14 +500,14 @@ input[type="email"] {
 .fd-link {
   text-decoration: underline;
   padding: 0.75rem;
-  color: #f8dbdb;
+  color: #ffe2e2;
   letter-spacing: 0.1rem;
   font-size: 1rem;
   transition: 0.3s ease-in color;
 }
 
 .fd-link:hover {
-  color: #f0b0b0;
+  color: #ffafaf;
 }
 
 /* Footer Styling */
@@ -522,7 +522,7 @@ input[type="email"] {
 
 .footer-nav-link a {
   display: block;
-  color: #f8dbdb;
+  color: #ffe2e2;
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0.7rem 0;
@@ -550,7 +550,7 @@ input[type="email"] {
 }
 
 .footer-social-media a i {
-  color: #f8dbdb;
+  color: #ffe2e2;
   font-size: 1rem;
   padding-right: 0.8rem;
 }

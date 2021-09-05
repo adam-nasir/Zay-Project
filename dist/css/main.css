@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: "Public Sans", sans-serif;
-  color: #fcc9c9;
+  color: #ffe0e0;
 }
 
 img {
@@ -166,7 +166,7 @@ a {
 .line {
   width: 30px;
   height: 2.8px;
-  background-color: #fcc9c9;
+  background-color: #ffe0e0;
   margin: 0.4rem 0.4rem 0.4rem 0;
 }
 
@@ -200,7 +200,7 @@ header {
 }
 
 .info-nav a {
-  color: #fcc9c9;
+  color: #ffe0e0;
   font-size: 0.75rem;
   display: inline-block;
 }
@@ -262,7 +262,7 @@ header {
 }
 
 .main-nav .nav-link a {
-  color: #fcc9c9;
+  color: #ffe0e0;
   padding: 0rem 2.9rem;
   transition: color 0.5s ease, font-weight 0.2s ease;
 }
@@ -296,7 +296,7 @@ header {
 .main-nav .icon-bar .hamburger {
   font-size: 1.4rem;
   margin-left: 1rem;
-  color: #fcc9c9;
+  color: #ffe0e0;
 }
 
 .main-nav .icon-bar .cart {
@@ -309,7 +309,7 @@ header {
   font-size: 0.8rem;
   top: -70%;
   left: 54%;
-  background: #fcc9c9;
+  background: #ffe0e0;
   border-radius: 50px;
   padding: 0.2rem;
   font-weight: 600;
@@ -319,7 +319,7 @@ header {
 /* Showcase Styling */
 .showcase {
   background: #2c2c2c;
-  color: #fcc9c9;
+  color: #ffe0e0;
 }
 
 .showcase-text {
@@ -377,12 +377,12 @@ header {
   font-weight: bold;
   height: 100%;
   line-height: 3rem;
-  border: 4px solid #fcc9c9;
+  border: 4px solid #ffe0e0;
 }
 
 .men-catagories p a,
 .women-catagories p a {
-  color: #fcc9c9;
+  color: #ffe0e0;
   position: relative;
   z-index: 9999;
   display: inline-block;
@@ -391,7 +391,7 @@ header {
 
 .men-catagories p a:hover,
 .women-catagories p a:hover {
-  color: #feebeb;
+  color: white;
 }
 
 .men-catagories .link-catagories,
@@ -542,7 +542,7 @@ input[type="email"] {
 }
 
 .fall-designer-section .container {
-  border: #fcc9c9 16px solid;
+  border: #ffe0e0 16px solid;
   padding: 6rem;
 }
 
@@ -564,14 +564,14 @@ input[type="email"] {
 .fd-link {
   text-decoration: underline;
   padding: 0.75rem;
-  color: #fcc9c9;
+  color: #ffe0e0;
   letter-spacing: 0.1rem;
   font-size: 1rem;
   transition: 0.3s ease-in color;
 }
 
 .fd-link:hover {
-  color: #f99999;
+  color: #ffadad;
 }
 
 /* Footer Styling */
@@ -586,7 +586,7 @@ input[type="email"] {
 
 .footer-nav-link a {
   display: block;
-  color: #fcc9c9;
+  color: #ffe0e0;
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0.7rem 0;
@@ -614,7 +614,7 @@ input[type="email"] {
 }
 
 .footer-social-media a i {
-  color: #fcc9c9;
+  color: #ffe0e0;
   font-size: 1rem;
   padding-right: 0.8rem;
 }
@@ -828,7 +828,7 @@ input[type="email"] {
   .women-catagories p {
     font-size: 1.6rem;
     line-height: 1.9rem;
-    border: 4px solid #fcc9c9;
+    border: 4px solid #ffe0e0;
   }
 }
 

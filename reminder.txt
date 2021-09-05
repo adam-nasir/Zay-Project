@@ -45,3 +45,7 @@ Issue with email subscribe section:
   .men-catagories,
 .women-catagories {
   height: 50vh;
+
+place a tag on fall-sale section 
+
+

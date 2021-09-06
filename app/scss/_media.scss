@@ -166,15 +166,15 @@
 }
 .men-catagories {
   @include media($viewport-7) {
-    background: url("../../images/catagories-section/man-small.jpg") no-repeat
-      center center/ cover;
+    // background: url("../../images/catagories-section/man-small.jpg") no-repeat
+    //   center center/ cover;
   }
 }
 
 .women-catagories {
   @include media($viewport-7) {
-    background: url("../../images/catagories-section/woman-small.jpg") no-repeat
-      center center/ cover;
+    // background: url("../../images/catagories-section/woman-small.jpg") no-repeat
+    //   center center/ cover;
   }
 }
 

@@ -150,6 +150,14 @@ a {
   }
 }
 
+.current {
+  color: $light-blue !important;
+}
+
+.accent-color {
+  color: $navy-blue !important;
+}
+
 //Overlay
 
 .overlay {
@@ -169,6 +177,12 @@ a {
 // Media Queries Section
 @mixin media($width) {
   @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-media($width) {
+  @media screen and (min-width: $width) {
     @content;
   }
 }

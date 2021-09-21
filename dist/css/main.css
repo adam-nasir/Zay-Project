@@ -149,6 +149,14 @@ a {
   color: #2c6bbd;
 }
 
+.current {
+  color: #4b8ce0 !important;
+}
+
+.accent-color {
+  color: #2c6bbd !important;
+}
+
 .overlay {
   position: fixed;
   height: 100%;
@@ -225,7 +233,7 @@ header {
 .main-nav {
   height: 100%;
   background: #363636;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .main-nav .container {
@@ -268,10 +276,6 @@ header {
 }
 
 .main-nav .nav-link a:hover {
-  color: #4b8ce0;
-}
-
-.main-nav .nav-link a:nth-child(2) {
   color: #4b8ce0;
 }
 
@@ -620,6 +624,82 @@ input[type="email"] {
 }
 
 /*---Media Queries---*/
+.about-para-style {
+  margin-top: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.about-heading {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.25rem;
+}
+
+/* ---- About Showcase Section ---- */
+.about-section {
+  height: 100vh;
+  background: linear-gradient(183deg, rgba(0, 0, 0, 0.253) 100%, rgba(255, 255, 255, 0) 100%), url("../../images/about-page/about-showcase-bg.jpg") no-repeat center center/cover;
+}
+
+.about-section .container {
+  display: grid;
+}
+
+.about-section .primary-about-head {
+  margin-bottom: 1.75rem;
+}
+
+/* ---- About Story Section ---- */
+.about-story-section {
+  background: #363636;
+}
+
+.about-story-section p {
+  margin-bottom: 2rem;
+}
+
+/* ---- About Values Section ---- */
+.about-values-section {
+  background: #2c2c2c;
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.card-img {
+  width: 90px;
+  height: 90px;
+  margin: 0.55rem auto;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.card-para {
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6rem;
+}
+
+/* ---- About Charity Section ---- */
+.about-charity-section {
+  background: #363636;
+}
+
+.about-charity-section p {
+  margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 992px) {
   .container {
     width: 100%;
@@ -1189,5 +1269,221 @@ input[type="email"] {
   }
 }
 
-/* Catagories Section Styling */
+/*=============================*/
+/*||       ABOUT PAGE        ||*/
+/*=============================*/
+@media screen and (min-width: 768px) {
+  .about-story-section .container,
+  .about-charity-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-story-section .about-story-content,
+  .about-story-section .about-charity-content,
+  .about-charity-section .about-story-content,
+  .about-charity-section .about-charity-content {
+    align-self: center;
+  }
+}
+
+.about-para-style {
+  margin-top: 1.2rem;
+  line-height: 1.6rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .about-para-style {
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+.about-heading {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about-heading {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-heading {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ---- About Showcase Section ---- */
+.about-section {
+  height: 100%;
+  background: linear-gradient(183deg, rgba(0, 0, 0, 0.253) 100%, rgba(255, 255, 255, 0) 100%), url("../../images/about-page/about-showcase-bg.jpg") no-repeat center center/cover;
+}
+
+@media screen and (min-width: 1200px) {
+  .about-section {
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-section .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.about-section .primary-about-head {
+  margin-bottom: 1.75rem;
+}
+
+@media screen and (min-width: 360px) {
+  .about-section .primary-about-head,
+  .about-section .secondary-about-head {
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 0.4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-section .primary-about-head,
+  .about-section .secondary-about-head {
+    font-size: 2.7rem;
+    line-height: 2.7rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-section .primary-about-head,
+  .about-section .secondary-about-head {
+    font-size: 2.7rem;
+    line-height: 2.7rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-section .primary-about-head,
+  .about-section .secondary-about-head {
+    font-size: 3.7rem;
+    line-height: 3.7rem;
+    letter-spacing: 0.7rem;
+  }
+}
+
+/* ---- About Story Section ---- */
+.about-story-section {
+  background: #363636;
+}
+
+.about-story-section p {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about-story-section img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-story-section img {
+    height: 100%;
+  }
+}
+
+/* ---- About Values Section ---- */
+@media screen and (min-width: 840px) {
+  .about-value-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    display: block;
+  }
+}
+
+.card-img {
+  width: 90px;
+  height: 90px;
+  margin: 0.55rem auto;
+}
+
+@media screen and (min-width: 768px) {
+  .card-img {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.card-para {
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card-para {
+    font-size: 1rem;
+  }
+}
+
+/* ---- About Charity Section ---- */
+.about-charity-section {
+  background: #363636;
+}
+
+.about-charity-section p {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about-charity-section img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-charity-section img {
+    height: 100%;
+  }
+}
 /*# sourceMappingURL=main.css.map */

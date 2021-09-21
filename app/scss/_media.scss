@@ -532,14 +532,206 @@ input[type="email"] {
     border-bottom: none;
   }
 }
-// .footer-social-media {
-//   margin-top: 1.7rem;
 
-//   a {
-//     color: $primary-font-color;
-//     font-size: 1.6rem;
-//     padding: 0 0.5rem;
-//   }
-// }
+/*=============================*/
+/*||       ABOUT PAGE        ||*/
+/*=============================*/
 
-/* Catagories Section Styling */
+.about-story-section,
+.about-charity-section {
+  .container {
+    @include min-media($viewport-7) {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 2.2rem;
+    }
+  }
+
+  .about-story-content,
+  .about-charity-content {
+    @include min-media($viewport-7) {
+      align-self: center;
+    }
+  }
+}
+
+.about-para-style {
+  margin-top: 1.2rem;
+  line-height: 1.6rem;
+  font-size: 1rem;
+
+  @include min-media($viewport-7) {
+  }
+
+  @include min-media($viewport-9) {
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+  }
+
+  @include min-media($viewport-12) {
+  }
+}
+
+.about-heading {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.25rem;
+
+  @include min-media($viewport-7) {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @include min-media($viewport-9) {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @include min-media($viewport-12) {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ---- About Showcase Section ---- */
+
+.about-section {
+  height: 100%;
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.253) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/about-page/about-showcase-bg.jpg") no-repeat center
+      center/cover;
+  @include min-media($viewport-12) {
+    height: 100vh;
+  }
+  .container {
+    @include min-media($viewport-7) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  .primary-about-head {
+    margin-bottom: 1.75rem;
+  }
+
+  .primary-about-head,
+  .secondary-about-head {
+    @include min-media($about-hero-text-iphone) {
+      text-transform: uppercase;
+      font-size: 2rem;
+      line-height: 2rem;
+      letter-spacing: 0.4rem;
+    }
+
+    @include min-media($viewport-7) {
+      font-size: 2.7rem;
+      line-height: 2.7rem;
+      letter-spacing: 0.3rem;
+    }
+
+    @include min-media($viewport-9) {
+      font-size: 2.7rem;
+      line-height: 2.7rem;
+      letter-spacing: 0.3rem;
+    }
+
+    @include min-media($viewport-12) {
+      font-size: 3.7rem;
+      line-height: 3.7rem;
+      letter-spacing: 0.7rem;
+    }
+  }
+}
+
+/* ---- About Story Section ---- */
+
+.about-story-section {
+  background: $secondary-color;
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  img {
+    @include min-media($viewport-7) {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+    @include min-media($viewport-9) {
+      height: 100%;
+    }
+  }
+}
+
+/* ---- About Values Section ---- */
+
+.about-value-cards {
+  @include min-media(840px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+}
+.card {
+  @include min-media($viewport-7) {
+    // padding: 2rem;
+    display: block;
+  }
+
+  &-img {
+    width: 90px;
+    height: 90px;
+    margin: 0.55rem auto;
+
+    @include min-media($viewport-7) {
+      width: 95px;
+      height: 95px;
+    }
+  }
+
+  &-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+
+  &-para {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.6rem;
+
+    @include min-media($viewport-7) {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* ---- About Charity Section ---- */
+.about-charity-section {
+  background: $secondary-color;
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  img {
+    @include min-media($viewport-7) {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+    @include min-media($viewport-9) {
+      height: 100%;
+    }
+  }
+}

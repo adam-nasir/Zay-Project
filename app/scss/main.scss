@@ -46,7 +46,7 @@ header {
 .main-nav {
   height: 100%;
   background: $secondary-color;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 
   .container {
     display: grid;
@@ -82,9 +82,6 @@ header {
       padding: 0rem 2.9rem;
       transition: color 0.5s ease, font-weight 0.2s ease;
       &:hover {
-        color: $light-blue;
-      }
-      &:nth-child(2) {
         color: $light-blue;
       }
     }
@@ -464,5 +461,5 @@ input[type="email"] {
 //-----------------------//
 
 /*---Media Queries---*/
-
+@import "about";
 @import "media";

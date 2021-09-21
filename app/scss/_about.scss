@@ -1,0 +1,82 @@
+.about-para-style {
+  margin-top: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.about-heading {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.25rem;
+}
+
+/* ---- About Showcase Section ---- */
+
+.about-section {
+  height: 100vh;
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.253) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/about-page/about-showcase-bg.jpg") no-repeat center
+      center/cover;
+
+  .container {
+    display: grid;
+  }
+
+  .primary-about-head {
+    margin-bottom: 1.75rem;
+  }
+}
+
+/* ---- About Story Section ---- */
+
+.about-story-section {
+  background: $secondary-color;
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ---- About Values Section ---- */
+.about-values-section {
+  background: $primary-color;
+  text-align: center;
+}
+.card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+
+  &-img {
+    width: 90px;
+    height: 90px;
+    margin: 0.55rem auto;
+  }
+
+  &-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+
+  &-para {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+
+/* ---- About Charity Section ---- */
+.about-charity-section {
+  background: $secondary-color;
+
+  p {
+    margin-bottom: 2rem;
+  }
+}

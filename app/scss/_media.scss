@@ -14,14 +14,13 @@
     font-size: 0.75rem;
   }
 }
-//Info Nav Styling
-.info-nav {
-  @include media($viewport-7) {
+
+//Main Nav Styling
+.overlay {
+  @include min-media($viewport-9) {
     display: none;
   }
 }
-
-//Main Nav Styling
 
 .main-nav {
   .container {
@@ -542,8 +541,8 @@ input[type="email"] {
   .container {
     @include min-media($viewport-7) {
       display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 2.2rem;
+      grid-template-columns: 1fr 2fr;
+      gap: 2.5rem;
     }
   }
 
@@ -585,13 +584,7 @@ input[type="email"] {
   }
 
   @include min-media($viewport-9) {
-    font-size: 2.5rem;
-    line-height: 3rem;
-    margin-bottom: 1.5rem;
-  }
-
-  @include min-media($viewport-12) {
-    font-size: 2.2rem;
+    font-size: 2.9rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
   }
@@ -600,14 +593,6 @@ input[type="email"] {
 /* ---- About Showcase Section ---- */
 
 .about-section {
-  height: 100%;
-  background: linear-gradient(
-      183deg,
-      rgba(0, 0, 0, 0.253) 100%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    url("../../images/about-page/about-showcase-bg.jpg") no-repeat center
-      center/cover;
   @include min-media($viewport-12) {
     height: 100vh;
   }
@@ -684,8 +669,11 @@ input[type="email"] {
 }
 .card {
   @include min-media($viewport-7) {
-    // padding: 2rem;
     display: block;
+  }
+
+  @include min-media($viewport-9) {
+    padding: 1rem 2rem;
   }
 
   &-img {
@@ -719,9 +707,20 @@ input[type="email"] {
 /* ---- About Charity Section ---- */
 .about-charity-section {
   background: $secondary-color;
+  .container {
+    @include min-media($viewport-7) {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
 
   p {
     margin-bottom: 2rem;
+  }
+
+  .about-charity-content {
+    @include min-media($viewport-7) {
+      order: 2;
+    }
   }
 
   img {
@@ -729,6 +728,7 @@ input[type="email"] {
       height: 400px;
       width: 100%;
       object-fit: cover;
+      order: 1;
     }
     @include min-media($viewport-9) {
       height: 100%;

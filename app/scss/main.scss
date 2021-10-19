@@ -8,38 +8,6 @@ header {
   top: 0;
   z-index: 999999;
 }
-//Info Nav Styling
-.info-nav {
-  padding: 0.65rem 0;
-  background: rgb(66, 66, 66);
-
-  a {
-    color: $primary-font-color;
-    font-size: 0.75rem;
-    display: inline-block;
-  }
-  .info {
-    a {
-      i,
-      span {
-        display: inline-block;
-      }
-      i {
-        padding: 0 0.5rem;
-      }
-    }
-  }
-
-  .social-media {
-    a {
-      margin: 0 0.5rem;
-
-      &:hover {
-        color: $light-blue;
-      }
-    }
-  }
-}
 
 //Main Nav Styling
 
@@ -74,12 +42,12 @@ header {
   .nav-link {
     justify-self: center;
     align-self: center;
-    font-weight: 200;
-    font-size: 1.2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
     margin: 1.5rem auto;
     a {
       color: $primary-font-color;
-      padding: 0rem 2.9rem;
+      padding: 0rem 1.5rem;
       transition: color 0.5s ease, font-weight 0.2s ease;
       &:hover {
         color: $light-blue;
@@ -97,7 +65,6 @@ header {
   }
 
   .icon-bar {
-    padding-top: 0.7rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-self: center;

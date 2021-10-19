@@ -202,34 +202,6 @@ header {
   z-index: 999999;
 }
 
-.info-nav {
-  padding: 0.65rem 0;
-  background: #424242;
-}
-
-.info-nav a {
-  color: #f3cdcd;
-  font-size: 0.75rem;
-  display: inline-block;
-}
-
-.info-nav .info a i,
-.info-nav .info a span {
-  display: inline-block;
-}
-
-.info-nav .info a i {
-  padding: 0 0.5rem;
-}
-
-.info-nav .social-media a {
-  margin: 0 0.5rem;
-}
-
-.info-nav .social-media a:hover {
-  color: #4b8ce0;
-}
-
 .main-nav {
   height: 100%;
   background: #363636;
@@ -264,14 +236,14 @@ header {
 .main-nav .nav-link {
   justify-self: center;
   align-self: center;
-  font-weight: 200;
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   margin: 1.5rem auto;
 }
 
 .main-nav .nav-link a {
   color: #f3cdcd;
-  padding: 0rem 2.9rem;
+  padding: 0rem 1.5rem;
   transition: color 0.5s ease, font-weight 0.2s ease;
 }
 
@@ -289,7 +261,6 @@ header {
 }
 
 .main-nav .icon-bar {
-  padding-top: 0.7rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-self: center;
@@ -639,7 +610,7 @@ input[type="email"] {
 /* ---- About Showcase Section ---- */
 .about-section {
   height: 100vh;
-  background: linear-gradient(183deg, rgba(0, 0, 0, 0.253) 100%, rgba(255, 255, 255, 0) 100%), url("../../images/about-page/about-showcase-bg.jpg") no-repeat center center/cover;
+  background: linear-gradient(183deg, rgba(0, 0, 0, 0.253) 100%, rgba(255, 255, 255, 0) 100%), url("../../images/about-page/about-bg-1.jpg") no-repeat center center/cover;
 }
 
 .about-section .container {
@@ -718,8 +689,8 @@ input[type="email"] {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .info-nav {
+@media screen and (min-width: 992px) {
+  .overlay {
     display: none;
   }
 }
@@ -1276,8 +1247,8 @@ input[type="email"] {
   .about-story-section .container,
   .about-charity-section .container {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 2.2rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
   }
 }
 
@@ -1320,26 +1291,13 @@ input[type="email"] {
 
 @media screen and (min-width: 992px) {
   .about-heading {
-    font-size: 2.5rem;
-    line-height: 3rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .about-heading {
-    font-size: 2.2rem;
+    font-size: 2.9rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
   }
 }
 
 /* ---- About Showcase Section ---- */
-.about-section {
-  height: 100%;
-  background: linear-gradient(183deg, rgba(0, 0, 0, 0.253) 100%, rgba(255, 255, 255, 0) 100%), url("../../images/about-page/about-showcase-bg.jpg") no-repeat center center/cover;
-}
-
 @media screen and (min-width: 1200px) {
   .about-section {
     height: 100vh;
@@ -1433,6 +1391,12 @@ input[type="email"] {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .card {
+    padding: 1rem 2rem;
+  }
+}
+
 .card-img {
   width: 90px;
   height: 90px;
@@ -1469,8 +1433,20 @@ input[type="email"] {
   background: #363636;
 }
 
+@media screen and (min-width: 768px) {
+  .about-charity-section .container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
 .about-charity-section p {
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about-charity-section .about-charity-content {
+    order: 2;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1478,6 +1454,7 @@ input[type="email"] {
     height: 400px;
     width: 100%;
     object-fit: cover;
+    order: 1;
   }
 }
 

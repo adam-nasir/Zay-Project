@@ -1,0 +1,74 @@
+/* ---- Men's Showcase Section ---- */
+
+.men-showcase-text {
+  margin-right: 3rem;
+}
+
+.men-showcase-text h1 {
+  line-height: 1;
+  font-size: 4.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.men-showcase-text p {
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* ---- Clothing Catagories Section ---- */
+
+.outwear-catagories,
+.t-shirt-catagories,
+.hoodies-sweater-catagories,
+.demin-catagories {
+  a {
+    padding-top: 1rem;
+    font-size: 3.7rem;
+    line-height: 1;
+  }
+}
+
+.outwear-catagories {
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.178) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/shop-page/men-shop-page/men-catagories-cards/outwear.jpg")
+      no-repeat center center/ cover;
+  margin-right: 1.3rem;
+}
+
+.t-shirt-catagories {
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.144) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/shop-page/men-shop-page/men-catagories-cards/t-shirt.jpg")
+      no-repeat center center/ cover;
+  margin-left: 1.3rem;
+}
+
+.hoodies-sweater-catagories {
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.212) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/shop-page/men-shop-page/men-catagories-cards/hoodies-and-sweater.jpg")
+      no-repeat center center/ cover;
+
+  margin-left: 1.3rem;
+}
+
+.demin-catagories {
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.144) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/shop-page/men-shop-page/men-catagories-cards/Demin.jpg")
+      no-repeat center center/ cover;
+  margin-right: 1.3rem;
+}

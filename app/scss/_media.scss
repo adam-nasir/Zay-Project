@@ -1,3 +1,9 @@
+// body {
+//   @include min-media($viewport-9) {
+//     overflow: auto !important;
+//   }
+// }
+
 //Global Classes
 .container {
   @include media($viewport-9) {
@@ -9,57 +15,84 @@
   @include media($viewport-9) {
     font-size: 1rem;
   }
+}
+
+.add-to-cart-button {
+  @include min-media($viewport-9) {
+    font-size: 1.45rem;
+  }
+}
+
+.size-chart-component {
+  &-title {
+    @include min-media($viewport-9) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &-options {
+    gap: 0.8rem;
+  }
+
+  &-option {
+    @include min-media($viewport-9) {
+      width: 60px;
+      height: 54px;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.catagories-card {
+  @include media($viewport-9) {
+    margin: 1rem;
+    height: 500px;
+    width: 100%;
+    background-position: 32% 39%;
+  }
 
   @include media($viewport-4) {
-    font-size: 0.75rem;
+    height: 310px;
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  p {
+    @include media($viewport-4) {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      border: 4px solid $primary-font-color;
+    }
+  }
+}
+
+.hero-text {
+  @include media($viewport-9) {
+    margin-bottom: 2.5rem;
+  }
+
+  @include media($viewport-4) {
+    margin-right: 0rem;
+  }
+}
+
+.site-location {
+  p {
+    @include min-media($viewport-9) {
+      font-weight: 600;
+      letter-spacing: 0.24rem;
+      text-align: left;
+      font-size: 0.95rem;
+    }
   }
 }
 
 //Main Nav Styling
-.overlay {
-  @include min-media($viewport-9) {
-    display: none;
-  }
-}
 
-.main-nav {
+.desktop-nav {
   .container {
     @include media($viewport-9) {
       grid-template-columns: 2fr 2fr;
-    }
-  }
-
-  .nav-link {
-    @include media($viewport-9) {
-      position: fixed;
-      background-color: $secondary-color;
-      height: 100%;
-      width: 14em;
-      top: 0;
-      left: 0;
-      z-index: 9999999;
-      display: flex;
-      margin: 0rem;
-      flex-direction: column;
-
-      transform: translateX(-276px);
-    }
-
-    a {
-      @include media($viewport-12) {
-        padding: 0rem 1.7rem;
-      }
-
-      @include media($viewport-9) {
-        padding: 1.5rem 1.5rem 1.5rem 0.8rem;
-        font-size: 1.9rem;
-        font-weight: 600;
-      }
-    }
-    .exit-button {
-      @include media($viewport-9) {
-        display: block;
-      }
     }
   }
 
@@ -91,6 +124,135 @@
   }
 }
 
+.desktop-nav-list {
+  @include media($viewport-9) {
+    display: none;
+  }
+}
+
+.mobile-nav-list {
+  @include media($viewport-9) {
+    position: fixed;
+    background-color: $primary-color;
+    height: 100%;
+    width: 16em;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: flex;
+    margin: 0rem;
+    flex-direction: column;
+    transform: translateX(-300px);
+    overflow: auto;
+  }
+
+  @include min-media($viewport-9) {
+    display: none;
+  }
+}
+
+.mobile-nav-link {
+  @include media($viewport-9) {
+    padding: 0.5rem 0.5rem 0.5rem 0.8rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    display: inline-block;
+  }
+}
+
+.chevron-down {
+  margin-right: 1rem;
+}
+
+.desktop-nav-item {
+  @include min-media($viewport-9) {
+    padding: 1.75rem 0.5rem;
+  }
+}
+
+.desktop-nav-item .c-t-n-s__list {
+  @include min-media($viewport-9) {
+    position: absolute;
+    background: $dark-line-color;
+    top: 90px;
+    padding: 1.5rem;
+    display: flex;
+    left: 52%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 400ms ease 0ms, visibility 1ms linear 400ms;
+  }
+
+  @include both-media($viewport-9, $men-women-nav-bar-tweak) {
+    display: block;
+  }
+
+  @include media($viewport-9) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.desktop-nav-item:hover .c-t-n-s__list,
+.desktop-nav-item:hover .c-t-n-s__list {
+  @include min-media($viewport-9) {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.desktop-women-catagories-item .c-t-n-s__list {
+  @include min-media($viewport-9) {
+    left: 58%;
+  }
+}
+
+.exit-button {
+  @include media($viewport-9) {
+    display: block;
+  }
+}
+
+.a-t-c {
+  &__continue-shopping {
+    background: $secondary-color;
+    padding: 1.5rem;
+
+    &-btn {
+      display: block;
+      background: transparent;
+      color: $primary-font-color;
+      border: none;
+      font-family: "Public Sans", sans-serif;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  &-items-body {
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  &-subtotal-section {
+    padding: 1.4rem;
+    background: $secondary-color;
+
+    .subtotal {
+      font-size: 1.4rem;
+      &_title {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+#a-t-c__continue-shopping-arrow {
+  margin-left: 0;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
 /* Showcase Section Styling */
 .showcase {
   @include media($viewport-9) {
@@ -108,14 +270,6 @@
 }
 
 .showcase-text {
-  @include media($viewport-9) {
-    margin-bottom: 2.5rem;
-  }
-
-  @include media($viewport-4) {
-    margin-right: 0rem;
-  }
-
   h4 {
     //Tweakpoint
     @include media($hero-text) {
@@ -163,43 +317,7 @@
     padding: 1rem;
   }
 }
-.men-catagories {
-  @include media($viewport-7) {
-    // background: url("../../images/catagories-section/man-small.jpg") no-repeat
-    //   center center/ cover;
-  }
-}
 
-.women-catagories {
-  @include media($viewport-7) {
-    // background: url("../../images/catagories-section/woman-small.jpg") no-repeat
-    //   center center/ cover;
-  }
-}
-
-.men-catagories,
-.women-catagories {
-  @include media($viewport-9) {
-    margin: 1rem;
-    height: 500px;
-    width: 100%;
-    background-position: 32% 39%;
-  }
-
-  @include media($viewport-4) {
-    height: 310px;
-    width: 100%;
-    padding: 1.2rem;
-  }
-
-  p {
-    @include media($viewport-4) {
-      font-size: 1.6rem;
-      line-height: 1.9rem;
-      border: 4px solid $primary-font-color;
-    }
-  }
-}
 /* Email Scription Section */
 .member-email-section {
   @include media($viewport-9) {
@@ -243,24 +361,6 @@
 
   @include media($viewport-4) {
     width: 100%;
-  }
-}
-
-.form-button {
-  @include media($viewport-7) {
-    margin-top: 1.2rem;
-    font-size: 1.1rem;
-  }
-
-  @include media($viewport-4) {
-    margin-top: 1.2rem;
-    font-size: 0.9rem;
-  }
-}
-
-input[type="email"] {
-  @include media($viewport-7) {
-    font-size: 1.2rem;
   }
 }
 
@@ -319,16 +419,6 @@ input[type="email"] {
   @include media($fall-sale-text) {
     font-size: 1.3rem;
   }
-
-  //   @include media($viewport-9) {
-  //     font-size: 1.5rem;
-  //     padding-bottom: 0rem;
-  //   }
-
-  //   @include media($viewport-7) {
-  //     font-size: 1.2rem;
-  //     padding-bottom: 0rem;
-  //   }
 
   @include media($viewport-4) {
     font-size: 0.95rem;
@@ -596,6 +686,14 @@ input[type="email"] {
   @include min-media($viewport-12) {
     height: 100vh;
   }
+
+  @include both-media($viewport-9, $viewport-12) {
+    height: 100%;
+  }
+
+  @include media($viewport-7) {
+    height: 100%;
+  }
   .container {
     @include min-media($viewport-7) {
       display: grid;
@@ -733,5 +831,349 @@ input[type="email"] {
     @include min-media($viewport-9) {
       height: 100%;
     }
+  }
+}
+
+/*=============================*/
+/*||      SHOP MEN PAGE      ||*/
+/*=============================*/
+
+.men-showcase-text,
+.women-showcase-text {
+  @include min-media($viewport-3) {
+    margin-right: 0;
+  }
+
+  @include min-media($viewport-9) {
+    margin-right: 3rem;
+  }
+}
+
+.men-showcase-text h1,
+.women-showcase-text h1 {
+  @include min-media($viewport-3) {
+    font-size: 2.7rem;
+  }
+
+  @include min-media($viewport-7) {
+    font-size: 3.5rem;
+  }
+
+  @include min-media($viewport-9) {
+    font-size: 3rem;
+  }
+
+  @include min-media($viewport-12) {
+    font-size: 4.2rem;
+  }
+}
+
+/* ---- Clothing Catagories Section ---- */
+
+.outwear-catagories,
+.t-shirt-catagories,
+.hoodies-sweater-catagories,
+.demin-catagories {
+  a {
+    @include min-media($viewport-3) {
+      font-size: 1.5rem;
+      padding-top: 0rem;
+    }
+
+    @include min-media($viewport-4) {
+      font-size: 2.3rem;
+      padding-top: 0rem;
+    }
+
+    @include min-media($viewport-7) {
+      font-size: 3rem;
+      padding-top: 1rem;
+    }
+
+    @include min-media($viewport-9) {
+      font-size: 3.8rem;
+      padding-top: 1rem;
+    }
+  }
+}
+
+.women-outwear-catagories,
+.women-t-shirt-catagories,
+.women-hoodies-sweater-catagories,
+.women-demin-catagories,
+.women-dresses-catagories,
+.women-blouses-catagories {
+  a {
+    @include min-media($viewport-3) {
+      font-size: 1.5rem;
+      padding-top: 0rem;
+    }
+
+    @include min-media($viewport-4) {
+      font-size: 2.3rem;
+      padding-top: 0rem;
+    }
+
+    @include min-media($viewport-7) {
+      font-size: 3rem;
+      padding-top: 1rem;
+    }
+
+    @include min-media($viewport-9) {
+      font-size: 3.8rem;
+      padding-top: 1rem;
+    }
+  }
+}
+
+/*=============================*/
+/*||     CATAGORIES PAGE      ||*/
+/*=============================*/
+.catagories-template-main-nav {
+  .container {
+    @include min-media($viewport-9) {
+    }
+  }
+}
+
+.catagories-template {
+  .container {
+    @include min-media($viewport-9) {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      gap: 0rem;
+    }
+
+    @include min-media($viewport-12) {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      gap: 0rem;
+    }
+  }
+}
+
+.catagories-template__nav {
+  @include min-media($viewport-9) {
+    display: block;
+  }
+}
+
+.signup-banner {
+  @include min-media($viewport-9) {
+    padding: 1.5rem;
+  }
+}
+
+.signup-banner__text {
+  @include min-media($viewport-9) {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+
+// description
+.catagories-template__content {
+  &-title {
+    @include min-media($viewport-9) {
+      text-align: left;
+      font-size: 2.5rem;
+    }
+  }
+
+  // description
+
+  &-description {
+    @include min-media($about-hero-section-ipad-pro) {
+      width: 90%;
+    }
+    @include min-media($viewport-9) {
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.6;
+      width: 70%;
+    }
+  }
+
+  &-gallary {
+    @include min-media($viewport-7) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include min-media($viewport-9) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include min-media($viewport-12) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &-card {
+      @include min-media($viewport-3) {
+        margin-bottom: 3rem;
+      }
+      &-text {
+        @include min-media($viewport-3) {
+          font-size: 0.8rem;
+        }
+      }
+
+      &__img-content {
+        &:hover img {
+          @include media($viewport-4) {
+            filter: blur(0px);
+          }
+        }
+
+        &__add-to-cart {
+          @include media($viewport-4) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*=============================*/
+/*||     CLOTHING PAGE        ||*/
+/*=============================*/
+
+#c-t__site-location {
+  margin-bottom: 0.5rem;
+  & p {
+    @include min-media($viewport-9) {
+      font-size: 1rem;
+    }
+    text-align: left;
+  }
+}
+
+.c-t {
+  &__content {
+    @include min-media($viewport-7) {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      gap: 2rem;
+    }
+  }
+
+  &__grid_2 {
+    @include min-media($viewport-7) {
+      align-self: center;
+    }
+  }
+
+  &__header {
+    @include min-media($viewport-7) {
+    }
+
+    &-title {
+      @include min-media($viewport-12) {
+        font-size: 2rem;
+      }
+
+      @include min-media($viewport-7) {
+        width: 59%;
+      }
+    }
+  }
+
+  &__price {
+    @include min-media($viewport-9) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__color {
+    &-title {
+      @include min-media($viewport-9) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__product-description {
+    &-title {
+      @include min-media($viewport-9) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &-text {
+      @include min-media($viewport-9) {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+/*=============================*/
+/*||          FORM           ||*/
+/*=============================*/
+
+//Form Class Styling
+
+.sign-in-form,
+.sign-up-form {
+  @include media($form-tweakpoint) {
+    padding: 2rem 1.5rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  @include media($viewport-4) {
+    padding: 2rem 1.5rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  @include media($viewport-3) {
+    padding: 2rem 1.5rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-content {
+    @include media($viewport-4) {
+      width: 100%;
+      margin: auto;
+    }
+
+    @include media($viewport-3) {
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  .global-logo {
+    @include media($viewport-4) {
+      font-size: 2.3rem;
+    }
+
+    @include media($viewport-3) {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__title {
+    @include media($viewport-4) {
+      font-size: 1rem;
+    }
+
+    @include media($viewport-3) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.sign-in-up-button {
+  @include media($viewport-4) {
+    font-size: 1rem;
+  }
+
+  @include media($viewport-3) {
+    font-size: 1rem;
   }
 }

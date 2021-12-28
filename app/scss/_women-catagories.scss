@@ -1,0 +1,99 @@
+/* ---- Men's Showcase Section ---- */
+
+.women-showcase-text {
+  margin-right: 3rem;
+}
+
+.women-showcase-text h1 {
+  line-height: 1;
+  font-size: 4.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.women-showcase-text p {
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* ---- Clothing Catagories Section ---- */
+
+.women-outwear-catagories,
+.women-t-shirt-catagories,
+.women-hoodies-sweater-catagories,
+.women-demin-catagories,
+.women-dresses-catagories,
+.women-blouses-catagories {
+  a {
+    padding-top: 1rem;
+    font-size: 3.7rem;
+    line-height: 1;
+  }
+}
+
+.women-outwear-catagories {
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.308) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/shop-page/women-shop-page/women-catagories-cards/outwear.jpg")
+      no-repeat center center/ cover;
+  margin-right: 1.3rem;
+}
+
+.women-t-shirt-catagories {
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.295) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/shop-page/women-shop-page/women-catagories-cards/t-shirt.jpg")
+      no-repeat center center/ cover;
+  margin-left: 1.3rem;
+}
+
+.women-hoodies-sweater-catagories {
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.178) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/shop-page/women-shop-page/women-catagories-cards/sweater.jpg")
+      no-repeat center center/ cover;
+
+  margin-left: 1.3rem;
+}
+
+.women-demin-catagories {
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.288) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/shop-page/women-shop-page/women-catagories-cards/demins.jpg")
+      no-repeat center center/ cover;
+  margin-right: 1.3rem;
+}
+
+.women-dresses-catagories {
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.247) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/shop-page/women-shop-page/women-catagories-cards/dresses.jpg")
+      no-repeat center center/ cover;
+  margin-right: 1.3rem;
+}
+
+.women-blouses-catagories {
+  background: linear-gradient(
+      183deg,
+      rgba(0, 0, 0, 0.288) 100%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../../images/shop-page/women-shop-page/women-catagories-cards/blouses.jpg")
+      no-repeat center center/ cover;
+
+  margin-left: 1.3rem;
+}

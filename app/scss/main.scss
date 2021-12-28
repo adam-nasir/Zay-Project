@@ -1,20 +1,22 @@
 @import "variables";
 @import "global";
 
+// Form
+@import "form";
+
 //Header Styling
 
-header {
+.desktop-header {
   position: sticky;
   top: 0;
-  z-index: 999999;
+  z-index: 6;
 }
 
 //Main Nav Styling
 
-.main-nav {
-  height: 100%;
+.desktop-nav {
   background: $secondary-color;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
 
   .container {
     display: grid;
@@ -39,31 +41,6 @@ header {
     }
   }
 
-  .nav-link {
-    justify-self: center;
-    align-self: center;
-    font-weight: 500;
-    font-size: 1.1rem;
-    margin: 1.5rem auto;
-    a {
-      color: $primary-font-color;
-      padding: 0rem 1.5rem;
-      transition: color 0.5s ease, font-weight 0.2s ease;
-      &:hover {
-        color: $light-blue;
-      }
-    }
-
-    .exit-button {
-      background: lighten($secondary-color, 20%);
-      font-size: 2rem;
-      padding: 0.8rem;
-      cursor: pointer;
-      text-align: right;
-      display: none;
-    }
-  }
-
   .icon-bar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -78,20 +55,69 @@ header {
 
     .cart {
       position: relative;
+      cursor: pointer;
 
       .number-of-item {
         font-family: "Public Sans", sans-serif;
         position: absolute;
         font-size: 0.8rem;
-        top: -70%;
-        left: 54%;
-        background: $primary-font-color;
+        top: -58%;
+        left: 72%;
+        background: #f3cdcd;
         border-radius: 50px;
-        padding: 0.2rem;
+        padding: 0.25rem;
         font-weight: 600;
-        color: $primary-color;
+        color: #2c2c2c;
       }
     }
+  }
+}
+
+.desktop-nav-list {
+  justify-self: center;
+  align-self: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.exit-button {
+  background: $secondary-color;
+  font-size: 2rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  text-align: right;
+  display: none;
+}
+
+/* Small Catagories Nav Section */
+
+//Small Nav
+
+.desktop-nav-header {
+  i {
+    padding: 0.8rem;
+    transition: 0.2s transform ease;
+  }
+}
+
+.c-t-n-s__list {
+  display: none;
+}
+
+.c-t-n-s__title {
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding: 0.75rem 1rem 0.75rem 0.8rem;
+}
+
+.c-t-n-s__sublist-link {
+  display: inline-block;
+  font-size: 0.95rem;
+  color: $primary-font-color;
+  padding: 0.5rem 0rem 0.5rem 2.3rem;
+  transition: color 0.5s ease, font-weight 0.2s ease;
+  &:hover {
+    color: $light-blue;
   }
 }
 
@@ -105,14 +131,6 @@ header {
 .showcase-text {
   align-self: center;
   text-transform: uppercase;
-  margin-right: 1.6rem;
-
-  h4 {
-    font-size: 0.9rem;
-    letter-spacing: 0.5rem;
-    padding-bottom: 0.2rem;
-    color: $third-font-color;
-  }
 
   h1 {
     font-size: 2.6rem;
@@ -137,49 +155,67 @@ header {
   z-index: 1;
 }
 
+//Add To Cart  Nav Styling
+
+.add-to-cart-nav {
+  position: fixed;
+  background-color: $primary-color;
+  height: 100%;
+  width: 25rem;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  margin: 0rem;
+  flex-direction: column;
+  transform: translateX(25rem);
+}
+
+.a-t-c {
+  &__continue-shopping {
+    background: $secondary-color;
+    padding: 1.5rem;
+
+    &-btn {
+      display: block;
+      background: transparent;
+      color: $primary-font-color;
+      border: none;
+      font-family: "Public Sans", sans-serif;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  &-items-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+  }
+
+  &-subtotal-section {
+    padding: 1.4rem;
+    background: $secondary-color;
+
+    .subtotal {
+      font-size: 1.4rem;
+      &_title {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+#a-t-c__continue-shopping-arrow {
+  margin-left: 0;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
 /* Catagories Section Styling */
 
 .catagories {
   background: $secondary-color;
-}
-
-.men-catagories,
-.women-catagories {
-  height: 600px;
-  padding: 1.7rem;
-  width: 900px;
-  position: relative;
-  p {
-    padding: 1rem;
-    font-size: 3.2rem;
-    font-weight: bold;
-    height: 100%;
-    line-height: 3rem;
-    border: 4px solid $primary-font-color;
-
-    a {
-      color: $primary-font-color;
-      position: relative;
-      z-index: 9999;
-      display: inline-block;
-      transition: color 0.6s ease;
-      &:hover {
-        color: lighten($primary-font-color, 7%);
-      }
-    }
-  }
-
-  .link-catagories {
-    width: 100%;
-    display: inline-block;
-    height: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    cursor: pointer;
-    z-index: 1;
-  }
 }
 
 .men-catagories {
@@ -240,11 +276,6 @@ header {
   letter-spacing: 0.4rem;
 }
 
-input[type="email"] {
-  font-family: inherit;
-  font-size: 1.3rem;
-}
-
 ::placeholder {
   color: $secondary-font-color;
 }
@@ -256,43 +287,27 @@ input[type="email"] {
 }
 
 .sale {
-  position: relative;
-  overflow: hidden;
-  max-width: 100vw;
-  // height: 100vh;
-  margin: 0 auto;
   display: flex;
+  justify-content: center;
+  position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    background: linear-gradient(
-      0deg,
-      rgba(65, 65, 65, 0.5495331921831232) 0%,
-      rgba(255, 255, 255, 0) 66%
-    );
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-  }
-
-  .link-fall-sale {
-    width: 100%;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+  .link-men-fall-sale,
+  .link-women-fall-sale {
     cursor: pointer;
-    z-index: 9999;
-  }
-}
 
-.sale img {
-  width: 100%;
-  height: 100%;
+    &:hover .sale-img {
+      filter: saturate(120%) grayscale(0%);
+      transform: scale(1.05);
+      transition: filter 1s ease, transform 0.5s ease;
+    }
+
+    .sale-img {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(80%);
+      transition: filter 1s ease, transform 0.5s ease;
+    }
+  }
 }
 
 .sale-info {
@@ -303,24 +318,24 @@ input[type="email"] {
   text-align: center;
   width: 100%;
   height: inherit;
-  z-index: 99999;
+  z-index: 1;
 }
 
-.sale-content-text {
-  position: relative;
-  // z-index: ;
-}
+// .sale-content-text {
+//   position: relative;
+//   // z-index: ;
+// }
 
-.link-fall-sale-info {
-  width: 100%;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  cursor: pointer;
-  z-index: 9999;
-}
+// .link-fall-sale-info {
+//   width: 100%;
+//   display: inline-block;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   cursor: pointer;
+//   z-index: 2;
+// }
 
 .sale-title {
   font-size: 4rem;
@@ -331,10 +346,10 @@ input[type="email"] {
   padding-bottom: 1rem;
 }
 
-/* Fall Fashion Show Section */
+// /* Fall Fashion Show Section */
 
 .fall-designer-section {
-  background: $terary-color;
+  background: $secondary-color;
   height: 100%;
   padding: 2rem;
 
@@ -425,8 +440,15 @@ input[type="email"] {
 }
 
 //-----------------------//
+// Page Styling          //
 //-----------------------//
 
-/*---Media Queries---*/
 @import "about";
+@import "men-catagories";
+@import "women-catagories";
+@import "catagories-template";
+@import "clothing-template";
+
+/*---Media Queries---*/
+
 @import "media";

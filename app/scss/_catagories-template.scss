@@ -1,0 +1,182 @@
+.catagories-template {
+  background: $primary-color;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+//Large Nav
+
+.catagories-template__nav {
+  padding-top: 3.2rem;
+
+  display: none;
+
+  .c-t-n__item {
+    margin-bottom: 1.5rem;
+  }
+
+  .c-t-n__title {
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .c-t-n__sublist {
+    margin-left: 1rem;
+  }
+
+  .c-t-n__sublist-link {
+    margin-bottom: 0.9rem;
+    color: $primary-font-color;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: color 0.5s ease, font-weight 0.2s ease;
+
+    &:hover {
+      color: $light-blue;
+    }
+  }
+}
+
+/* --- Catagories Template Content --- */
+
+// Sign-up banner
+
+.signup-banner {
+  background: $line-color;
+  border: 8px solid $primary-font-color;
+  text-align: center;
+  padding: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.signup-banner__text {
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+// title
+
+.catagories-template__content {
+  padding: 3rem 0 1.2rem 0;
+  &-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.65rem;
+    margin-bottom: 0.8rem;
+  }
+
+  // description
+
+  &-description {
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 2.6rem;
+  }
+
+  &-site-location {
+    margin-bottom: 1rem;
+
+    p {
+      font-weight: 600;
+      letter-spacing: 0.24rem;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+  &-gallary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+
+    &-card {
+      &__img-content {
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        &:hover img {
+          filter: blur(3px);
+        }
+
+        &:hover &__add-to-cart {
+          bottom: 0;
+        }
+
+        &__add-to-cart {
+          transition: 0.5s bottom ease;
+          transition-delay: 0.2s;
+          position: absolute;
+          z-index: 1;
+          bottom: -50%;
+          left: 0;
+          width: 100%;
+          background: $secondary-color;
+
+          .add-to-cart-button {
+            font-size: 0.9rem;
+            width: 90%;
+            margin: 0.9rem auto;
+          }
+
+          .size-chart-component {
+            padding: 1em 0;
+            border-bottom: $third-line-color 2px solid;
+
+            &-title {
+              font-weight: 600;
+              font-size: 0.9rem;
+              margin-bottom: 0.9rem;
+            }
+
+            &-options {
+              gap: 0.7rem;
+            }
+
+            &-option {
+              background: $primary-color;
+              display: flex;
+              width: 30px;
+              height: 26px;
+              border: #555555 3px solid;
+              justify-content: center;
+              align-items: center;
+              font-size: 0.8rem;
+              cursor: pointer;
+              font-weight: 600;
+              padding: 1em;
+
+              &:hover {
+                background: lighten($primary-color, 20%);
+              }
+            }
+          }
+        }
+      }
+
+      margin-bottom: 1.2rem;
+      a {
+        color: $primary-font-color;
+      }
+      img {
+        object-fit: cover;
+        transition: 0.3s filter ease;
+      }
+      &-text {
+        font-size: 0.9rem;
+        margin: 1.2rem 0;
+        &-title {
+          font-weight: 600;
+          margin-bottom: 0.8rem;
+          text-transform: capitalize;
+        }
+
+        &-price {
+          margin-top: 0.8rem;
+        }
+      }
+    }
+  }
+}

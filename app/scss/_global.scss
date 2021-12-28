@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;900&display=swap");
+
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -93,6 +96,8 @@ a {
   }
 }
 
+//Padding Y-axis
+
 .padding-y {
   &-1 {
     padding: 1rem 0;
@@ -115,8 +120,9 @@ a {
   }
 }
 
+//Components
+
 .container {
-  width: 90%;
   margin: 0 auto;
   max-width: 1400px;
   padding: 0 1.5rem;
@@ -142,12 +148,240 @@ a {
   }
 }
 
+.btn-alternate {
+  color: #969696;
+  background: $primary-color;
+  border: 4px solid $primary-font-color;
+  padding: 0.56em 0.43em;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 5px;
+  letter-spacing: -1px;
+  cursor: pointer;
+  transition: 0.5s ease background;
+
+  &:hover {
+    background: lighten($primary-color, 20%);
+  }
+}
+
+.add-to-cart-button,
+.c-t-add-to-cart-button {
+  display: block;
+  margin: 1.4rem 0;
+  width: 100%;
+  font-family: "Public San", sans-serif;
+  border: 3px solid $primary-font-color;
+  background: $secondary-color;
+  text-transform: uppercase;
+  color: $primary-font-color;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($secondary-color, 20%);
+  }
+
+  &:disabled,
+  &[disabled] {
+    border: 3px solid #999999;
+    background-color: $secondary-color;
+    color: #666666;
+    cursor: default;
+  }
+}
+
+.checkout-button {
+  display: block;
+  margin: 1.4rem 0;
+  width: 100%;
+  font-family: "Public San", sans-serif;
+  border: 3px solid $primary-font-color;
+  background: $primary-color;
+  color: $primary-font-color;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($secondary-color, 20%);
+  }
+
+  &:disabled,
+  &[disabled] {
+    border: 3px solid #999999;
+    background-color: $secondary-color;
+    color: #666666;
+    cursor: default;
+  }
+}
+.size-chart-component {
+  padding: 1.4em 0;
+  border-bottom: $third-line-color 2px solid;
+  &-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+  }
+
+  &-options {
+    gap: 0.8rem;
+  }
+
+  &-option {
+    margin-bottom: 0.9rem;
+    transition: border 0.5s ease;
+    display: flex;
+    width: 48px;
+    height: 44px;
+    border: $line-color 4px solid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover {
+      background: lighten($primary-color, 20%);
+    }
+  }
+}
+
+.site-location {
+  margin-bottom: 1rem;
+
+  p {
+    font-weight: 600;
+    letter-spacing: 0.24rem;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+// Form Stylings
+
 .global-logo {
+  color: $navy-blue;
   font-weight: 600;
   font-size: 3rem;
   a {
     color: $navy-blue;
   }
+}
+
+.color-options {
+  display: none;
+}
+
+.color-option {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  margin-right: 0.6rem;
+}
+
+.color-option-1 {
+  background: rgb(185, 177, 233);
+}
+
+.color-option-2 {
+  background: rgb(238, 220, 212);
+}
+
+.color-option-3 {
+  background: rgb(15, 31, 59);
+}
+
+.color-option-4 {
+  background: rgb(14, 46, 35);
+}
+.color-option-5 {
+  background: rgb(107, 117, 138);
+}
+
+.catagories-card {
+  height: 600px;
+  padding: 1.7rem;
+  width: 900px;
+  position: relative;
+  p {
+    padding: 1rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+    height: 100%;
+    line-height: 3rem;
+    border: 4px solid $primary-font-color;
+
+    a {
+      color: $primary-font-color;
+      position: relative;
+      z-index: 5;
+      display: inline-block;
+      transition: color 0.6s ease;
+      &:hover {
+        color: lighten($primary-font-color, 7%);
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    display: inline-block;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+    z-index: 4;
+  }
+}
+
+.hero-text {
+  margin-right: 1.6rem;
+}
+
+.hero-text__sub-text {
+  font-size: 1.1rem;
+  letter-spacing: 0.6rem;
+  padding-bottom: 0.2rem;
+  color: $third-font-color;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//Color-state
+
+.large-border-on {
+  border: 4px $primary-font-color solid;
+}
+
+.large-border-on-HARD {
+  border: 4px $primary-font-color solid !important;
+}
+
+.small-border-on {
+  border: 3px $primary-font-color solid !important;
+}
+
+.not-location {
+  color: $terary-color;
+}
+
+.current-location {
+  color: $primary-font-color;
 }
 
 .current {
@@ -158,6 +392,15 @@ a {
   color: $navy-blue !important;
 }
 
+.link-style {
+  color: $primary-font-color;
+  padding: 0rem 1.5rem;
+  transition: color 0.5s ease, font-weight 0.2s ease;
+  &:hover {
+    color: $light-blue;
+  }
+}
+
 //Overlay
 
 .overlay {
@@ -165,26 +408,13 @@ a {
   height: 100%;
   width: 100%;
   opacity: 0.8;
-  z-index: 998;
+  z-index: 8;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: $secondary-color;
   overflow: hidden;
-}
-
-// Media Queries Section
-@mixin media($width) {
-  @media screen and (max-width: $width) {
-    @content;
-  }
-}
-
-@mixin min-media($width) {
-  @media screen and (min-width: $width) {
-    @content;
-  }
 }
 
 .line {
@@ -200,16 +430,92 @@ a {
   overflow: hidden;
 }
 
-.appear {
+.smallNavAppear {
   transform: translateX(0px) !important;
   transition: 0.6s ease transform;
+}
+
+.shoppingCartAppear {
+  transform: translateX(0rem) !important;
+  transition: 0.6s ease transform;
+}
+
+.open {
+  display: block !important;
+}
+
+.display {
+  max-height: 500px !important;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.3s ease transform;
 }
 
 .no-display {
   display: none;
 }
 
-.display {
-  max-height: 500px !important;
-  transition: max-height 0.2s ease-in-out;
+.no-display-HARD {
+  display: none !important;
+}
+
+//Shopping Item
+
+.selected-item-card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 1.5rem;
+  gap: 1.2rem;
+
+  h4,
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.item-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-shopping-item-button {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  color: $primary-font-color;
+  font-size: 1.3rem;
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.visible-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s visibility ease 1s, 0.4 opacity ease 1s;
+}
+
+.shopping-item-button-exit-sign {
+}
+
+// Media Queries Section
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-media($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin both-media($minwidth, $maxwidth) {
+  @media (min-width: $minwidth) and (max-width: $maxwidth) {
+    @content;
+  }
 }

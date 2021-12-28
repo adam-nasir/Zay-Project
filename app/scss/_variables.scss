@@ -3,11 +3,14 @@ $primary-color: #2c2c2c;
 $secondary-color: #363636;
 $navy-blue: #2c6bbd;
 $light-blue: #4b8ce0;
-$primary-font-color: #f3cdcd;
+$primary-font-color: #f3d0d0;
 $secondary-font-color: #a7a7a7;
 $third-font-color: #8f8e8e;
-$terary-color: #313131;
-$line-color: #707070;
+$terary-color: #5f5f5f;
+$line-color: #555555;
+$dark-line-color: #3d3d3d;
+$third-line-color: #3a3a3a;
+$dark-form-color: #3e3e3e;
 
 //Media Queries variables
 
@@ -26,3 +29,11 @@ $fall-sale-text: 1080px;
 
 //About Tweakpoints
 $about-hero-text-iphone: 360px;
+$about-hero-section-ipad-pro: 1024px;
+
+//Men and Women Tweakpoints
+$men-women-nav-bar-tweak: 1260px;
+
+//Form Tweaks
+
+$form-tweakpoint: 814px;

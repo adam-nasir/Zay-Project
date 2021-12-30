@@ -680,7 +680,7 @@ if (
       let newSweaterAndHoodiesStringId =
         shoppingCartListItemLink.attributes[2].textContent;
       const updatedSweaterAndHoodiesStringId =
-        newSweaterAndHoodiesStringId.slice(1, 71);
+        newSweaterAndHoodiesStringId.slice(13, 83);
       let updatedSweaterAndHoodiesStringHref = `${updatedSweaterAndHoodiesStringId}${newSweaterAndHoodiesStringHref}`;
       shoppingCartListItemLink.attributes[0].textContent =
         updatedSweaterAndHoodiesStringHref;

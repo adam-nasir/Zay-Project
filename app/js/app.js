@@ -635,8 +635,8 @@ const shoppingCartListItemImgs = document.querySelectorAll(
 console.log(shoppingCartListItemImgs);
 
 if (
-  document.baseURI === "http://127.0.0.1:5501/index.html" ||
-  document.baseURI === "http://127.0.0.1:5501/about.html"
+  document.baseURI === "https://adam-nasir.github.io/Zay-Project/index.html" ||
+  document.baseURI === "https://adam-nasir.github.io/Zay-Project/about.html"
 ) {
   for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
     let newString = shoppingCartListItemImg.attributes[0].textContent.slice(

@@ -640,7 +640,7 @@ if (
 ) {
   for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
     let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
-      8,
+      9,
       50
     );
     shoppingCartListItemImg.attributes[0].textContent = newString;

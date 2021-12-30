@@ -648,23 +648,32 @@ const shoppingCartListItemLinks = document.querySelectorAll(
 
 console.log(shoppingCartListItemLinks);
 
-
-function changeHrefandSrc(URLOne, URLTwo = null, elementNumOne, searchStringOne, startingSliceNumOne, endingSliceNumOne, elementNumTwo, secondElementNumTwo, searchStringTwo, startingSliceNumTwo, endingSliceNumTwo){
-  if (
-    document.baseURI === URLOne ||
-    document.baseURI === URLTwo
-  ) {
+function changeHrefAndSrc(
+  URLOne,
+  URLTwo = null,
+  elementNumOne,
+  searchStringOne,
+  startingSliceNumOne,
+  endingSliceNumOne,
+  elementNumTwo,
+  secondElementNumTwo,
+  searchStringTwo,
+  startingSliceNumTwo,
+  endingSliceNumTwo
+) {
+  if (document.baseURI === URLOne || document.baseURI === URLTwo) {
     for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
       if (
         shoppingCartListItemImg.attributes[elementNumOne].textContent.includes(
           searchStringOne
         )
       ) {
-        let newString = shoppingCartListItemImg.attributes[elementNumOne].textContent.slice(
-          startingSliceNumOne, endingSliceNumOne
-        );
+        let newString = shoppingCartListItemImg.attributes[
+          elementNumOne
+        ].textContent.slice(startingSliceNumOne, endingSliceNumOne);
         console.log(newString);
-        shoppingCartListItemImg.attributes[elementNumOne].textContent = newString;
+        shoppingCartListItemImg.attributes[elementNumOne].textContent =
+          newString;
       }
     }
     for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
@@ -675,26 +684,34 @@ function changeHrefandSrc(URLOne, URLTwo = null, elementNumOne, searchStringOne,
       ) {
         let newStringHref =
           shoppingCartListItemLink.attributes[secondElementNumTwo].textContent;
-  
+
         let newStringId =
           shoppingCartListItemLink.attributes[elementNumTwo].textContent;
-        const updatedStringId =
-          newStringId.slice(startingSliceNumTwo, endingSliceNumTwo);
+        const updatedStringId = newStringId.slice(
+          startingSliceNumTwo,
+          endingSliceNumTwo
+        );
         let updatedStringHref = `${updatedStringId}${newStringHref}`;
         shoppingCartListItemLink.attributes[secondElementNumTwo].textContent =
           updatedStringHref;
       }
     }
-} 
+  }
+}
 
-
-changeHrefandSrc("https://adam-nasir.github.io/Zay-Project/index.html", "https://adam-nasir.github.io/Zay-Project/about.html", 0, "/men/sweaters-and-hoodies/", 9, 50, 2, 0, "/catagories-men-hoodies-and-sweaters/", 13, 83);
-
-
-
-
-
-
+changeHrefAndSrc(
+  "https://adam-nasir.github.io/Zay-Project/index.html",
+  "https://adam-nasir.github.io/Zay-Project/about.html",
+  0,
+  "/men/sweaters-and-hoodies/",
+  9,
+  50,
+  2,
+  0,
+  "/catagories-men-hoodies-and-sweaters/",
+  13,
+  83
+);
 
 //Clothing Adding Items To Cart in Clothing template
 

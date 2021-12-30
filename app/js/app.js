@@ -128,6 +128,7 @@ catagoriesGallaryCardButtons.forEach((element) => {
       price: "",
       itemNumber: "",
       URL: "",
+      location: "",
     };
 
     const cardInfo = {
@@ -137,6 +138,7 @@ catagoriesGallaryCardButtons.forEach((element) => {
       price: "",
       itemNumber: "",
       URL: "",
+      location: "",
     };
 
     //getting the name
@@ -160,6 +162,10 @@ catagoriesGallaryCardButtons.forEach((element) => {
       }
     });
 
+    //getting Location
+    cardInfo.location = `${document.location.pathname}`;
+    console.log(cardInfo.location);
+
     //getting the image
     let imgSrc =
       element.parentElement.parentElement.parentElement.children[0].children[0]
@@ -177,6 +183,10 @@ catagoriesGallaryCardButtons.forEach((element) => {
     let pricePara = document.createElement("p");
     pricePara.textContent = price;
     card.price = pricePara;
+    console.log("hello there -1");
+    //Getting URL
+    cardInfo.URL = `${document.baseURI}`;
+    console.log(cardInfo.URL);
 
     // Creat and get itemNumber
     number++;
@@ -366,10 +376,10 @@ function getDataToLocalStorage() {
 
     //Creating anchor tag
     let anchorTag = document.createElement("a");
-
     let hrefAttribute = element.URL;
     anchorTag.setAttribute("href", hrefAttribute);
-
+    anchorTag.classList.add("shopping-cart-list-item-link");
+    anchorTag.setAttribute("id", element.location);
     //Append image to anchor tag
     anchorTag.appendChild(newImg);
 
@@ -632,18 +642,49 @@ const shoppingCartListItemImgs = document.querySelectorAll(
   ".shopping-cart-list-item-img"
 );
 
-console.log(shoppingCartListItemImgs);
+const shoppingCartListItemLinks = document.querySelectorAll(
+  ".shopping-cart-list-item-link"
+);
+
+console.log(shoppingCartListItemLinks);
+// document.baseURI === "https://adam-nasir.github.io/Zay-Project/index.html" ||
+//   document.baseURI === "https://adam-nasir.github.io/Zay-Project/about.html"
 
 if (
-  document.baseURI === "https://adam-nasir.github.io/Zay-Project/index.html" ||
-  document.baseURI === "https://adam-nasir.github.io/Zay-Project/about.html"
+  document.baseURI === "http://127.0.0.1:5501/index.html" ||
+  document.baseURI === "http://127.0.0.1:5501/about.html"
 ) {
   for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
-    let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
-      9,
-      50
-    );
-    shoppingCartListItemImg.attributes[0].textContent = newString;
+    if (
+      shoppingCartListItemImg.attributes[0].textContent.includes(
+        "/men/sweaters-and-hoodies/"
+      )
+    ) {
+      let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
+        9,
+        50
+      );
+      console.log(newString);
+      shoppingCartListItemImg.attributes[0].textContent = newString;
+    }
+  }
+  for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
+    if (
+      shoppingCartListItemLink.attributes[2].textContent.includes(
+        "/catagories-men-hoodies-and-sweaters/"
+      )
+    ) {
+      let newSweaterAndHoodiesStringHref =
+        shoppingCartListItemLink.attributes[0].textContent;
+
+      let newSweaterAndHoodiesStringId =
+        shoppingCartListItemLink.attributes[2].textContent;
+      const updatedSweaterAndHoodiesStringId =
+        newSweaterAndHoodiesStringId.slice(1, 71);
+      let updatedSweaterAndHoodiesStringHref = `${updatedSweaterAndHoodiesStringId}${newSweaterAndHoodiesStringHref}`;
+      shoppingCartListItemLink.attributes[0].textContent =
+        updatedSweaterAndHoodiesStringHref;
+    }
   }
 }
 // else if (document.baseURI === "http://127.0.0.1:5501/men-catagories.html") {

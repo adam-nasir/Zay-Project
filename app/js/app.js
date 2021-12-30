@@ -161,10 +161,10 @@ catagoriesGallaryCardButtons.forEach((element) => {
     });
 
     //getting the image
-
     let imgSrc =
       element.parentElement.parentElement.parentElement.children[0].children[0]
         .attributes[0].textContent;
+    console.log(imgSrc);
     cardInfo.image = imgSrc;
     let newImg = document.createElement("img");
     newImg.setAttribute("src", imgSrc);
@@ -346,6 +346,7 @@ function getDataToLocalStorage() {
     let imgSrc = element.image;
     let newImg = document.createElement("img");
     newImg.setAttribute("src", imgSrc);
+    newImg.classList.add("shopping-cart-list-item-img");
 
     // Create and Get Price
     let price = element.price;
@@ -627,6 +628,29 @@ colorOptionHighlight(colorButtons);
 sizebuttonHighlight(smallSizeChartButtons);
 sizebuttonHighlight(mainSizeChartButtons);
 
+const shoppingCartListItemImgs = document.querySelectorAll(
+  ".shopping-cart-list-item-img"
+);
+
+console.log(shoppingCartListItemImgs);
+
+if (
+  document.baseURI === "http://127.0.0.1:5501/index.html" ||
+  document.baseURI === "http://127.0.0.1:5501/about.html"
+) {
+  for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
+    let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
+      8,
+      50
+    );
+    shoppingCartListItemImg.attributes[0].textContent = newString;
+  }
+}
+// else if (document.baseURI === "http://127.0.0.1:5501/men-catagories.html") {
+// }
+
+console.log("jello");
+
 //Clothing Adding Items To Cart in Clothing template
 
 mainAddToCartButton.addEventListener("click", () => {
@@ -699,7 +723,7 @@ mainAddToCartButton.addEventListener("click", () => {
   cardInfo.image = imgSrc;
   let newImg = document.createElement("img");
   newImg.setAttribute("src", imgSrc);
-
+  newImg.classList.add("shopping-cart-list-item-img");
   card.image = newImg;
 
   //getting the price

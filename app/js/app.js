@@ -647,50 +647,54 @@ const shoppingCartListItemLinks = document.querySelectorAll(
 );
 
 console.log(shoppingCartListItemLinks);
-// document.baseURI === "https://adam-nasir.github.io/Zay-Project/index.html" ||
-//   document.baseURI === "https://adam-nasir.github.io/Zay-Project/about.html"
 
-if (
-  document.baseURI === "https://adam-nasir.github.io/Zay-Project/index.html" ||
-  document.baseURI === "https://adam-nasir.github.io/Zay-Project/about.html"
-) {
-  for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
-    if (
-      shoppingCartListItemImg.attributes[0].textContent.includes(
-        "/men/sweaters-and-hoodies/"
-      )
-    ) {
-      let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
-        9,
-        50
-      );
-      console.log(newString);
-      shoppingCartListItemImg.attributes[0].textContent = newString;
+
+function changeHrefandSrc(URLOne, URLTwo = null, elementNumOne, searchStringOne, startingSliceNumOne, endingSliceNumOne, elementNumTwo, secondElementNumTwo, searchStringTwo, startingSliceNumTwo, endingSliceNumTwo){
+  if (
+    document.baseURI === URLOne ||
+    document.baseURI === URLTwo
+  ) {
+    for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
+      if (
+        shoppingCartListItemImg.attributes[elementNumOne].textContent.includes(
+          searchStringOne
+        )
+      ) {
+        let newString = shoppingCartListItemImg.attributes[elementNumOne].textContent.slice(
+          startingSliceNumOne, endingSliceNumOne
+        );
+        console.log(newString);
+        shoppingCartListItemImg.attributes[elementNumOne].textContent = newString;
+      }
     }
-  }
-  for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
-    if (
-      shoppingCartListItemLink.attributes[2].textContent.includes(
-        "/catagories-men-hoodies-and-sweaters/"
-      )
-    ) {
-      let newSweaterAndHoodiesStringHref =
-        shoppingCartListItemLink.attributes[0].textContent;
-
-      let newSweaterAndHoodiesStringId =
-        shoppingCartListItemLink.attributes[2].textContent;
-      const updatedSweaterAndHoodiesStringId =
-        newSweaterAndHoodiesStringId.slice(13, 83);
-      let updatedSweaterAndHoodiesStringHref = `${updatedSweaterAndHoodiesStringId}${newSweaterAndHoodiesStringHref}`;
-      shoppingCartListItemLink.attributes[0].textContent =
-        updatedSweaterAndHoodiesStringHref;
+    for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
+      if (
+        shoppingCartListItemLink.attributes[elementNumTwo].textContent.includes(
+          searchStringTwo
+        )
+      ) {
+        let newStringHref =
+          shoppingCartListItemLink.attributes[secondElementNumTwo].textContent;
+  
+        let newStringId =
+          shoppingCartListItemLink.attributes[elementNumTwo].textContent;
+        const updatedStringId =
+          newStringId.slice(startingSliceNumTwo, endingSliceNumTwo);
+        let updatedStringHref = `${updatedStringId}${newStringHref}`;
+        shoppingCartListItemLink.attributes[secondElementNumTwo].textContent =
+          updatedStringHref;
+      }
     }
-  }
-}
-// else if (document.baseURI === "http://127.0.0.1:5501/men-catagories.html") {
-// }
+} 
 
-console.log("jello");
+
+changeHrefandSrc("https://adam-nasir.github.io/Zay-Project/index.html", "https://adam-nasir.github.io/Zay-Project/about.html", 0, "/men/sweaters-and-hoodies/", 9, 50, 2, 0, "/catagories-men-hoodies-and-sweaters/", 13, 83);
+
+
+
+
+
+
 
 //Clothing Adding Items To Cart in Clothing template
 
@@ -702,6 +706,7 @@ mainAddToCartButton.addEventListener("click", () => {
     price: "",
     itemNumber: "",
     URL: "",
+    location: "",
   };
 
   const cardInfo = {
@@ -711,6 +716,7 @@ mainAddToCartButton.addEventListener("click", () => {
     price: "",
     itemNumber: "",
     URL: "",
+    location: "",
   };
 
   let sizeChart =
@@ -737,6 +743,10 @@ mainAddToCartButton.addEventListener("click", () => {
       .previousElementSibling.children[0].children[0].attributes[0].textContent;
 
   console.log(imgSrc);
+
+  //getting Location
+  cardInfo.location = `${document.location.pathname}`;
+  console.log(cardInfo.location);
 
   //getting the name
   let cardName =

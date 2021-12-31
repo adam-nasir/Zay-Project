@@ -745,7 +745,7 @@ changeHrefAndSrc(
   "catagories-men-hoodies-and-sweaters/",
   0,
   1000,
-  "catagories-men-hoodies-and-sweaters"
+  "catagories-men-hoodies-and-sweaters/"
 );
 
 changeHrefAndSrc(

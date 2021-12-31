@@ -648,130 +648,78 @@ const shoppingCartListItemLinks = document.querySelectorAll(
 
 console.log(shoppingCartListItemLinks);
 
-// changeHrefAndSrc(
-//   "https://adam-nasir.github.io/Zay-Project/index.html",
-//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
-//   0,
-//   "/men/sweaters-and-hoodies/",
-//   9,
-//   50,
-//   2,
-//   0,
-//   "/catagories-men-hoodies-and-sweaters/",
-//   13,
-//   83
-//);
+function changeHrefAndSrc(
+  URLOne,
+  URLTwo = null,
+  searchStringOne,
+  startingSliceNumOne,
+  searchStringTwo,
+  startingSliceNumTwo,
+  endingSliceNumTwo
+) {
+  window.addEventListener("DOMContentLoaded", () => {
+    if (document.baseURI === URLOne || document.baseURI === URLTwo) {
+      for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
+        //Get the src of the images in the Shopping Cart
+        if (
+          shoppingCartListItemImg.attributes[0].textContent.includes(
+            searchStringOne
+          )
+        ) {
+          let newString =
+            shoppingCartListItemImg.attributes[0].textContent.slice(
+              startingSliceNumOne,
+              shoppingCartListItemImg.attributes[0].textContent.length
+            );
+          console.log(newString);
+          shoppingCartListItemImg.attributes[0].textContent = newString;
+        }
+      }
+      for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
+        if (
+          shoppingCartListItemLink.attributes[2].textContent.includes(
+            searchStringTwo
+          )
+        ) {
+          let newStringHref =
+            shoppingCartListItemLink.attributes[0].textContent;
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (
-    document.baseURI ===
-    "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html"
-  ) {
-    for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
-      //
-      if (
-        shoppingCartListItemImg.attributes[0].textContent.includes(
-          "/men/sweaters-and-hoodies/"
-        )
-      ) {
-        let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
-          3,
-          shoppingCartListItemImg.attributes[0].textContent.length
-        );
-        console.log(newString);
-        shoppingCartListItemImg.attributes[0].textContent = newString;
+          let newStringId = shoppingCartListItemLink.attributes[2].textContent;
+          const updatedStringId = newStringId.slice(
+            startingSliceNumTwo,
+            endingSliceNumTwo
+          );
+          let updatedStringHref = `${updatedStringId}${newStringHref}`;
+          shoppingCartListItemLink.attributes[0].textContent =
+            updatedStringHref;
+        }
       }
     }
-    for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
-      console.log(shoppingCartListItemLink);
+  });
+}
 
-      if (
-        shoppingCartListItemLink.attributes[2].textContent.includes(
-          "catagories-men-hoodies-and-sweaters/"
-        )
-      ) {
-        let newStringHref = shoppingCartListItemLink.attributes[0].textContent;
-        console.log(newStringHref);
-        let newStringId = shoppingCartListItemLink.attributes[2].textContent;
-        console.log(newStringId);
-        const updatedStringId = newStringId.slice(47, 83);
-        console.log(updatedStringId);
-        let updatedStringHref = `${updatedStringId}${newStringHref}`;
-        console.log(updatedStringHref);
-        shoppingCartListItemLink.attributes[0].textContent = updatedStringHref;
-      }
-    }
-  }
-});
+changeHrefAndSrc(
+  "https://adam-nasir.github.io/Zay-Project/index.html",
+  "https://adam-nasir.github.io/Zay-Project/about.html",
+  "/men/sweaters-and-hoodies/",
+  9,
+  50,
+  "/catagories-men-hoodies-and-sweaters/",
+  13,
+  83
+);
 
-// function changeHrefAndSrc(
-//   URLOne,
-//   URLTwo = null,
-//   searchStringOne,
-//   startingSliceNumOne,
-//   searchStringTwo,
-//   startingSliceNumTwo,
-//   endingSliceNumTwo
-// ) {
-//   if (document.baseURI === URLOne || document.baseURI === URLTwo) {
-//     for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
-//       //Get the src of the images in the Shopping Cart
-//       if (
-//         shoppingCartListItemImg.attributes[0].textContent.includes(
-//           searchStringOne
-//         )
-//       ) {
-//         let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
-//           startingSliceNumOne,
-//           shoppingCartListItemImg.attributes[0].textContent.length
-//         );
-//         console.log(newString);
-//         shoppingCartListItemImg.attributes[0].textContent = newString;
-//       }
-//     }
-//     for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
-//       if (
-//         shoppingCartListItemLink.attributes[2].textContent.includes(
-//           searchStringTwo
-//         )
-//       ) {
-//         let newStringHref = shoppingCartListItemLink.attributes[0].textContent;
-
-//         let newStringId = shoppingCartListItemLink.attributes[2].textContent;
-//         const updatedStringId = newStringId.slice(
-//           startingSliceNumTwo,
-//           endingSliceNumTwo
-//         );
-//         let updatedStringHref = `${updatedStringId}${newStringHref}`;
-//         shoppingCartListItemLink.attributes[0].textContent = updatedStringHref;
-//       }
-//     }
-//   }
-// }
-
-// changeHrefAndSrc(
-//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
-//   0,
-//   "/men/sweaters-and-hoodies/",
-//   9,
-//   50,
-//   2,
-//   0,
-//   "/catagories-men-hoodies-and-sweaters/",
-//   13,
-//   83
-// );
-
-// changeHrefAndSrc(
-//   "https://adam-nasir.github.io/Zay-Project/index.html",
-//   "https://adam-nasir.github.io/Zay-Project/about.html",
-//   "/men/sweaters-and-hoodies/",
-//   9,
-//   50,
-//   "/catagories-men-hoodies-and-sweaters/",
-//   13,
-//   83
-// );
+changeHrefAndSrc(
+  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
+  "/men/sweaters-and-hoodies/",
+  9,
+  50,
+  2,
+  0,
+  "catagories-men-hoodies-and-sweaters/",
+  47,
+  83
+);
 
 //Clothing Adding Items To Cart in Clothing template
 

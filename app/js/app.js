@@ -664,7 +664,7 @@ console.log(shoppingCartListItemLinks);
 
 if (
   document.baseURI ===
-  "http://127.0.0.1:5501/catagories-section/catagories-men/men-catagories.html"
+  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html"
 ) {
   for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
     //

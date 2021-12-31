@@ -690,7 +690,7 @@ if (
       let newStringHref = shoppingCartListItemLink.attributes[2].textContent;
 
       let newStringId = shoppingCartListItemLink.attributes[0].textContent;
-      const updatedStringId = newStringId.slice(47, 135);
+      const updatedStringId = newStringId.slice(47, 83);
       let updatedStringHref = `${updatedStringId}${newStringHref}`;
       shoppingCartListItemLink.attributes[2].textContent = updatedStringHref;
     }

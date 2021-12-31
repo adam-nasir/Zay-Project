@@ -688,8 +688,9 @@ if (
       )
     ) {
       let newStringHref = shoppingCartListItemLink.attributes[2].textContent;
-
+      console.log(newStringHref);
       let newStringId = shoppingCartListItemLink.attributes[0].textContent;
+      console.log(newStringId);
       const updatedStringId = newStringId.slice(47, 83);
       let updatedStringHref = `${updatedStringId}${newStringHref}`;
       shoppingCartListItemLink.attributes[2].textContent = updatedStringHref;
@@ -755,16 +756,16 @@ function changeHrefAndSrc(
 //   83
 // );
 
-changeHrefAndSrc(
-  "https://adam-nasir.github.io/Zay-Project/index.html",
-  "https://adam-nasir.github.io/Zay-Project/about.html",
-  "/men/sweaters-and-hoodies/",
-  9,
-  50,
-  "/catagories-men-hoodies-and-sweaters/",
-  13,
-  83
-);
+// changeHrefAndSrc(
+//   "https://adam-nasir.github.io/Zay-Project/index.html",
+//   "https://adam-nasir.github.io/Zay-Project/about.html",
+//   "/men/sweaters-and-hoodies/",
+//   9,
+//   50,
+//   "/catagories-men-hoodies-and-sweaters/",
+//   13,
+//   83
+// );
 
 //Clothing Adding Items To Cart in Clothing template
 

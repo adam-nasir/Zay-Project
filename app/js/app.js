@@ -732,7 +732,7 @@ changeHrefAndSrc(
   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
   null,
   "/men/sweaters-and-hoodies/",
-  9,
+  3,
   "catagories-men-hoodies-and-sweaters/",
   47,
   83

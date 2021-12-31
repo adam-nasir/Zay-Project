@@ -680,6 +680,10 @@ function changeHrefAndSrc(
         console.log("what is startingSliceNumOne?", startingSliceNumOne);
         {
           console.log("if-include is working");
+          console.log(
+            "original string",
+            shoppingCartListItemImg.attributes[0].textContent
+          );
           let newString =
             shoppingCartListItemImg.attributes[0].textContent.slice(
               startingSliceNumOne,

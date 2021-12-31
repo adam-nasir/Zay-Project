@@ -686,7 +686,7 @@ if (
 
     if (
       shoppingCartListItemLink.attributes[2].textContent.includes(
-        "/catagories-men-hoodies-and-sweaters/"
+        "catagories-men-hoodies-and-sweaters/"
       )
     ) {
       console.log("hhhhhhhhhhhh");

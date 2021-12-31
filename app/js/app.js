@@ -684,7 +684,7 @@ if (
   for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
     if (
       shoppingCartListItemLink.attributes[0].textContent.includes(
-        "/men/sweaters-and-hoodies/"
+        "/catagories-men-hoodies-and-sweaters/"
       )
     ) {
       let newStringHref = shoppingCartListItemLink.attributes[2].textContent;
@@ -698,50 +698,50 @@ if (
   }
 }
 
-function changeHrefAndSrc(
-  URLOne,
-  URLTwo = null,
-  searchStringOne,
-  startingSliceNumOne,
-  searchStringTwo,
-  startingSliceNumTwo,
-  endingSliceNumTwo
-) {
-  if (document.baseURI === URLOne || document.baseURI === URLTwo) {
-    for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
-      //Get the src of the images in the Shopping Cart
-      if (
-        shoppingCartListItemImg.attributes[0].textContent.includes(
-          searchStringOne
-        )
-      ) {
-        let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
-          startingSliceNumOne,
-          shoppingCartListItemImg.attributes[0].textContent.length
-        );
-        console.log(newString);
-        shoppingCartListItemImg.attributes[0].textContent = newString;
-      }
-    }
-    for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
-      if (
-        shoppingCartListItemLink.attributes[0].textContent.includes(
-          searchStringTwo
-        )
-      ) {
-        let newStringHref = shoppingCartListItemLink.attributes[2].textContent;
+// function changeHrefAndSrc(
+//   URLOne,
+//   URLTwo = null,
+//   searchStringOne,
+//   startingSliceNumOne,
+//   searchStringTwo,
+//   startingSliceNumTwo,
+//   endingSliceNumTwo
+// ) {
+//   if (document.baseURI === URLOne || document.baseURI === URLTwo) {
+//     for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
+//       //Get the src of the images in the Shopping Cart
+//       if (
+//         shoppingCartListItemImg.attributes[0].textContent.includes(
+//           searchStringOne
+//         )
+//       ) {
+//         let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
+//           startingSliceNumOne,
+//           shoppingCartListItemImg.attributes[0].textContent.length
+//         );
+//         console.log(newString);
+//         shoppingCartListItemImg.attributes[0].textContent = newString;
+//       }
+//     }
+//     for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
+//       if (
+//         shoppingCartListItemLink.attributes[0].textContent.includes(
+//           searchStringTwo
+//         )
+//       ) {
+//         let newStringHref = shoppingCartListItemLink.attributes[2].textContent;
 
-        let newStringId = shoppingCartListItemLink.attributes[0].textContent;
-        const updatedStringId = newStringId.slice(
-          startingSliceNumTwo,
-          endingSliceNumTwo
-        );
-        let updatedStringHref = `${updatedStringId}${newStringHref}`;
-        shoppingCartListItemLink.attributes[2].textContent = updatedStringHref;
-      }
-    }
-  }
-}
+//         let newStringId = shoppingCartListItemLink.attributes[0].textContent;
+//         const updatedStringId = newStringId.slice(
+//           startingSliceNumTwo,
+//           endingSliceNumTwo
+//         );
+//         let updatedStringHref = `${updatedStringId}${newStringHref}`;
+//         shoppingCartListItemLink.attributes[2].textContent = updatedStringHref;
+//       }
+//     }
+//   }
+// }
 
 // changeHrefAndSrc(
 //   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",

@@ -664,7 +664,7 @@ console.log(shoppingCartListItemLinks);
 
 if (
   document.baseURI ===
-  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html"
+  "http://127.0.0.1:5501/catagories-section/catagories-men/men-catagories.html"
 ) {
   for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
     //
@@ -689,6 +689,7 @@ if (
         "/catagories-men-hoodies-and-sweaters/"
       )
     ) {
+      console.log("hhhhhhhhhhhh");
       let newStringHref = shoppingCartListItemLink.attributes[0].textContent;
       console.log(newStringHref);
       let newStringId = shoppingCartListItemLink.attributes[2].textContent;

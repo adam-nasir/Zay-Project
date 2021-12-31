@@ -687,13 +687,16 @@ if (
         "/catagories-men-hoodies-and-sweaters/"
       )
     ) {
-      let newStringHref = shoppingCartListItemLink.attributes[2].textContent;
-      console.log(newStringHref);
-      let newStringId = shoppingCartListItemLink.attributes[0].textContent;
-      console.log(newStringId);
-      const updatedStringId = newStringId.slice(47, 83);
-      let updatedStringHref = `${updatedStringId}${newStringHref}`;
-      shoppingCartListItemLink.attributes[2].textContent = updatedStringHref;
+      shoppingCartListItemLink.attributes[0].textContent = "heelo";
+      // console.log(shoppingCartListItemLink.attributes[0].textContent.includes(
+      //   "/catagories-men-hoodies-and-sweaters/"))
+      // let newStringHref = shoppingCartListItemLink.attributes[2].textContent;
+      // console.log(newStringHref);
+      // let newStringId = shoppingCartListItemLink.attributes[0].textContent;
+      // console.log(newStringId);
+      // const updatedStringId = newStringId.slice(47, 83);
+      // let updatedStringHref = `${updatedStringId}${newStringHref}`;
+      // shoppingCartListItemLink.attributes[2].textContent = updatedStringHref;
     }
   }
 }

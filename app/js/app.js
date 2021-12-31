@@ -650,7 +650,7 @@ console.log(shoppingCartListItemLinks);
 
 // changeHrefAndSrc(
 //   "https://adam-nasir.github.io/Zay-Project/index.html",
-//   "https://adam-nasir.github.io/Zay-Project/about.html",
+//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
 //   0,
 //   "/men/sweaters-and-hoodies/",
 //   9,
@@ -662,45 +662,47 @@ console.log(shoppingCartListItemLinks);
 //   83
 //);
 
-if (
-  document.baseURI ===
-  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html"
-) {
-  for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
-    //
-    if (
-      shoppingCartListItemImg.attributes[0].textContent.includes(
-        "/men/sweaters-and-hoodies/"
-      )
-    ) {
-      let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
-        3,
-        shoppingCartListItemImg.attributes[0].textContent.length
-      );
-      console.log(newString);
-      shoppingCartListItemImg.attributes[0].textContent = newString;
+document.addEventListener("DOMContentLoaded", () => {
+  if (
+    document.baseURI ===
+    "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html"
+  ) {
+    for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
+      //
+      if (
+        shoppingCartListItemImg.attributes[0].textContent.includes(
+          "/men/sweaters-and-hoodies/"
+        )
+      ) {
+        let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
+          3,
+          shoppingCartListItemImg.attributes[0].textContent.length
+        );
+        console.log(newString);
+        shoppingCartListItemImg.attributes[0].textContent = newString;
+      }
     }
-  }
-  for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
-    console.log(shoppingCartListItemLink);
+    for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
+      console.log(shoppingCartListItemLink);
 
-    if (
-      shoppingCartListItemLink.attributes[2].textContent.includes(
-        "catagories-men-hoodies-and-sweaters/"
-      )
-    ) {
-      let newStringHref = shoppingCartListItemLink.attributes[0].textContent;
-      console.log(newStringHref);
-      let newStringId = shoppingCartListItemLink.attributes[2].textContent;
-      console.log(newStringId);
-      const updatedStringId = newStringId.slice(47, 83);
-      console.log(updatedStringId);
-      let updatedStringHref = `${updatedStringId}${newStringHref}`;
-      console.log(updatedStringHref);
-      shoppingCartListItemLink.attributes[2].textContent = updatedStringHref;
+      if (
+        shoppingCartListItemLink.attributes[2].textContent.includes(
+          "catagories-men-hoodies-and-sweaters/"
+        )
+      ) {
+        let newStringHref = shoppingCartListItemLink.attributes[0].textContent;
+        console.log(newStringHref);
+        let newStringId = shoppingCartListItemLink.attributes[2].textContent;
+        console.log(newStringId);
+        const updatedStringId = newStringId.slice(47, 83);
+        console.log(updatedStringId);
+        let updatedStringHref = `${updatedStringId}${newStringHref}`;
+        console.log(updatedStringHref);
+        shoppingCartListItemLink.attributes[0].textContent = updatedStringHref;
+      }
     }
   }
-}
+});
 
 // function changeHrefAndSrc(
 //   URLOne,

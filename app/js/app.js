@@ -756,7 +756,7 @@ changeHrefAndSrc(
   "/catagories-men-hoodies-and-sweaters/",
   0,
   1000,
-  "catagories-section/catagories-men/catagories-men-hoodies-and-sweaters"
+  "catagories-section/catagories-men/catagories-men-hoodies-and-sweaters/"
 );
 
 //Clothing Adding Items To Cart in Clothing template

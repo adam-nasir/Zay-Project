@@ -703,7 +703,6 @@ changeHrefAndSrc(
   "https://adam-nasir.github.io/Zay-Project/about.html",
   "/men/sweaters-and-hoodies/",
   9,
-  50,
   "/catagories-men-hoodies-and-sweaters/",
   13,
   83
@@ -713,9 +712,6 @@ changeHrefAndSrc(
   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
   "/men/sweaters-and-hoodies/",
   9,
-  50,
-  2,
-  0,
   "catagories-men-hoodies-and-sweaters/",
   47,
   83

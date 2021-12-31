@@ -728,13 +728,16 @@ function changeHrefAndSrc(
   });
 }
 
-// changeHrefAndSrc(
-//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
-//   null,
-//   "/men/sweaters-and-hoodies/",
-//   3,
-//   "catagories-men-hoodies-and-sweaters/"
-// );
+changeHrefAndSrc(
+  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
+  null,
+  "/men/sweaters-and-hoodies/",
+  3,
+  "catagories-men-hoodies-and-sweaters/",
+  0,
+  newStringHref.length,
+  "catagories-men-hoodies-and-sweaters"
+);
 
 // changeHrefAndSrc(
 //   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-women/women-catagories.html",

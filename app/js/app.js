@@ -648,66 +648,119 @@ const shoppingCartListItemLinks = document.querySelectorAll(
 
 console.log(shoppingCartListItemLinks);
 
+// changeHrefAndSrc(
+//   "https://adam-nasir.github.io/Zay-Project/index.html",
+//   "https://adam-nasir.github.io/Zay-Project/about.html",
+//   0,
+//   "/men/sweaters-and-hoodies/",
+//   9,
+//   50,
+//   2,
+//   0,
+//   "/catagories-men-hoodies-and-sweaters/",
+//   13,
+//   83
+//);
+
+if (
+  document.baseURI ===
+  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html"
+) {
+  for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
+    //
+    if (
+      shoppingCartListItemImg.attributes[0].textContent.includes(
+        "/men/sweaters-and-hoodies/"
+      )
+    ) {
+      let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
+        3,
+        shoppingCartListItemImg.attributes[0].textContent.length
+      );
+      console.log(newString);
+      shoppingCartListItemImg.attributes[0].textContent = newString;
+    }
+  }
+  for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
+    if (
+      shoppingCartListItemLink.attributes[0].textContent.includes(
+        "/men/sweaters-and-hoodies/"
+      )
+    ) {
+      let newStringHref = shoppingCartListItemLink.attributes[2].textContent;
+
+      let newStringId = shoppingCartListItemLink.attributes[0].textContent;
+      const updatedStringId = newStringId.slice(47, 135);
+      let updatedStringHref = `${updatedStringId}${newStringHref}`;
+      shoppingCartListItemLink.attributes[2].textContent = updatedStringHref;
+    }
+  }
+}
+
 function changeHrefAndSrc(
   URLOne,
   URLTwo = null,
-  elementNumOne,
   searchStringOne,
   startingSliceNumOne,
-  endingSliceNumOne,
-  elementNumTwo,
-  secondElementNumTwo,
   searchStringTwo,
   startingSliceNumTwo,
   endingSliceNumTwo
 ) {
   if (document.baseURI === URLOne || document.baseURI === URLTwo) {
     for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
+      //Get the src of the images in the Shopping Cart
       if (
-        shoppingCartListItemImg.attributes[elementNumOne].textContent.includes(
+        shoppingCartListItemImg.attributes[0].textContent.includes(
           searchStringOne
         )
       ) {
-        let newString = shoppingCartListItemImg.attributes[
-          elementNumOne
-        ].textContent.slice(startingSliceNumOne, endingSliceNumOne);
+        let newString = shoppingCartListItemImg.attributes[0].textContent.slice(
+          startingSliceNumOne,
+          shoppingCartListItemImg.attributes[0].textContent.length
+        );
         console.log(newString);
-        shoppingCartListItemImg.attributes[elementNumOne].textContent =
-          newString;
+        shoppingCartListItemImg.attributes[0].textContent = newString;
       }
     }
     for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
       if (
-        shoppingCartListItemLink.attributes[elementNumTwo].textContent.includes(
+        shoppingCartListItemLink.attributes[0].textContent.includes(
           searchStringTwo
         )
       ) {
-        let newStringHref =
-          shoppingCartListItemLink.attributes[secondElementNumTwo].textContent;
+        let newStringHref = shoppingCartListItemLink.attributes[2].textContent;
 
-        let newStringId =
-          shoppingCartListItemLink.attributes[elementNumTwo].textContent;
+        let newStringId = shoppingCartListItemLink.attributes[0].textContent;
         const updatedStringId = newStringId.slice(
           startingSliceNumTwo,
           endingSliceNumTwo
         );
         let updatedStringHref = `${updatedStringId}${newStringHref}`;
-        shoppingCartListItemLink.attributes[secondElementNumTwo].textContent =
-          updatedStringHref;
+        shoppingCartListItemLink.attributes[2].textContent = updatedStringHref;
       }
     }
   }
 }
 
+// changeHrefAndSrc(
+//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
+//   0,
+//   "/men/sweaters-and-hoodies/",
+//   9,
+//   50,
+//   2,
+//   0,
+//   "/catagories-men-hoodies-and-sweaters/",
+//   13,
+//   83
+// );
+
 changeHrefAndSrc(
   "https://adam-nasir.github.io/Zay-Project/index.html",
   "https://adam-nasir.github.io/Zay-Project/about.html",
-  0,
   "/men/sweaters-and-hoodies/",
   9,
   50,
-  2,
-  0,
   "/catagories-men-hoodies-and-sweaters/",
   13,
   83

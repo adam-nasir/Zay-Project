@@ -650,7 +650,7 @@ console.log(shoppingCartListItemLinks);
 
 function changeHrefAndSrc(
   URLOne,
-  URLTwo = null,
+  URLTwo,
   searchStringOne,
   startingSliceNumOne,
   searchStringTwo,
@@ -658,21 +658,39 @@ function changeHrefAndSrc(
   endingSliceNumTwo
 ) {
   window.addEventListener("DOMContentLoaded", () => {
+    console.log("addEventListener working");
+    console.log(
+      "is if-doc.BaseURI true?",
+      document.baseURI === URLOne || document.baseURI === URLTwo
+    );
+    console.log("document.baseURI: ", document.baseURI);
+    console.log("URLOne: ", URLOne);
+    console.log("URLTwo: ", URLTwo);
     if (document.baseURI === URLOne || document.baseURI === URLTwo) {
+      console.log("if-doc.BaseURI is working!");
       for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
         //Get the src of the images in the Shopping Cart
+
         if (
           shoppingCartListItemImg.attributes[0].textContent.includes(
             searchStringOne
           )
-        ) {
+        )
+          console.log("searchStringOne:", searchStringOne);
+        console.log("what is startingSliceNumOne?", startingSliceNumOne);
+        {
+          console.log("if-include is working");
           let newString =
             shoppingCartListItemImg.attributes[0].textContent.slice(
               startingSliceNumOne,
               shoppingCartListItemImg.attributes[0].textContent.length
             );
-          console.log(newString);
+          console.log("newString - the new img src", newString);
           shoppingCartListItemImg.attributes[0].textContent = newString;
+          console.log(
+            "is new newString and src the same?",
+            shoppingCartListItemImg.attributes[0].textContent
+          );
         }
       }
       for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
@@ -680,23 +698,41 @@ function changeHrefAndSrc(
           shoppingCartListItemLink.attributes[2].textContent.includes(
             searchStringTwo
           )
-        ) {
+        )
+          console.log("searchStringTwo:", searchStringOne);
+        {
+          console.log("if-include is working");
           let newStringHref =
             shoppingCartListItemLink.attributes[0].textContent;
-
+          console.log("newStringHref:", newStringHref);
           let newStringId = shoppingCartListItemLink.attributes[2].textContent;
+          console.log("newStringId:", newStringId);
+          console.log("startingSliceNumTwo:", startingSliceNumTwo);
+          console.log("endingSliceNumTwo:", endingSliceNumTwo);
           const updatedStringId = newStringId.slice(
             startingSliceNumTwo,
             endingSliceNumTwo
           );
           let updatedStringHref = `${updatedStringId}${newStringHref}`;
+          console.log(updatedStringHref);
           shoppingCartListItemLink.attributes[0].textContent =
             updatedStringHref;
+          console.log("updated link", updatedStringHref);
         }
       }
     }
   });
 }
+
+changeHrefAndSrc(
+  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
+  null,
+  "/men/sweaters-and-hoodies/",
+  9,
+  "catagories-men-hoodies-and-sweaters/",
+  47,
+  83
+);
 
 changeHrefAndSrc(
   "https://adam-nasir.github.io/Zay-Project/index.html",
@@ -705,15 +741,6 @@ changeHrefAndSrc(
   9,
   "/catagories-men-hoodies-and-sweaters/",
   13,
-  83
-);
-
-changeHrefAndSrc(
-  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
-  "/men/sweaters-and-hoodies/",
-  9,
-  "catagories-men-hoodies-and-sweaters/",
-  47,
   83
 );
 

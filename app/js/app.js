@@ -655,7 +655,8 @@ function changeHrefAndSrc(
   startingSliceNumOne,
   searchStringTwo,
   startingSliceNumTwo,
-  endingSliceNumTwo
+  endingSliceNumTwo,
+  addingInfo
 ) {
   window.addEventListener("DOMContentLoaded", () => {
     console.log("addEventListener working");
@@ -709,16 +710,15 @@ function changeHrefAndSrc(
           let newStringHref =
             shoppingCartListItemLink.attributes[0].textContent;
           console.log("newStringHref:", newStringHref);
-          let newStringId = shoppingCartListItemLink.attributes[2].textContent;
-          console.log("newStringId:", newStringId);
+          let newStringId = addingInfo;
+
           console.log("startingSliceNumTwo:", startingSliceNumTwo);
           console.log("endingSliceNumTwo:", endingSliceNumTwo);
-          const updatedStringId = newStringId.slice(
+          const changedStringHref = newStringHref.slice(
             startingSliceNumTwo,
             endingSliceNumTwo
           );
-          let updatedStringHref = `${updatedStringId}${newStringHref}`;
-          console.log(updatedStringHref);
+          let updatedStringHref = `${addingInfo}${changedStringHref}`;
           shoppingCartListItemLink.attributes[0].textContent =
             updatedStringHref;
           console.log("updated link", updatedStringHref);
@@ -728,25 +728,23 @@ function changeHrefAndSrc(
   });
 }
 
-changeHrefAndSrc(
-  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
-  null,
-  "/men/sweaters-and-hoodies/",
-  3,
-  "catagories-men-hoodies-and-sweaters/",
-  47,
-  83
-);
+// changeHrefAndSrc(
+//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
+//   null,
+//   "/men/sweaters-and-hoodies/",
+//   3,
+//   "catagories-men-hoodies-and-sweaters/"
+// );
 
-changeHrefAndSrc(
-  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-women/women-catagories.html",
-  null,
-  "/men/sweaters-and-hoodies/",
-  3,
-  "catagories-men-hoodies-and-sweaters/",
-  47,
-  83
-);
+// changeHrefAndSrc(
+//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-women/women-catagories.html",
+//   null,
+//   "/men/sweaters-and-hoodies/",
+//   3,
+//   "catagories-men-hoodies-and-sweaters/",
+//   47,
+//   83
+// );
 
 changeHrefAndSrc(
   "https://adam-nasir.github.io/Zay-Project/index.html",
@@ -754,8 +752,9 @@ changeHrefAndSrc(
   "/men/sweaters-and-hoodies/",
   9,
   "/catagories-men-hoodies-and-sweaters/",
-  13,
-  83
+  0,
+  newStringHref.length,
+  "catagories-section/catagories-men/catagories-men-hoodies-and-sweaters"
 );
 
 //Clothing Adding Items To Cart in Clothing template

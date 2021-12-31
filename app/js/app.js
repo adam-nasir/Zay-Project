@@ -703,7 +703,7 @@ function changeHrefAndSrc(
             searchStringTwo
           )
         )
-          console.log("searchStringTwo:", searchStringOne);
+          console.log("searchStringTwo:", searchStringTwo);
         {
           console.log("if-include is working");
           let newStringHref =
@@ -730,6 +730,16 @@ function changeHrefAndSrc(
 
 changeHrefAndSrc(
   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
+  null,
+  "/men/sweaters-and-hoodies/",
+  3,
+  "catagories-men-hoodies-and-sweaters/",
+  47,
+  83
+);
+
+changeHrefAndSrc(
+  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-women/women-catagories.html",
   null,
   "/men/sweaters-and-hoodies/",
   3,

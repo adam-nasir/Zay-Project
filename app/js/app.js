@@ -689,12 +689,12 @@ if (
         "catagories-men-hoodies-and-sweaters/"
       )
     ) {
-      console.log("hhhhhhhhhhhh");
       let newStringHref = shoppingCartListItemLink.attributes[0].textContent;
       console.log(newStringHref);
       let newStringId = shoppingCartListItemLink.attributes[2].textContent;
       console.log(newStringId);
       const updatedStringId = newStringId.slice(47, 83);
+      console.log(updatedStringId);
       let updatedStringHref = `${updatedStringId}${newStringHref}`;
       shoppingCartListItemLink.attributes[2].textContent = updatedStringHref;
     }

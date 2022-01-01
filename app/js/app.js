@@ -700,7 +700,7 @@ function changeHrefAndSrc(
         } else if (
           shoppingCartListItemImg.attributes[0].textContent.includes(
             searchStringOne
-          )
+          ) === false
         )
           console.log("searchStringOne:", searchStringOne);
         console.log("what is startingSliceNumOne?", startingSliceNumOne);
@@ -793,7 +793,7 @@ changeHrefAndSrc(
   "/men/sweaters-and-hoodies/",
   12,
   9,
-  "/catagories-men-hoodies-and-sweaters/",
+  "Clothing",
   0,
   1000,
   "catagories-section/catagories-men/catagories-men-hoodies-and-sweaters/"

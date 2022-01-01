@@ -673,9 +673,15 @@ function changeHrefAndSrc(
       console.log("if-doc.BaseURI is working!");
       for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
         //Get the src of the images in the Shopping Cart
+        console.log(
+          "!!!!!!!!!!!!!!",
+          shoppingCartListItemImg.attributes[1].textContent
+        );
+        console.log("!!!!!!!!!!!!!!", shoppingCartListItemImg.attributes[1]);
         if (
           shoppingCartListItemImg.attributes[1].textContent.includes("Clothing")
         ) {
+          console.log("working");
           let newStringforClothing =
             shoppingCartListItemImg.attributes[0].textContent.slice(
               startingSliceNumOneForClothingPage,
@@ -738,31 +744,43 @@ function changeHrefAndSrc(
   });
 }
 
-changeHrefAndSrc(
-  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-women/women-catagories.html",
-  null,
-  "/men/sweaters-and-hoodies/",
-  3,
-  "catagories-men-hoodies-and-sweaters/",
-  0,
-  1000,
-  "../catagories-men/catagories-men-hoodies-and-sweaters/"
-);
+// changeHrefAndSrc(
+//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-women/women-catagories.html",
+//   null,
+//   "/men/sweaters-and-hoodies/",
+//   3,
+//   "catagories-men-hoodies-and-sweaters/",
+//   0,
+//   1000,
+//   "../catagories-men/catagories-men-hoodies-and-sweaters/"
+// );
+
+// changeHrefAndSrc(
+//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
+//   null,
+//   "/men/sweaters-and-hoodies/",
+//   3,
+//   "catagories-men-hoodies-and-sweaters/",
+//   0,
+//   1000,
+//   "catagories-men-hoodies-and-sweaters/"
+// );
+
+// changeHrefAndSrc(
+//   "https://adam-nasir.github.io/Zay-Project/index.html",
+//   "https://adam-nasir.github.io/Zay-Project/about.html",
+//   "/men/sweaters-and-hoodies/",
+//   12,
+//   9,
+//   "/catagories-men-hoodies-and-sweaters/",
+//   0,
+//   1000,
+//   "catagories-section/catagories-men/catagories-men-hoodies-and-sweaters/"
+// );
 
 changeHrefAndSrc(
-  "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
-  null,
-  "/men/sweaters-and-hoodies/",
-  3,
-  "catagories-men-hoodies-and-sweaters/",
-  0,
-  1000,
-  "catagories-men-hoodies-and-sweaters/"
-);
-
-changeHrefAndSrc(
-  "https://adam-nasir.github.io/Zay-Project/index.html",
-  "https://adam-nasir.github.io/Zay-Project/about.html",
+  "http://127.0.0.1:5501/index.html",
+  "http://127.0.0.1:5501/about.html",
   "/men/sweaters-and-hoodies/",
   12,
   9,

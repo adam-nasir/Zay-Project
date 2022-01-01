@@ -356,6 +356,7 @@ function getDataToLocalStorage() {
     let imgSrc = element.image;
     let newImg = document.createElement("img");
     newImg.setAttribute("src", imgSrc);
+    newImg.setAttribute("id", element.location);
     newImg.classList.add("shopping-cart-list-item-img");
 
     // Create and Get Price
@@ -646,12 +647,13 @@ const shoppingCartListItemLinks = document.querySelectorAll(
   ".shopping-cart-list-item-link"
 );
 
-console.log(shoppingCartListItemLinks);
+console.log(shoppingCartListItemImgs);
 
 function changeHrefAndSrc(
   URLOne,
   URLTwo,
   searchStringOne,
+  startingSliceNumOneForClothingPage,
   startingSliceNumOne,
   searchStringTwo,
   startingSliceNumTwo,
@@ -671,8 +673,16 @@ function changeHrefAndSrc(
       console.log("if-doc.BaseURI is working!");
       for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
         //Get the src of the images in the Shopping Cart
-
         if (
+          shoppingCartListItemImg.attributes[1].textContent.includes("Clothing")
+        ) {
+          let newStringforClothing =
+            shoppingCartListItemImg.attributes[0].textContent.slice(
+              startingSliceNumOneForClothingPage,
+              shoppingCartListItemImg.attributes[0].textContent.length
+            );
+          shoppingCartListItemImg.attributes[0] = newStringforClothing;
+        } else if (
           shoppingCartListItemImg.attributes[0].textContent.includes(
             searchStringOne
           )
@@ -685,6 +695,7 @@ function changeHrefAndSrc(
             "original string",
             shoppingCartListItemImg.attributes[0].textContent
           );
+
           let newString =
             shoppingCartListItemImg.attributes[0].textContent.slice(
               startingSliceNumOne,
@@ -753,6 +764,7 @@ changeHrefAndSrc(
   "https://adam-nasir.github.io/Zay-Project/index.html",
   "https://adam-nasir.github.io/Zay-Project/about.html",
   "/men/sweaters-and-hoodies/",
+  12,
   9,
   "/catagories-men-hoodies-and-sweaters/",
   0,

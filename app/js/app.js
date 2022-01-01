@@ -792,12 +792,21 @@ changeHrefAndSrc(
   "https://adam-nasir.github.io/Zay-Project/about.html",
   "/men/sweaters-and-hoodies/",
   12,
-  9,
   "Clothing",
+  9,
   0,
   1000,
   "catagories-section/catagories-men/catagories-men-hoodies-and-sweaters/"
 );
+URLOne,
+  URLTwo,
+  searchStringOne,
+  startingSliceNumOneForClothingPage,
+  startingSliceNumOne,
+  searchStringTwo,
+  startingSliceNumTwo,
+  endingSliceNumTwo,
+  addingInfo;
 
 //Clothing Adding Items To Cart in Clothing template
 

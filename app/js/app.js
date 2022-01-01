@@ -688,7 +688,10 @@ function changeHrefAndSrc(
             )
           );
           console.log("working");
-          console.log(startingSliceNumOneForClothingPage);
+          console.log(
+            "startingSliceNumOneForClothingPage",
+            startingSliceNumOneForClothingPage
+          );
           let newStringforClothing =
             shoppingCartListItemImg.attributes[0].textContent.slice(
               startingSliceNumOneForClothingPage,
@@ -703,9 +706,16 @@ function changeHrefAndSrc(
           ) === false
         )
           console.log("searchStringOne:", searchStringOne);
+        console.log(
+          `shoppingCartListItemImg.attributes[0].textContent.includes(
+            searchStringOne) is true or false?`,
+          shoppingCartListItemImg.attributes[0].textContent.includes(
+            searchStringOne
+          )
+        );
         console.log("what is startingSliceNumOne?", startingSliceNumOne);
         {
-          console.log("if-include is working");
+          console.log("else-if has been activating");
           console.log(
             "original string",
             shoppingCartListItemImg.attributes[0].textContent

@@ -694,7 +694,9 @@ function changeHrefAndSrc(
               startingSliceNumOneForClothingPage,
               shoppingCartListItemImg.attributes[0].textContent.length
             );
-          shoppingCartListItemImg.attributes[0] = newStringforClothing;
+          console.log("newStringforClothing", newStringforClothing);
+          shoppingCartListItemImg.attributes[0].textContent =
+            newStringforClothing;
         } else if (
           shoppingCartListItemImg.attributes[0].textContent.includes(
             searchStringOne

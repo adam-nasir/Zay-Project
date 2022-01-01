@@ -652,8 +652,8 @@ console.log(shoppingCartListItemImgs);
 function changeHrefAndSrc(
   URLOne,
   URLTwo,
-  searchStringOne,
   startingSliceNumOneForClothingPage,
+  searchStringOne,
   startingSliceNumOne,
   searchStringTwo,
   startingSliceNumTwo,
@@ -788,12 +788,12 @@ function changeHrefAndSrc(
 // );
 
 changeHrefAndSrc(
-  "https://adam-nasir.github.io/Zay-Project/index.html",
-  "https://adam-nasir.github.io/Zay-Project/about.html",
-  "/men/sweaters-and-hoodies/",
-  12,
-  "Clothing",
-  9,
+  "https://adam-nasir.github.io/Zay-Project/index.html", //URLOne
+  "https://adam-nasir.github.io/Zay-Project/about.html", //URLTwo
+  12, //ClothingNumber
+  "Clothing", //SearchStringOne
+  9, //startingString
+  "/catagories-men-hoodies-and-sweaters/",
   0,
   1000,
   "catagories-section/catagories-men/catagories-men-hoodies-and-sweaters/"

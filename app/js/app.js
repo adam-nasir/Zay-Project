@@ -682,6 +682,7 @@ function changeHrefAndSrc(
           shoppingCartListItemImg.attributes[1].textContent.includes("Clothing")
         ) {
           console.log(
+            "is clothing there? : ",
             shoppingCartListItemImg.attributes[1].textContent.includes(
               "Clothing"
             )

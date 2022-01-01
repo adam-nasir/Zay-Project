@@ -681,7 +681,13 @@ function changeHrefAndSrc(
         if (
           shoppingCartListItemImg.attributes[1].textContent.includes("Clothing")
         ) {
+          console.log(
+            shoppingCartListItemImg.attributes[1].textContent.includes(
+              "Clothing"
+            )
+          );
           console.log("working");
+          console.log(startingSliceNumOneForClothingPage);
           let newStringforClothing =
             shoppingCartListItemImg.attributes[0].textContent.slice(
               startingSliceNumOneForClothingPage,

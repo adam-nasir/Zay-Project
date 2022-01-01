@@ -779,8 +779,8 @@ function changeHrefAndSrc(
 // );
 
 changeHrefAndSrc(
-  "http://127.0.0.1:5501/index.html",
-  "http://127.0.0.1:5501/about.html",
+  "https://adam-nasir.github.io/Zay-Project/index.html",
+  "https://adam-nasir.github.io/Zay-Project/about.html",
   "/men/sweaters-and-hoodies/",
   12,
   9,

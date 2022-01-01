@@ -798,15 +798,6 @@ changeHrefAndSrc(
   1000,
   "catagories-section/catagories-men/catagories-men-hoodies-and-sweaters/"
 );
-URLOne,
-  URLTwo,
-  searchStringOne,
-  startingSliceNumOneForClothingPage,
-  startingSliceNumOne,
-  searchStringTwo,
-  startingSliceNumTwo,
-  endingSliceNumTwo,
-  addingInfo;
 
 //Clothing Adding Items To Cart in Clothing template
 

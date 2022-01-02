@@ -706,7 +706,13 @@ function changeHrefAndSrc(
             searchStringOne
           ) === false
         )
-          console.log("what is searchStringOne: ", searchStringOne);
+          console.log(
+            "is else-if true or false",
+            shoppingCartListItemImg.attributes[1].textContent.includes(
+              searchStringOne
+            ) === false
+          );
+        console.log("what is searchStringOne: ", searchStringOne);
         console.log(shoppingCartListItemImg.attributes[0].textContent);
         console.log(
           `shoppingCartListItemImg.attributes[0].textContent.includes(

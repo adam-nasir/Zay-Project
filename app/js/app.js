@@ -647,7 +647,7 @@ const shoppingCartListItemLinks = document.querySelectorAll(
   ".shopping-cart-list-item-link"
 );
 
-console.log(shoppingCartListItemImgs);
+console.log(shoppingCartListItemLinks);
 
 function changeHrefAndSrc(
   URLOne,
@@ -658,7 +658,8 @@ function changeHrefAndSrc(
   searchStringTwo,
   startingSliceNumTwo,
   endingSliceNumTwo,
-  addingInfo
+  addingInfo,
+  NOTaddingInfo
 ) {
   window.addEventListener("DOMContentLoaded", () => {
     console.log("addEventListener working");
@@ -701,7 +702,7 @@ function changeHrefAndSrc(
           shoppingCartListItemImg.attributes[0].textContent =
             newStringforClothing;
         } else if (
-          shoppingCartListItemImg.attributes[0].textContent.includes(
+          shoppingCartListItemImg.attributes[1].textContent.includes(
             searchStringOne
           ) === false
         )
@@ -710,7 +711,7 @@ function changeHrefAndSrc(
         console.log(
           `shoppingCartListItemImg.attributes[0].textContent.includes(
             searchStringOne) is true or false?`,
-          shoppingCartListItemImg.attributes[0].textContent.includes(
+          shoppingCartListItemImg.attributes[1].textContent.includes(
             searchStringOne
           )
         );
@@ -754,10 +755,21 @@ function changeHrefAndSrc(
             startingSliceNumTwo,
             endingSliceNumTwo
           );
-          let updatedStringHref = `${addingInfo}${changedStringHref}`;
-          shoppingCartListItemLink.attributes[0].textContent =
-            updatedStringHref;
-          console.log("updated link", updatedStringHref);
+          if (
+            shoppingCartListItemLink.attributes[2].textContent.includes(
+              "Clothing"
+            )
+          ) {
+            let updatedStringHref = `${NOTaddingInfo}${changedStringHref}`;
+            shoppingCartListItemLink.attributes[0].textContent =
+              updatedStringHref;
+            console.log("updated link", updatedStringHref);
+          } else {
+            let updatedStringHref = `${addingInfo}${changedStringHref}`;
+            shoppingCartListItemLink.attributes[0].textContent =
+              updatedStringHref;
+            console.log("updated link", updatedStringHref);
+          }
         }
       }
     }
@@ -807,6 +819,7 @@ changeHrefAndSrc(
   "/catagories-men-hoodies-and-sweaters/",
   0,
   1000,
+  "catagories-section/catagories-men/catagories-men-hoodies-and-sweaters/Clothing/",
   "catagories-section/catagories-men/catagories-men-hoodies-and-sweaters/"
 );
 

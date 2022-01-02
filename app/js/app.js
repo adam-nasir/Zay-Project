@@ -701,28 +701,28 @@ function changeHrefAndSrc(
           console.log("newStringforClothing", newStringforClothing);
           shoppingCartListItemImg.attributes[0].textContent =
             newStringforClothing;
+          console.log("NEXT PART IS COMING");
+          console.log(
+            "What is shoppingCartListItemImg.attributes[1].textContent",
+            shoppingCartListItemImg.attributes[1].textContent
+          );
+          console.log(
+            "Does shoppingCartListItemImg.attributes[1].textContent contain the word clothing",
+            shoppingCartListItemImg.attributes[1].textContent.includes(
+              searchStringOne
+            )
+          );
+          console.log(
+            "Is the else-if true or false????",
+            shoppingCartListItemImg.attributes[1].textContent.includes(
+              searchStringOne
+            ) !== true
+          );
         } else if (
           shoppingCartListItemImg.attributes[1].textContent.includes(
             searchStringOne
           ) !== true
-        )
-          console.log(
-            "is else-if true or false:  ",
-            shoppingCartListItemImg.attributes[1].textContent.includes(
-              searchStringOne
-            ) === false
-          );
-        console.log("what is searchStringOne: ", searchStringOne);
-        console.log(shoppingCartListItemImg.attributes[1].textContent);
-        console.log(
-          `shoppingCartListItemImg.attributes[1].textContent.includes(
-            searchStringOne) is true or false?`,
-          shoppingCartListItemImg.attributes[1].textContent.includes(
-            searchStringOne
-          )
-        );
-        console.log("what is startingSliceNumOne?", startingSliceNumOne);
-        {
+        ) {
           console.log("else-if has been activating");
           console.log(
             "original string",

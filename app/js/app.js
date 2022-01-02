@@ -704,7 +704,7 @@ function changeHrefAndSrc(
         } else if (
           shoppingCartListItemImg.attributes[1].textContent.includes(
             searchStringOne
-          ) === false
+          ) !== true
         )
           console.log(
             "is else-if true or false:  ",
@@ -713,9 +713,9 @@ function changeHrefAndSrc(
             ) === false
           );
         console.log("what is searchStringOne: ", searchStringOne);
-        console.log(shoppingCartListItemImg.attributes[0].textContent);
+        console.log(shoppingCartListItemImg.attributes[1].textContent);
         console.log(
-          `shoppingCartListItemImg.attributes[0].textContent.includes(
+          `shoppingCartListItemImg.attributes[1].textContent.includes(
             searchStringOne) is true or false?`,
           shoppingCartListItemImg.attributes[1].textContent.includes(
             searchStringOne
@@ -766,12 +766,14 @@ function changeHrefAndSrc(
               "Clothing"
             )
           ) {
-            let updatedStringHref = `${NOTaddingInfo}${changedStringHref}`;
+            console.log("clothing is in the id");
+            let updatedStringHref = `${addingInfo}${changedStringHref}`;
             shoppingCartListItemLink.attributes[0].textContent =
               updatedStringHref;
             console.log("updated link", updatedStringHref);
           } else {
-            let updatedStringHref = `${addingInfo}${changedStringHref}`;
+            console.log("clothing is in the id");
+            let updatedStringHref = `${NOTaddingInfo}${changedStringHref}`;
             shoppingCartListItemLink.attributes[0].textContent =
               updatedStringHref;
             console.log("updated link", updatedStringHref);

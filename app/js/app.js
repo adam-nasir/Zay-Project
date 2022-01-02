@@ -707,7 +707,7 @@ function changeHrefAndSrc(
           ) === false
         )
           console.log(
-            "is else-if true or false",
+            "is else-if true or false:  ",
             shoppingCartListItemImg.attributes[1].textContent.includes(
               searchStringOne
             ) === false

@@ -662,6 +662,7 @@ function changeHrefAndSrc() {
           "/Zay-Project/",
           ""
         );
+        console.log(turnIDsToHref);
         if (
           sclItemLink.children[0].attributes[1].textContent.includes("Clothing")
         ) {

@@ -51,6 +51,11 @@
       font-size: 1.4rem;
       margin-left: 1rem;
       color: $primary-font-color;
+      cursor: pointer;
+      transition: 0.5s color ease;
+      &:hover {
+        color: $navy-blue;
+      }
     }
 
     .cart {
@@ -65,9 +70,14 @@
         left: 72%;
         background: #f3cdcd;
         border-radius: 50px;
-        padding: 0.25rem;
+        padding: 0.27rem;
         font-weight: 600;
         color: #2c2c2c;
+        transition: 0.5s color ease, 0.5s background ease;
+      }
+      &:hover .number-of-item {
+        background: $navy-blue;
+        color: $primary-font-color;
       }
     }
   }
@@ -390,7 +400,7 @@
 /* Footer Styling */
 
 .footer-section {
-  background: $primary-color;
+  background: #303030;
 }
 
 .footer-nav {
@@ -406,6 +416,11 @@
     font-weight: 600;
     padding: 0.7rem 0;
     align-self: center;
+    transition: 0.5s color ease;
+
+    &:hover {
+      color: $navy-blue;
+    }
   }
 }
 

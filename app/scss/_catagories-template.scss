@@ -13,6 +13,10 @@
 
   display: none;
 
+  .catagories-template__title {
+    margin-bottom: 1.2rem;
+  }
+
   .c-t-n__item {
     margin-bottom: 1.5rem;
   }
@@ -178,5 +182,66 @@
         }
       }
     }
+  }
+}
+
+// !! THIS IS ONLY LOCATED IN THE MEN AND WOMEN FASHION FALL HTML FILES
+
+.new-item-showcase {
+  background: #303030;
+  .container {
+    display: flex;
+  }
+
+  &__text {
+    &-content {
+      font-family: "Playfair Display", serif;
+      align-self: center;
+      order: 2;
+    }
+    &-title {
+      font-size: 3.7rem;
+      text-transform: uppercase;
+      // letter-spacing: 0.2rem;
+      margin-bottom: 1.7rem;
+      font-weight: 500;
+    }
+    &-p {
+      font-weight: 300;
+      line-height: 1.9;
+      font-family: "Public Sans", serif;
+      font-size: 1.05rem;
+      line-height: 2.2;
+      letter-spacing: 1.2;
+    }
+  }
+  &__img-content {
+    margin-right: 4rem;
+  }
+}
+
+.ff {
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1400px;
+    text-align: center;
+  }
+  &__content-title {
+    font-weight: 500;
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    letter-spacing: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+  &__content-description {
+    width: 67%;
+    margin: 0 auto 2rem auto;
+    font-weight: 300;
+    line-height: 1.9;
+    font-family: "Public Sans", serif;
   }
 }

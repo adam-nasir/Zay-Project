@@ -5,6 +5,53 @@
 // }
 
 //Global Classes
+
+.hero-showcase {
+  &__text-content {
+    @include media($viewport-3) {
+      transform: translateY(-33px);
+    }
+  }
+
+  &__text-title {
+    @include media($viewport-4) {
+      font-size: 2rem;
+    }
+
+    @include media($viewport-3) {
+      font-size: 2rem;
+    }
+  }
+
+  &__text-p {
+    @include media($viewport-4) {
+      font-size: 0.9rem;
+    }
+    @include media($viewport-3) {
+      font-size: 0.9rem;
+    }
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 0.3rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    animation: fade-in-up 1.4s ease 1.8s forwards;
+  }
+
+  &__video-background {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+  }
+}
+
+// WHERE I AM!
+
 .container {
   @include media($viewport-9) {
     width: 100%;
@@ -948,6 +995,13 @@
       display: grid;
       grid-template-columns: 1fr 5fr;
       gap: 0rem;
+    }
+  }
+  .new-item-showcase {
+    .container {
+      @include min-media($viewport-12) {
+        display: flex;
+      }
     }
   }
 }

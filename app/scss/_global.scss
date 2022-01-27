@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Public+Sans:wght@300;400;500;600;900&display=swap");
 
 html {
   font-size: 100%;
@@ -121,6 +121,83 @@ a {
 }
 
 //Components
+
+.hero-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  min-height: 100vh;
+  min-width: 100%;
+  position: relative;
+  font-family: "Playfair Display", serif;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  &__text-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 2rem;
+  }
+
+  &__text-title {
+    font-size: 5rem;
+    letter-spacing: 0.7rem;
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    animation: fade-in-up 1.4s ease 2s forwards;
+  }
+
+  &__text-p {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 0.3rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    animation: fade-in-up 1.4s ease 1.8s forwards;
+  }
+
+  &__video-background {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+  }
+}
+
+.bold {
+  font-weight: 900;
+}
+
+//Animation
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}
 
 .container {
   margin: 0 auto;

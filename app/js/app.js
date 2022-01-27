@@ -693,6 +693,10 @@ function changeHrefAndSrc() {
           ""
         );
         sclItemLink.children[0].attributes[0].textContent = newSrc.replace(
+          "../../../",
+          ""
+        );
+        sclItemLink.children[0].attributes[0].textContent = newSrc.replace(
           "",
           "../../../"
         );

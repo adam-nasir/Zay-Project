@@ -684,6 +684,36 @@ function changeHrefAndSrc() {
           );
         }
       }
+    } else if (document.baseURI.includes("Clothing") !== true) {
+      for (sclItemLink of shoppingCartListItemLinks) {
+        console.log("WORKING");
+        let newSrc = sclItemLink.children[0].attributes[0].textContent;
+        let turnIDsToHref = sclItemLink.attributes[2].textContent.replace(
+          "/Zay-Project/",
+          ""
+        );
+        sclItemLink.children[0].attributes[0].textContent = newSrc.replace(
+          "",
+          "../../../"
+        );
+
+        if (
+          sclItemLink.children[0].attributes[1].textContent.includes("Clothing")
+        ) {
+          sclItemLink.attributes[0].textContent = turnIDsToHref;
+        } else {
+          // let noClothingHref = sclItemLink.attributes[0].textContent;
+          // let noClothingIds = turnIDsToHref;
+          // console.log(noClothingIds);
+          // let result = noClothingIds.lastIndexOf("catagories-men-");
+          // let newText = noClothingIds.slice(0, result);
+          // sclItemLink.attributes[0].textContent = newText + noClothingHref;
+          // sclItemLink.children[0].attributes[0].textContent = newSrc.replace(
+          //   "",
+          //   "../"
+          // );
+        }
+      }
     }
   });
 }

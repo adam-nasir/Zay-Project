@@ -167,7 +167,7 @@ a {
 
 .hero-showcase__video-background {
   position: absolute;
-  top: 72%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 100%;
@@ -1542,6 +1542,7 @@ input::placeholder {
   margin: 0 auto;
   max-width: 1400px;
   text-align: center;
+  padding: 2rem;
 }
 
 .ff__content-title {
@@ -1683,16 +1684,6 @@ input::placeholder {
   .hero-showcase__text-p {
     font-size: 0.9rem;
   }
-}
-
-.hero-showcase__video-background {
-  position: absolute;
-  top: 72%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 0;
 }
 
 @media screen and (max-width: 992px) {

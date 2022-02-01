@@ -38,16 +38,6 @@
     transform: translateY(20px);
     animation: fade-in-up 1.4s ease 1.8s forwards;
   }
-
-  &__video-background {
-    position: absolute;
-    top: 72%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 0;
-  }
 }
 
 // WHERE I AM!

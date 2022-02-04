@@ -684,7 +684,9 @@ function changeHrefAndSrc() {
           );
         }
       }
-    } else if (document.baseURI.includes("index.html")) {
+    } else if (document.baseURI.includes("men-catagories.html")) {
+      for (sclItemLink of shoppingCartListItemLinks) {
+      }
     }
   });
 }

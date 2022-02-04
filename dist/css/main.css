@@ -1326,7 +1326,7 @@ input::placeholder {
 }
 
 .catagories-template__nav {
-  padding-top: 3.2rem;
+  padding-top: 6rem;
   display: none;
 }
 
@@ -1652,9 +1652,17 @@ input::placeholder {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .hero-showcase__text-title {
+    font-size: 4rem;
+    color: orange;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .hero-showcase__text-title {
-    font-size: 2rem;
+    font-size: 3rem;
+    color: pink;
   }
 }
 

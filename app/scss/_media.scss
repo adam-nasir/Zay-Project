@@ -14,8 +14,12 @@
   }
 
   &__text-title {
+    @include media($viewport-9) {
+      font-size: 4rem;
+    }
+
     @include media($viewport-4) {
-      font-size: 2rem;
+      font-size: 3rem;
     }
 
     @include media($viewport-3) {

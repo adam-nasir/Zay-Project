@@ -229,6 +229,12 @@
     max-width: 1400px;
     text-align: center;
     padding: 2rem;
+    text-align: center;
+
+    .site-location p {
+      text-align: center;
+      font-family: "Playfair Display", serif;
+    }
   }
   &__content-title {
     font-weight: 500;

@@ -664,10 +664,10 @@ function changeHrefAndSrc() {
     ) {
       for (sclItemLink of shoppingCartListItemLinks) {
         let newSrc = sclItemLink.children[0].attributes[0].textContent;
-        let turnIDsToHref = sclItemLink.attributes[2].textContent.replace(
-          "/Zay-Project/",
-          ""
-        );
+        // let turnIDsToHref = sclItemLink.attributes[2].textContent.replace(
+        //   "/Zay-Project/",
+        //   ""
+        // );
         console.log(turnIDsToHref);
         if (
           sclItemLink.children[0].attributes[1].textContent.includes("Clothing")

@@ -145,12 +145,14 @@ catagoriesGallaryCardButtons.forEach((element) => {
     let textLinage =
       element.parentElement.parentElement.parentElement.parentElement
         .children[1];
-    let cardName = textLinage.children[0].children[0].textContent;
+    console.log("name", textLinage);
+    let cardName = textLinage.children[0].textContent;
+    console.log;
     cardInfo.name = cardName;
     let cardTitle = document.createElement("h4");
     cardTitle.textContent = cardName;
     card.name = cardTitle;
-
+    console.log("updatedName", textLinage);
     //getting the size
     let selectedSizes = Array.from(element.previousElementSibling.children);
     selectedSizes.forEach((selectedSize) => {
@@ -178,7 +180,8 @@ catagoriesGallaryCardButtons.forEach((element) => {
     card.image = newImg;
 
     //getting the price
-    let price = textLinage.children[2].children[0].textContent;
+    let price = textLinage.children[1].textContent;
+    console.log("price", textLinage.children);
     cardInfo.price = price;
     let pricePara = document.createElement("p");
     pricePara.textContent = price;
@@ -220,6 +223,7 @@ catagoriesGallaryCardButtons.forEach((element) => {
     let itemCardTextContent = document.createElement("div");
     //Creating button to delete shopping items
     let deleteShoppingItemButton = document.createElement("button");
+    deleteShoppingItemButton.style.marginLeft = "1rem";
     //Adding class to style button
     deleteShoppingItemButton.classList.add("delete-shopping-item-button");
     let deleteShoppingItemButtonContent = document.createElement("i");
@@ -392,6 +396,7 @@ function getDataToLocalStorage() {
     let itemCardTextContent = document.createElement("div");
     //Creating button to delete shopping items
     let deleteShoppingItemButton = document.createElement("button");
+    deleteShoppingItemButton.style.marginLeft = "1rem";
     //Adding class to style button
     deleteShoppingItemButton.classList.add("delete-shopping-item-button");
     let deleteShoppingItemButtonContent = document.createElement("i");
@@ -652,6 +657,7 @@ console.log(shoppingCartListItemImgs);
 
 function changeHrefAndSrc() {
   window.addEventListener("DOMContentLoaded", () => {
+    0;
     if (
       document.baseURI.includes("index.html") ||
       document.baseURI.includes("about.html")
@@ -686,6 +692,7 @@ function changeHrefAndSrc() {
       }
     } else if (document.baseURI.includes("men-catagories.html")) {
       for (sclItemLink of shoppingCartListItemLinks) {
+        console.log("hello");
       }
     }
   });
@@ -893,8 +900,6 @@ mainAddToCartButton.addEventListener("click", () => {
       .previousElementSibling.previousElementSibling.parentElement.parentElement
       .previousElementSibling.children[0].children[0].attributes[0].textContent;
 
-  console.log(imgSrc);
-
   //getting Location
   cardInfo.location = `${document.location.pathname}`;
   console.log(cardInfo.location);
@@ -961,6 +966,7 @@ mainAddToCartButton.addEventListener("click", () => {
   let itemCardTextContent = document.createElement("div");
   //Creating button to delete shopping items
   let deleteShoppingItemButton = document.createElement("button");
+  deleteShoppingItemButton.style.marginLeft = "1rem";
   //Adding class to style button
   deleteShoppingItemButton.classList.add("delete-shopping-item-button");
   let deleteShoppingItemButtonContent = document.createElement("i");

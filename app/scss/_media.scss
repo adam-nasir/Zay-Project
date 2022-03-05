@@ -208,7 +208,7 @@
 
 .desktop-nav-item {
   @include min-media($viewport-9) {
-    padding: 1.75rem 0.5rem;
+    padding: 0.7rem 0.5rem;
   }
 }
 
@@ -216,7 +216,7 @@
   @include min-media($viewport-9) {
     position: absolute;
     background: $dark-line-color;
-    top: 90px;
+    top: 76px;
     padding: 1.5rem;
     display: flex;
     left: 52%;

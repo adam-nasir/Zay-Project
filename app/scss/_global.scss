@@ -120,6 +120,13 @@ a {
   }
 }
 
+.showcase-img {
+  transition: filter 0.5s ease;
+  &:hover {
+    filter: contrast(125%);
+  }
+}
+
 //Components
 
 .hero-showcase {
@@ -351,10 +358,6 @@ a {
   }
 }
 
-.color-options {
-  display: none;
-}
-
 .color-option {
   width: 16px;
   height: 16px;
@@ -386,6 +389,11 @@ a {
   padding: 1.7rem;
   width: 900px;
   position: relative;
+  transition: filter 0.5s ease;
+  &:hover {
+    filter: contrast(85%);
+  }
+
   p {
     padding: 1rem;
     font-size: 3.2rem;
@@ -438,6 +446,8 @@ a {
     opacity: 1;
   }
 }
+
+.link-showcase
 
 //Color-state
 
@@ -573,9 +583,6 @@ a {
   visibility: hidden;
   opacity: 0;
   transition: 0.4s visibility ease 1s, 0.4 opacity ease 1s;
-}
-
-.shopping-item-button-exit-sign {
 }
 
 // Media Queries Section

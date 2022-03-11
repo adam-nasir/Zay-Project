@@ -237,6 +237,10 @@
     url("../../images/catagories-section/man-large.jpg") no-repeat center
       center/ cover;
   margin-right: 1.3rem;
+  transition: filter 0.4s ease;
+  &:hover {
+    filter: contrast(109%);
+  }
 }
 
 .women-catagories {
@@ -247,7 +251,10 @@
     ),
     url("../../images/catagories-section/woman-large.jpg") no-repeat center
       center/ cover;
-  margin-left: 1.3rem;
+  transition: filter 0.4s ease;
+  &:hover {
+    filter: contrast(125%);
+  }
 }
 
 /* Email Scription Section */
@@ -300,7 +307,6 @@
   display: flex;
   justify-content: center;
   position: relative;
-
   .link-men-fall-sale,
   .link-women-fall-sale {
     cursor: pointer;
@@ -330,22 +336,6 @@
   height: inherit;
   z-index: 1;
 }
-
-// .sale-content-text {
-//   position: relative;
-//   // z-index: ;
-// }
-
-// .link-fall-sale-info {
-//   width: 100%;
-//   display: inline-block;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   cursor: pointer;
-//   z-index: 2;
-// }
 
 .sale-title {
   font-size: 4rem;

@@ -116,6 +116,14 @@ a {
   padding: 5rem 0;
 }
 
+.showcase-img {
+  transition: filter 0.5s ease;
+}
+
+.showcase-img:hover {
+  filter: contrast(125%);
+}
+
 .hero-showcase {
   display: flex;
   justify-content: center;
@@ -345,10 +353,6 @@ a {
   color: #2c6bbd;
 }
 
-.color-options {
-  display: none;
-}
-
 .color-option {
   width: 16px;
   height: 16px;
@@ -381,6 +385,11 @@ a {
   padding: 1.7rem;
   width: 900px;
   position: relative;
+  transition: filter 0.5s ease;
+}
+
+.catagories-card:hover {
+  filter: contrast(85%);
 }
 
 .catagories-card p {
@@ -436,6 +445,7 @@ a {
   }
 }
 
+.link-showcase
 .large-border-on {
   border: 4px #f3d0d0 solid;
 }
@@ -936,11 +946,20 @@ input::placeholder {
 .men-catagories {
   background: linear-gradient(183deg, rgba(0, 0, 0, 0.15) 100%, rgba(255, 255, 255, 0) 100%), url("../../images/catagories-section/man-large.jpg") no-repeat center center/cover;
   margin-right: 1.3rem;
+  transition: filter 0.4s ease;
+}
+
+.men-catagories:hover {
+  filter: contrast(109%);
 }
 
 .women-catagories {
   background: linear-gradient(183deg, rgba(0, 0, 0, 0.048) 100%, rgba(255, 255, 255, 0) 100%), url("../../images/catagories-section/woman-large.jpg") no-repeat center center/cover;
-  margin-left: 1.3rem;
+  transition: filter 0.4s ease;
+}
+
+.women-catagories:hover {
+  filter: contrast(125%);
 }
 
 /* Email Scription Section */

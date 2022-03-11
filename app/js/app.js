@@ -665,7 +665,7 @@ function changeHrefAndSrc() {
         console.log("../../../");
         let newSrc = sclItemLink.children[0].attributes[0].textContent;
         console.log("newSrc", newSrc);
-        let updatedSrc = newSrc.replace("../../../", "/Zay-Project/");
+        let updatedSrc = newSrc.replace("../../../", "/");
         console.log("updatedSrc", updatedSrc);
         sclItemLink.children[0].attributes[0].textContent = updatedSrc;
       } else if (
@@ -676,7 +676,7 @@ function changeHrefAndSrc() {
         console.log("../../../../");
         let newSrc = sclItemLink.children[0].attributes[0].textContent;
         console.log("newSrc", newSrc);
-        let updatedSrc = newSrc.replace("../../../../", "/Zay-Project/");
+        let updatedSrc = newSrc.replace("../../../../", "/");
         console.log("updatedSrc", updatedSrc);
         sclItemLink.children[0].attributes[0].textContent = updatedSrc;
       }

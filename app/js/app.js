@@ -655,170 +655,24 @@ console.log(shoppingCartListItemImgs);
 function changeHrefAndSrc() {
   window.addEventListener("DOMContentLoaded", () => {
     for (sclItemLink of shoppingCartListItemLinks) {
-      let newSrc = sclItemLink.children[0].attributes[0].textContent;
-      console.log("newSrc", newSrc);
-      let updatedSrc = newSrc.replace("../../../", "/Zay-Project/");
-      console.log("updatedSrc", updatedSrc);
-      sclItemLink.children[0].attributes[0].textContent = updatedSrc;
+      if (!document.baseURI.includes("Clothing")) {
+        let newSrc = sclItemLink.children[0].attributes[0].textContent;
+        console.log("newSrc", newSrc);
+        let updatedSrc = newSrc.replace("../../../", "/Zay-Project/");
+        console.log("updatedSrc", updatedSrc);
+        sclItemLink.children[0].attributes[0].textContent = updatedSrc;
+      } else {
+        let newSrc = sclItemLink.children[0].attributes[0].textContent;
+        console.log("newSrc", newSrc);
+        let updatedSrc = newSrc.replace("../../../../", "/Zay-Project/");
+        console.log("updatedSrc", updatedSrc);
+        sclItemLink.children[0].attributes[0].textContent = updatedSrc;
+      }
     }
   });
 }
 
 changeHrefAndSrc();
-//  window.addEventListener("DOMContentLoaded", () => {
-//     console.log("addEventListener working");
-//     console.log(
-//       "is if-doc.BaseURI true?",
-//       document.baseURI === URLOne || document.baseURI === URLTwo
-//     );
-//     console.log("document.baseURI: ", document.baseURI);
-//     console.log("URLOne: ", URLOne);
-//     console.log("URLTwo: ", URLTwo);
-//     if (document.baseURI === URLOne || document.baseURI === URLTwo) {
-//       console.log("if-doc.BaseURI is working!");
-//       for (let shoppingCartListItemImg of shoppingCartListItemImgs) {
-//         //Get the src of the images in the Shopping Cart
-//         console.log(
-//           "!!!!!!!!!!!!!!",
-//           shoppingCartListItemImg.attributes[1].textContent
-//         );
-//         console.log("!!!!!!!!!!!!!!", shoppingCartListItemImg.attributes[1]);
-//         if (
-//           shoppingCartListItemImg.attributes[1].textContent.includes("Clothing")
-//         ) {
-//           console.log(
-//             "is clothing there? : ",
-//             shoppingCartListItemImg.attributes[1].textContent.includes(
-//               "Clothing"
-//             )
-//           );
-//           console.log("working");
-//           console.log(
-//             "startingSliceNumOneForClothingPage",
-//             startingSliceNumOneForClothingPage
-//           );
-//           let newStringforClothing =
-//             shoppingCartListItemImg.attributes[0].textContent.slice(
-//               startingSliceNumOneForClothingPage,
-//               shoppingCartListItemImg.attributes[0].textContent.length
-//             );
-//           console.log("newStringforClothing", newStringforClothing);
-//           shoppingCartListItemImg.attributes[0].textContent =
-//             newStringforClothing;
-//           console.log("NEXT PART IS COMING");
-//           console.log(
-//             "What is shoppingCartListItemImg.attributes[1].textContent",
-//             shoppingCartListItemImg.attributes[1].textContent
-//           );
-//           console.log(
-//             "Does shoppingCartListItemImg.attributes[1].textContent contain the word clothing",
-//             shoppingCartListItemImg.attributes[1].textContent.includes(
-//               searchStringOne
-//             )
-//           );
-//           console.log(
-//             "Is the else-if true or false????",
-//             shoppingCartListItemImg.attributes[1].textContent.includes(
-//               searchStringOne
-//             ) !== true
-//           );
-//         } else if (
-//           shoppingCartListItemImg.attributes[1].textContent.includes(
-//             searchStringOne
-//           ) !== true
-//         ) {
-//           console.log("else-if has been activating");
-//           console.log(
-//             "original string",
-//             shoppingCartListItemImg.attributes[0].textContent
-//           );
-
-//           let newString =
-//             shoppingCartListItemImg.attributes[0].textContent.slice(
-//               startingSliceNumOne,
-//               shoppingCartListItemImg.attributes[0].textContent.length
-//             );
-//           console.log("newString - the new img src", newString);
-//           shoppingCartListItemImg.attributes[0].textContent = newString;
-//           console.log(
-//             "is new newString and src the same?",
-//             shoppingCartListItemImg.attributes[0].textContent
-//           );
-//         }
-//       }
-// for (let shoppingCartListItemLink of shoppingCartListItemLinks) {
-// get info from id
-//mainpulate the info depending on the current url
-//
-// if (
-//   shoppingCartListItemLink.attributes[2].textContent.includes(
-//     searchStringTwo
-//   )
-// )
-//   console.log("searchStringTwo:", searchStringTwo);
-// {
-//   console.log("if-include is working");
-//   let newStringHref =
-//     shoppingCartListItemLink.attributes[0].textContent;
-//   console.log("newStringHref:", newStringHref);
-//   console.log("startingSliceNumTwo:", startingSliceNumTwo);
-//   console.log("endingSliceNumTwo:", endingSliceNumTwo);
-//   const changedStringHref = newStringHref.slice(
-//     startingSliceNumTwo,
-//     endingSliceNumTwo
-//   );
-//   if (
-//     shoppingCartListItemLink.attributes[2].textContent.includes(
-//       "Clothing"
-//     )
-//   ) {
-//     console.log("clothing is in the id");
-//     let updatedStringHref = `${addingInfo}${changedStringHref}`;
-//     shoppingCartListItemLink.attributes[0].textContent =
-//       updatedStringHref;
-//     console.log("updated link", updatedStringHref);
-//   } else {
-//     console.log("clothing is in the id");
-//     let updatedStringHref = `${NOTaddingInfo}${changedStringHref}`;
-//     shoppingCartListItemLink.attributes[0].textContent =
-//       updatedStringHref;
-//     console.log("updated link", updatedStringHref);
-//   }
-// }
-//       }
-//     }
-//   });
-// }
-
-// changeHrefAndSrc(
-//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-women/women-catagories.html",
-//   null,
-//   "/men/sweaters-and-hoodies/",
-//   3,
-//   "catagories-men-hoodies-and-sweaters/",
-//   0,
-//   1000,
-//   "../catagories-men/catagories-men-hoodies-and-sweaters/"
-// );
-
-// changeHrefAndSrc(
-//   "https://adam-nasir.github.io/Zay-Project/catagories-section/catagories-men/men-catagories.html",
-//   null,
-//   "12",
-//   3,
-//   "catagories-men-hoodies-and-sweaters/",
-//   0,
-//   1000,
-//   "catagories-men-hoodies-and-sweaters/"
-// );
-
-// changeHrefAndSrc(
-//   "https://adam-nasir.github.io/Zay-Project/index.html", //URLOne
-//   "https://adam-nasir.github.io/Zay-Project/about.html", //URLTwo
-//   12, //ClothingNumber
-//   "Clothing", //SearchStringOne
-//   9 //startingString
-// );
 
 //Clothing Adding Items To Cart in Clothing template
 

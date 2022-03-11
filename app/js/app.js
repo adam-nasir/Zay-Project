@@ -659,7 +659,7 @@ function changeHrefAndSrc() {
       console.log("newSrc", newSrc);
       let updatedSrc = newSrc.replace("../../../", "/Zay-Project/");
       console.log("updatedSrc", updatedSrc);
-      newSrc = updatedSrc;
+      sclItemLink.children[0].attributes[0].textContent = updatedSrc;
     }
   });
 }

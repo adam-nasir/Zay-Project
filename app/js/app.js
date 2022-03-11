@@ -655,13 +655,25 @@ console.log(shoppingCartListItemImgs);
 function changeHrefAndSrc() {
   window.addEventListener("DOMContentLoaded", () => {
     for (sclItemLink of shoppingCartListItemLinks) {
-      if (!document.baseURI.includes("Clothing")) {
+      console.log(sclItemLink.children[0].attributes[0].textContent);
+      console.log(sclItemLink.children[0].attributes);
+      if (
+        sclItemLink.children[0].attributes[0].textContent.startsWith(
+          "../../../images"
+        )
+      ) {
+        console.log("../../../");
         let newSrc = sclItemLink.children[0].attributes[0].textContent;
         console.log("newSrc", newSrc);
         let updatedSrc = newSrc.replace("../../../", "/Zay-Project/");
         console.log("updatedSrc", updatedSrc);
         sclItemLink.children[0].attributes[0].textContent = updatedSrc;
-      } else {
+      } else if (
+        sclItemLink.children[0].attributes[0].textContent.startsWith(
+          "../../../../images"
+        )
+      ) {
+        console.log("../../../../");
         let newSrc = sclItemLink.children[0].attributes[0].textContent;
         console.log("newSrc", newSrc);
         let updatedSrc = newSrc.replace("../../../../", "/Zay-Project/");

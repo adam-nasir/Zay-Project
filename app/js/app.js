@@ -24,7 +24,7 @@ const shoppingCartIcon = document.querySelector(".shopping-cart-icon");
 const shoppingCartNav = document.querySelector(".add-to-cart-nav");
 //** I am going to use this
 const shoppingCartList = document.querySelector(".a-t-c__items-list");
-console.log(shoppingCartList);
+
 const continueShoppingButton = document.querySelector(
   ".a-t-c__continue-shopping-btn"
 );
@@ -159,14 +159,13 @@ catagoriesGallaryCardButtons.forEach((element) => {
     let textLinage =
       element.parentElement.parentElement.parentElement.parentElement
         .children[1];
-    console.log("name", textLinage);
+    "name", textLinage;
     let cardName = textLinage.children[0].textContent;
-    console.log;
     cardInfo.name = cardName;
     let cardTitle = document.createElement("h4");
     cardTitle.textContent = cardName;
     card.name = cardTitle;
-    console.log("updatedName", textLinage);
+    "updatedName", textLinage;
     //getting the size
     let selectedSizes = Array.from(element.previousElementSibling.children);
     selectedSizes.forEach((selectedSize) => {
@@ -180,13 +179,13 @@ catagoriesGallaryCardButtons.forEach((element) => {
 
     //getting Location
     cardInfo.location = `${document.location.pathname}`;
-    console.log(cardInfo.location);
+    cardInfo.location;
 
     //getting the image
     let imgSrc =
       element.parentElement.parentElement.parentElement.children[0].children[0]
         .attributes[0].textContent;
-    console.log("imgSrc", imgSrc);
+    "imgSrc", imgSrc;
     cardInfo.image = imgSrc;
     let newImg = document.createElement("img");
     newImg.setAttribute("src", imgSrc);
@@ -195,15 +194,15 @@ catagoriesGallaryCardButtons.forEach((element) => {
 
     //getting the price
     let price = textLinage.children[1].textContent;
-    console.log("price textlinage", textLinage.children);
+    "price textlinage", textLinage.children;
     cardInfo.price = price;
     let pricePara = document.createElement("p");
     pricePara.textContent = price;
     card.price = pricePara;
-    console.log("hello there -1");
+    ("hello there -1");
     //Getting URL
     cardInfo.URL = `${document.baseURI}`;
-    console.log(cardInfo.URL);
+    cardInfo.URL;
 
     // Create and get itemNumber
     number++;
@@ -223,7 +222,7 @@ catagoriesGallaryCardButtons.forEach((element) => {
     let hrefAttribute =
       element.parentElement.parentElement.parentElement.children[0]
         .attributes[0].textContent;
-    console.log(hrefAttribute);
+    hrefAttribute;
     cardInfo.URL = hrefAttribute;
     anchorTag.setAttribute("href", hrefAttribute);
 
@@ -272,14 +271,14 @@ catagoriesGallaryCardButtons.forEach((element) => {
     //Add The Price To The Subtotal
     function addPriceToSubtotal() {
       numberOfItem.textContent = shoppingCartList.children.length;
-      console.log("price", price);
+      "price", price;
       let priceNoDollarSign = price.slice(1);
       let convertedPrice = parseFloat(priceNoDollarSign);
 
-      console.log("convertedPrice", convertedPrice);
+      "convertedPrice", convertedPrice;
       let convertedSubtotal = parseFloat(subtotalPrice.textContent);
       subtotal = convertedPrice + convertedSubtotal;
-      console.log("subtotal", subtotal);
+      "subtotal", subtotal;
       if (subtotal > 0) {
         checkoutButton.disabled = false;
       }
@@ -291,22 +290,22 @@ catagoriesGallaryCardButtons.forEach((element) => {
       //Get price of item
       numberOfItem.textContent = shoppingCartList.children.length - 1;
       let priceNoDollarSign = price.slice(1);
-      console.log("priceNoDollarSign", priceNoDollarSign);
+      "priceNoDollarSign", priceNoDollarSign;
       //convert price into a number
       let convertedPrice = parseFloat(priceNoDollarSign);
       //Get current subtotal
       let currentSubtotal = subtotalPrice.textContent;
-      console.log("currentSubtotal", currentSubtotal);
+      "currentSubtotal", currentSubtotal;
       //convert price into a number
       let convertedCurrentSubtotal = parseFloat(currentSubtotal);
-      console.log("convertedCurrentSubtotal", convertedCurrentSubtotal);
+      "convertedCurrentSubtotal", convertedCurrentSubtotal;
       //Subtract the subtotal by the price
       let newSubtotal = convertedCurrentSubtotal - convertedPrice;
-      console.log("newSubtotal", newSubtotal);
+      "newSubtotal", newSubtotal;
       //Update subtotal
-      console.log(subtotalPrice);
+      subtotalPrice;
       subtotalPrice.textContent = newSubtotal.toFixed(2);
-      console.log(subtotalPrice.textContent);
+      subtotalPrice.textContent;
       if (subtotalPrice.textContent === "0.00") {
         checkoutButton.disabled = true;
       }
@@ -316,9 +315,9 @@ catagoriesGallaryCardButtons.forEach((element) => {
       let itemCode =
         element.target.parentElement.parentElement.parentElement.children[3]
           .textContent;
-      console.log("itemCode", itemCode);
+      "itemCode", itemCode;
       let itemCodeNumber = itemCode.slice(13, 15);
-      console.log("deleteButton", itemCodeNumber);
+      "deleteButton", itemCodeNumber;
       removeDataToLocalStorage(itemCodeNumber);
       subtractPriceFromSubtotal();
       itemCard.remove();
@@ -348,7 +347,7 @@ function removeDataToLocalStorage(item) {
     cards = JSON.parse(sessionStorage.getItem("cards"));
   }
   let indexOfCardItem = cards.findIndex((element) => {
-    console.log(`item`, item);
+    `item`, item;
     return element.itemNumber === item;
   });
 
@@ -441,10 +440,10 @@ function getDataToLocalStorage() {
       numberOfItem.textContent = shoppingCartList.children.length;
       let priceNoDollarSign = element.price.slice(1);
       let convertedPrice = parseFloat(priceNoDollarSign);
-      console.log("cPrice", convertedPrice);
+      "cPrice", convertedPrice;
       let convertedSubtotal = parseFloat(subtotalPrice.textContent);
       subtotal = convertedPrice + convertedSubtotal;
-      console.log("subtotal", subtotal);
+      "subtotal", subtotal;
       if (subtotal > 0) {
         checkoutButton.disabled = false;
       }
@@ -457,22 +456,22 @@ function getDataToLocalStorage() {
       //Get price of item
       numberOfItem.textContent = shoppingCartList.children.length - 1;
       let priceNoDollarSign = element.price.slice(1);
-      console.log("priceNoDollarSign", priceNoDollarSign);
+      "priceNoDollarSign", priceNoDollarSign;
       //convert price into a number
       let convertedPrice = parseFloat(priceNoDollarSign);
       //Get current subtotal
       let currentSubtotal = subtotalPrice.textContent;
-      console.log("currentSubtotal", currentSubtotal);
+      "currentSubtotal", currentSubtotal;
       //convert price into a number
       let convertedCurrentSubtotal = parseFloat(currentSubtotal);
-      console.log("convertedCurrentSubtotal", convertedCurrentSubtotal);
+      "convertedCurrentSubtotal", convertedCurrentSubtotal;
       //Subtract the subtotal by the price
       let newSubtotal = convertedCurrentSubtotal - convertedPrice;
-      console.log("newSubtotal", newSubtotal);
+      "newSubtotal", newSubtotal;
       //Update subtotal
-      console.log(subtotalPrice);
+      subtotalPrice;
       subtotalPrice.textContent = newSubtotal.toFixed(2);
-      console.log(subtotalPrice.textContent);
+      subtotalPrice.textContent;
       if (subtotalPrice.textContent === "0.00") {
         checkoutButton.disabled = true;
       }
@@ -483,9 +482,9 @@ function getDataToLocalStorage() {
       let itemCode =
         element.target.parentElement.parentElement.parentElement.children[3]
           .textContent;
-      console.log("itemCode", itemCode);
+      "itemCode", itemCode;
       let itemCodeNumber = itemCode.slice(13, 15);
-      console.log("deleteButton", itemCodeNumber);
+      "deleteButton", itemCodeNumber;
       removeDataToLocalStorage(itemCodeNumber);
       subtractPriceFromSubtotal();
       itemCard.remove();
@@ -588,25 +587,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 mainCatagoriesNavMen.addEventListener("click", () => {
   if (window.innerWidth <= 992) {
-    console.log(mainCatagoriesNavMen);
+    mainCatagoriesNavMen;
     mainCatagoriesNavMen.children[1].classList.toggle("open");
     chevronDownMen.classList.toggle("rotate");
     chevronDownWomen.classList.remove("rotate");
     mainCatagoriesNavWomen.children[1].classList.remove("open");
   } else {
-    console.log("nothing");
+    ("nothing");
   }
 });
 
 mainCatagoriesNavWomen.addEventListener("click", () => {
   if (window.innerWidth <= 992) {
-    console.log("working");
+    ("working");
     mainCatagoriesNavWomen.children[1].classList.toggle("open");
     chevronDownWomen.classList.toggle("rotate");
     chevronDownMen.classList.remove("rotate");
     mainCatagoriesNavMen.children[1].classList.remove("open");
   } else {
-    console.log("nothing");
+    ("nothing");
   }
 });
 
@@ -650,35 +649,47 @@ const shoppingCartListItemLinks = document.querySelectorAll(
   ".shopping-cart-list-item-link"
 );
 
-console.log(shoppingCartListItemImgs);
+shoppingCartListItemImgs;
 
 function changeHrefAndSrc() {
   window.addEventListener("DOMContentLoaded", () => {
     for (sclItemLink of shoppingCartListItemLinks) {
-      console.log(sclItemLink.children[0].attributes[0].textContent);
-      console.log(sclItemLink.children[0].attributes);
+      sclItemLink.children[0].attributes[0].textContent;
+      sclItemLink.children[0].attributes;
       if (
         sclItemLink.children[0].attributes[0].textContent.startsWith(
           "../../../images"
         )
       ) {
-        console.log("../../../");
+        ("../../../");
         let newSrc = sclItemLink.children[0].attributes[0].textContent;
-        console.log("newSrc", newSrc);
+        "newSrc", newSrc;
         let updatedSrc = newSrc.replace("../../../", "/");
-        console.log("updatedSrc", updatedSrc);
+        "updatedSrc", updatedSrc;
         sclItemLink.children[0].attributes[0].textContent = updatedSrc;
       } else if (
         sclItemLink.children[0].attributes[0].textContent.startsWith(
           "../../../../images"
         )
       ) {
-        console.log("../../../../");
+        ("../../../../");
         let newSrc = sclItemLink.children[0].attributes[0].textContent;
-        console.log("newSrc", newSrc);
+        "newSrc", newSrc;
         let updatedSrc = newSrc.replace("../../../../", "/");
-        console.log("updatedSrc", updatedSrc);
+        "updatedSrc", updatedSrc;
         sclItemLink.children[0].attributes[0].textContent = updatedSrc;
+      }
+      if (sclItemLink.attributes[2].textContent.includes("Clothing")) {
+        let newHref = sclItemLink.attributes[2].textContent;
+        sclItemLink.attributes[0].textContent = newHref;
+      } else if (!sclItemLink.attributes[2].textContent.includes("Clothing")) {
+        let itemID = sclItemLink.attributes[2].textContent;
+        let oldHref = sclItemLink.attributes[0].textContent;
+        let indexOfLastSlash = itemID.lastIndexOf("/") + 1;
+
+        let updatedHref = itemID.slice(0, indexOfLastSlash);
+        let completedHref = updatedHref + oldHref;
+        sclItemLink.attributes[0].textContent = completedHref;
       }
     }
   });
@@ -734,7 +745,7 @@ mainAddToCartButton.addEventListener("click", () => {
 
   //getting Location
   cardInfo.location = `${document.location.pathname}`;
-  console.log(cardInfo.location);
+  cardInfo.location;
 
   //getting the name
   let cardName =
@@ -833,13 +844,13 @@ mainAddToCartButton.addEventListener("click", () => {
   //Add The Price To The Subtotal
   function addPriceToSubtotal() {
     numberOfItem.textContent = shoppingCartList.children.length;
-    console.log("price", price);
+    "price", price;
     let priceNoDollarSign = price.slice(1);
     let convertedPrice = parseFloat(priceNoDollarSign);
-    console.log("cPrice", convertedPrice);
+    "cPrice", convertedPrice;
     let convertedSubtotal = parseFloat(subtotalPrice.textContent);
     subtotal = convertedPrice + convertedSubtotal;
-    console.log("subtotal", subtotal);
+    "subtotal", subtotal;
     if (subtotal > 0) {
       checkoutButton.disabled = false;
     }
@@ -851,22 +862,22 @@ mainAddToCartButton.addEventListener("click", () => {
     //Get price of item
     numberOfItem.textContent = shoppingCartList.children.length - 1;
     let priceNoDollarSign = price.slice(1);
-    console.log("priceNoDollarSign", priceNoDollarSign);
+    "priceNoDollarSign", priceNoDollarSign;
     //convert price into a number
     let convertedPrice = parseFloat(priceNoDollarSign);
     //Get current subtotal
     let currentSubtotal = subtotalPrice.textContent;
-    console.log("currentSubtotal", currentSubtotal);
+    "currentSubtotal", currentSubtotal;
     //convert price into a number
     let convertedCurrentSubtotal = parseFloat(currentSubtotal);
-    console.log("convertedCurrentSubtotal", convertedCurrentSubtotal);
+    "convertedCurrentSubtotal", convertedCurrentSubtotal;
     //Subtract the subtotal by the price
     let newSubtotal = convertedCurrentSubtotal - convertedPrice;
-    console.log("newSubtotal", newSubtotal);
+    "newSubtotal", newSubtotal;
     //Update subtotal
-    console.log(subtotalPrice);
+    subtotalPrice;
     subtotalPrice.textContent = newSubtotal.toFixed(2);
-    console.log(subtotalPrice.textContent);
+    subtotalPrice.textContent;
     if (subtotalPrice.textContent === "0.00") {
       checkoutButton.disabled = true;
     }
@@ -876,9 +887,9 @@ mainAddToCartButton.addEventListener("click", () => {
     let itemCode =
       element.target.parentElement.parentElement.parentElement.children[3]
         .textContent;
-    console.log("itemCode", itemCode);
+    "itemCode", itemCode;
     let itemCodeNumber = itemCode.slice(13, 15);
-    console.log("deleteButton", itemCodeNumber);
+    "deleteButton", itemCodeNumber;
     removeDataToLocalStorage(itemCodeNumber);
     subtractPriceFromSubtotal();
     itemCard.remove();

@@ -48,4 +48,9 @@ Issue with email subscribe section:
 
 place a tag on fall-sale section 
 
+-  /catagories-section/catagories-men/catagories-men-new-arrivals/catagories-men-new-arrivals.html for all men catagories sections 
 
+"../../../catagories-men/catagories-men-demin/catagories-men-demin.html"
+"../../../catagories-men/catagories-men-fall-sale/catagories-men-fall-sale.html"
+
+women outwear catagories and clothing good to go 

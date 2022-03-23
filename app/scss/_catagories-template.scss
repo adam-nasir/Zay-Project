@@ -233,7 +233,6 @@
 
     .site-location p {
       text-align: center;
-      font-family: "Playfair Display", serif;
     }
   }
   &__content-title {
@@ -251,4 +250,9 @@
     line-height: 1.9;
     font-family: "Public Sans", serif;
   }
+}
+
+//catagories nav
+.nav-catagories-container {
+  max-width: 1500px;
 }

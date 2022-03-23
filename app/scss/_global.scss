@@ -208,7 +208,7 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1350px;
   padding: 0 1.5rem;
 }
 
@@ -561,6 +561,11 @@ a {
   p {
     margin-bottom: 0.5rem;
   }
+}
+//Padding
+
+.padding-bottom-two {
+  padding-bottom: 2rem;
 }
 
 .item-card__header {

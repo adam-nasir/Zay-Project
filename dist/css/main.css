@@ -202,7 +202,7 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1350px;
   padding: 0 1.5rem;
 }
 
@@ -551,6 +551,10 @@ a {
 .selected-item-card h4,
 .selected-item-card p {
   margin-bottom: 0.5rem;
+}
+
+.padding-bottom-two {
+  padding-bottom: 2rem;
 }
 
 .item-card__header {
@@ -1567,7 +1571,6 @@ input::placeholder {
 
 .ff-container .site-location p {
   text-align: center;
-  font-family: "Playfair Display", serif;
 }
 
 .ff__content-title {
@@ -1585,6 +1588,10 @@ input::placeholder {
   font-weight: 300;
   line-height: 1.9;
   font-family: "Public Sans", serif;
+}
+
+.nav-catagories-container {
+  max-width: 1500px;
 }
 
 .clothing-template {
@@ -2856,7 +2863,7 @@ input::placeholder {
   }
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 480px) {
   .catagories-template__content-gallary-card-text {
     font-size: 0.8rem;
   }
@@ -2871,6 +2878,24 @@ input::placeholder {
 @media screen and (max-width: 480px) {
   .catagories-template__content-gallary-card__img-content__add-to-cart {
     display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .ff__content-description {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .ff__content-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ff__content-title {
+    font-size: 2rem;
   }
 }
 
@@ -2938,8 +2963,7 @@ input::placeholder {
 
 @media screen and (min-width: 768px) {
   .c-t__content {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
+    display: flex;
     gap: 2rem;
   }
 }

@@ -1069,7 +1069,7 @@
         margin-bottom: 3rem;
       }
       &-text {
-        @include min-media($viewport-3) {
+        @include media($viewport-4) {
           font-size: 0.8rem;
         }
       }
@@ -1088,6 +1088,22 @@
         }
       }
     }
+  }
+}
+
+.ff__content-description {
+  @include media($viewport-9) {
+    width: 100%;
+  }
+}
+
+.ff__content-title {
+  @include media($viewport-9) {
+    font-size: 2.5rem;
+  }
+
+  @include media($viewport-4) {
+    font-size: 2rem;
   }
 }
 
@@ -1151,8 +1167,8 @@
 .c-t {
   &__content {
     @include min-media($viewport-7) {
-      display: grid;
-      grid-template-columns: 2fr 2fr;
+      display: flex;
+      // grid-template-columns: 2fr 2fr;
       gap: 2rem;
     }
   }

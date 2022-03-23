@@ -1,12 +1,12 @@
 # Zay-Project
 
-This is a static website I created myself from the inspiration of the Zay html/css template I found on designhooks.com:
+![alt text for screen readers](/images/apple-touch-icon-114.png "Text to show on mouseover")
+
+![GitHub last commit](https://img.shields.io/github/last-commit/adam-nasir/Zay-Project)
+
+**A custom clothing e-commerce website**
+
+---
+
+I created myself from the inspiration of the Zay html/css template I found on designhooks.com:
 https://designhooks.com/freebies/free-html-template-for-ecommerce-website/
-
-- change names and pictures
-
--- fix all the nav bars
-
--- z-index are going to be an issue
-
--- work on the media queries for add to cart nav

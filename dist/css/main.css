@@ -448,6 +448,7 @@ a {
 .link-showcase
 .large-border-on {
   border: 4px #f3d0d0 solid;
+  background-color: aqua;
 }
 
 .large-border-on-HARD {

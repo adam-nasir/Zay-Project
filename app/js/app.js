@@ -617,13 +617,13 @@ function sizebuttonHighlight(sizeButtons) {
         if (sizeButtons === smallSizeChartButtons) {
           smallSizeChartButton.classList.remove("small-border-on");
         } else if (sizeButtons === mainSizeChartButtons) {
-          smallSizeChartButton.classList.remove("large-border-on");
+          smallSizeChartButton.classList.remove("large-border-on-HARD");
         }
       }
       if (sizeButtons === smallSizeChartButtons) {
         sizeButton.classList.add("small-border-on");
       } else if (sizeButtons === mainSizeChartButtons) {
-        sizeButton.classList.add("large-border-on");
+        sizeButton.classList.add("large-border-on-HARD");
       }
 
       if (sizeButtons === smallSizeChartButtons) {
@@ -760,8 +760,10 @@ mainAddToCartButton.addEventListener("click", () => {
 
   //getting the size
   let selectedSizes = Array.from(sizeChart);
+
   selectedSizes.forEach((selectedSize) => {
-    if (selectedSize.classList.contains("large-border-on")) {
+    console.log("selectedSize", selectedSize);
+    if (selectedSize.classList.contains("large-border-on-HARD")) {
       let sizePara = document.createElement("p");
       cardInfo.size = ` Size: ${selectedSize.textContent}`;
       sizePara.textContent = ` Size: ${selectedSize.textContent}`;
@@ -807,6 +809,7 @@ mainAddToCartButton.addEventListener("click", () => {
 
   //Create Text content of the item card
   let itemCardTextContent = document.createElement("div");
+  console.log("itemCardTextContent has been created", itemCardTextContent);
   //Creating button to delete shopping items
   let deleteShoppingItemButton = document.createElement("button");
   deleteShoppingItemButton.style.marginLeft = "1rem";
@@ -820,25 +823,32 @@ mainAddToCartButton.addEventListener("click", () => {
   );
   deleteShoppingItemButton.appendChild(deleteShoppingItemButtonContent);
   //Append text content to item Card
-  itemCard.appendChild(itemCardTextContent);
 
   //Append item card header to text content
   itemCardTextContent.append(itemCardHeader);
 
   //Append title  to text header
   itemCardHeader.appendChild(card.name);
+  console.log("itemCardHeader", itemCardHeader);
 
   //Append delete button to text header
   itemCardHeader.appendChild(deleteShoppingItemButton);
 
   //Append size  to text content
+
+  console.log("card.size", card.size);
   itemCardTextContent.appendChild(card.size);
+  console.log(itemCardTextContent);
 
   //Append item number to text content
   itemCardTextContent.appendChild(itemNum);
 
   //Append size  to text content
+  console.log("card.price", card.price);
+
   itemCardTextContent.appendChild(card.price);
+  itemCard.appendChild(itemCardTextContent);
+
   shoppingCartList.appendChild(itemCard);
 
   //Add The Price To The Subtotal

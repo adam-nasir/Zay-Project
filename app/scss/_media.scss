@@ -51,6 +51,9 @@
   @include media($viewport-9) {
     width: 100%;
   }
+  // @include min-media($viewport-25) {
+  //   max-width: 2000px;
+  // }
 }
 
 .btn {

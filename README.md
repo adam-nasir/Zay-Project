@@ -12,6 +12,15 @@
 
 
 ---
+## Features
+- A wide selection of clothng 
+- A shopping cart you can add, remove clothing items and give you the subtotal of all your items in the cart 
+
+## Technologies 
+- HTML 5
+- CSS 3
+- JavaScript 
+
 
 
 

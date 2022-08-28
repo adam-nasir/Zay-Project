@@ -258,6 +258,12 @@
   }
 }
 
+.add-to-cart-nav {
+  @include media($viewport-4) {
+    width: 100%;
+  }
+}
+
 .a-t-c {
   &__continue-shopping {
     background: $secondary-color;
